@@ -1,0 +1,43 @@
+HALL SCAN v3.15 batch86
+Date: 2026-09-22
+Baseline: batch85 only
+
+Benefit/payout audit targets (exactly 4):
+1. スロドル / オーロラ北見店
+   - 999G+α -> プレミアムAT「トップスターモード」
+   - max 9 cycles / 10M followers -> normal AT「スロドルフェスティバル」
+   - top star mode expected ~3600 medals (setting 1, series after activation); average, not guaranteed minimum
+   - Sources: https://nana-press.com/kaiseki/machine/517/14208/ , /14216/ , /14213/
+2. パチスロなめ猫～液晶ないけどなめんじゃねぇ～ / オーロラ北見店
+   - 100/300/max 600G+α -> bonus; BIG/REG not fixed
+   - REG ~60 / BIG ~200; initial BIG has 3-BIG guarantee (~600), but ceiling bonus is not guaranteed BIG
+   - JACKPOT expected ~3000 is separate trigger, not ceiling average
+   - Sources: https://nana-press.com/kaiseki/machine/990/ , https://1geki.jp/slot/s_nameneko/
+3. 超ギラギラ爺サマー / オーロラ北見店
+   - max 200G+α (heaven max150G+α) -> CZ「ギラチャンス」, not AT
+   - direct minimum from CZ ceiling = 0; AT after CZ success has minimum 500 medals
+   - Sources: https://nana-press.com/kaiseki/machine/331/8731/ , https://1geki.jp/slot/s_sgsummer/
+4. PA愛の不時着 99スイート ver. / 北見ひまわり
+   - no yutime; after two consecutive non-RUSH initial hits, next initial hit enters RUSH at 100%
+   - next initial hit is 3R / ~300 payout balls + ST60 + 4 reserve; payout != net profit guarantee
+   - Sources: https://www.universal-777.com/product/pachinko/ainofujichaku_99/ , https://p.hisshobon.jp/machine/4776/1/1
+
+Separation rules retained:
+- ceiling/special-state reward != fixed minimum payout
+- CZ ceiling != AT guarantee
+- payout balls/medals != net profit guarantee
+- initial G/medals != final net profit guarantee
+- average acquisition != minimum guarantee
+- do not derive fixed medals from G x pure increase
+
+Protected data/UI unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- aliases
+- low-rate factchecked HTML
+- normal-rate installation DB
+- exchange conditions / fuzzy search / favorites / rate toggles / PWA UI
+
+Project tracker inherited: 165/199 audited, 34 remaining.
+Current live edge/yutime unresolved-by-payout after batch86: 29 (informational; tracker discrepancy not reconciled).
+Service Worker cache: hall-scan-v3.15-r87

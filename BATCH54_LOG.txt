@@ -1,0 +1,62 @@
+HALL SCAN v3.15 batch54
+Date: 2026-09-22
+Base: batch53
+
+Scope:
+- Ceiling benefit / minimum guarantee caution / initial payout or AT structure audit.
+- Exactly 4 machines.
+
+Machines:
+1. PAわんわんパラダイスCELEBRATION
+   - Low-probability 250 spins -> SUPERわんわんRUSH, time-shortening 379 spins.
+   - Entry itself gives no payout; jackpot expectation about 97.8% is not a payout guarantee.
+   - Jackpot payout: 10R about 800 balls / 6R about 480 / 4R about 320 (payout basis).
+   - Source: https://www.p-world.co.jp/machine/database/10089
+
+2. スマスロ やじきた道中記参る！
+   - Mile ceiling: max 999 miles -> CZ; advantageous-section reset max 399 miles -> CZ.
+   - After six CZ failures, the 7th CZ has 100% win rate -> AT highly certain.
+   - Normal AT starts at 50G+alpha, net about 2.5 medals/G; upper AT about 5.0 medals/G.
+   - Source: https://nana-press.com/kaiseki/machine/1186/
+
+3. スマスロスーパーリオエース2
+   - 750G+alpha (reset max 500G+alpha) -> BIG, not guaranteed AT.
+   - Normal 7 skips then 8th / reset 4 skips then 5th -> AT.
+   - BIG 31G, AT expectation about 50%; normal AT 50G+alpha, net about 2.5 medals/G.
+   - Source: https://nana-press.com/kaiseki/machine/1143/36738/
+
+4. スマスロバジリスク～甲賀忍法帖～絆2 天膳 BLACK EDITION
+   - BC interval 333G+alpha -> BC; does not guarantee BT.
+   - Max 7 BC skips then 8th BC -> BT.
+   - BC 16G. BT net about 2.9 medals/G, average 40G; Pursuit phase minimum 10G.
+   - Source: https://nana-press.com/kaiseki/machine/666/18317/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r55
+
+QA:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- central installed edge/yutime display names: 199
+- benefit-audited strategy records: 37 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged vs batch53: PASS
+- fullrate-data-v314.js unchanged vs batch53: PASS
+- hallscan-v315.js unchanged vs batch53: PASS
+- hallscan-v315.css unchanged vs batch53: PASS
+- factchecked low-rate HTML unchanged vs batch53: PASS
+- benefit/minimum/initial/average UI fields remain wired: PASS

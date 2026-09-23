@@ -1,0 +1,62 @@
+HALL SCAN v3.15 batch56
+Date: 2026-09-22
+Base: batch55
+
+Scope:
+- Ceiling benefit / minimum guarantee caution / initial payout or AT structure audit.
+- Exactly 4 machines.
+
+Machines:
+1. Lタクトオーパス デスティニー
+   - AT interval max 999G+alpha -> AT "Battle Orchestra".
+   - CZ interval max 500G+alpha / reset max 300G+alpha -> CZ only; no AT or payout guarantee at CZ ceiling.
+   - Main AT initial 150 medals+alpha, net about 2.6 medals/G. Initial medals are not a final minimum payout guarantee.
+   - Sources: https://nana-press.com/kaiseki/machine/1142/36797/ , https://nana-press.com/kaiseki/machine/1142/36807/
+
+2. Lパチスロ 彼女、お借りします
+   - Game ceiling: normal 1000G / after REG 800G / reset 600G -> "Kanokari Bonus" (BIG) strongly expected.
+   - Kanokari Bonus: 30G, net about 5.0 medals/G, about 150 medals; initial BIG includes at least one 1G Ren CHANCE-or-better stock.
+   - REG about 70 medals is a separate bonus and is not the game-ceiling benefit.
+   - Sources: https://nana-press.com/kaiseki/machine/1221/38779/ , https://1geki.jp/slot/l_kanokari/63/
+
+3. スマスロ ビッグドリーム THE GOLDEN PUSHER
+   - Game ceiling: normal AT after max 1499G; reset/upper-AT after max 999G -> AT via success-guaranteed Judgment CZ.
+   - Ball ceiling -> premium CZ or first treasure box of next AT becomes gold.
+   - Main AT net about 8.2 medals/G. Dream Rush guarantees 3 or more games and >=100 medals each, so initial AT difference >=300 medals is explicitly guaranteed.
+   - This is an AT-start initial difference guarantee; ball-ceiling entry itself does not directly guarantee payout.
+   - Sources: https://nana-press.com/kaiseki/machine/1151/36841/ , https://nana-press.com/kaiseki/machine/1151/36848/ , https://nana-press.com/kaiseki/machine/1151/36849/
+
+4. スマスロ 沖ドキ！DUO アンコール
+   - Max 800G game ceiling -> bonus + "Noru Kana Chance" (1G-ren high-probability state) strongly expected.
+   - Ten-koku max 9 skips then 10th bonus -> next Ten-koku-or-better strongly expected; additional upgrades depend on selected regulation count.
+   - Net about 4.0 medals/G. BIG average about 204 medals / REG average about 84 medals.
+   - Bonus type is not fixed to BIG at the 800G ceiling; averages are not minimum guarantees.
+   - Source: https://nana-press.com/kaiseki/machine/1071/33874/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r57
+
+QA:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 45 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged vs batch55: PASS
+- fullrate-data-v314.js unchanged vs batch55: PASS
+- hallscan-v315.js unchanged vs batch55: PASS
+- hallscan-v315.css unchanged vs batch55: PASS
+- factchecked low-rate HTML unchanged vs batch55: PASS

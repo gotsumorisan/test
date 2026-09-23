@@ -1,0 +1,90 @@
+HALL SCAN v3.15 batch51
+Date: 2026-09-22
+Purpose: continue ceiling-arrival benefit / payout-information audit, next 4 machines
+
+Selection rule:
+- Continued strictly from batch50.
+- Kept the 4-machine batch cap.
+- Ranked unprocessed installed edge/yutime names by exact current-name store coverage in fullrate-data-v314.js.
+- Five names were tied at 8 target stores; practical play relevance was used as the secondary factor.
+- Researched exactly 4 actual machines.
+
+Web-audited machines: 4
+
+1. 沖ドキ！GOLD
+   - Game ceiling -> bonus; normal A/B max 999G, pullback/chance 200G, heaven/doki/super-doki/guarantee/kin-doki 32G
+   - Ceiling does not guarantee BIG
+   - BIG: 70G, average ~210 medals; REG: 30G, average ~90 medals
+   - Both are pseudo-bonuses at about 3.0 medals/G
+   - Average bonus acquisition is not a fixed minimum net guarantee at the ceiling
+   - Sources:
+     https://nana-press.com/kaiseki/machine/478/12848/
+     https://nana-press.com/kaiseki/machine/478/12853/
+
+2. スマスロ ストリートファイター6
+   - Display 1000G+alpha (about 470 actual G) -> Fighters Battle (FB), not an automatic bonus
+   - After 3 consecutive FB failures, the 4th FB is win-likely/confirmed by published analysis
+   - FB: 15G+alpha
+   - Bonus after FB win: about 6.0 medals/G
+   - Finish Blow average payout ~273 medals; Finish Combo average payout ~521 medals
+   - Payout averages are not fixed minimum net acquisition guarantees
+   - Source:
+     https://nana-press.com/kaiseki/machine/1194/
+
+3. スマスロ バイオハザードRE:3
+   - Normal 1000G+alpha / reset 650G+alpha -> AT + Pandemic Chance
+   - Max 6 CZ failures -> 7th CZ -> AT
+   - Pandemic Chance: initial 7G decrementing ST
+   - Main pseudo-bonuses: about 100 medals, about 4.5 medals/G
+   - Normal AT Hazard Rush: initial 40G, about 1.0 medal/G
+   - About 100 medals is a published approximate bonus amount, not a fixed ceiling minimum guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1140/36677/
+     https://nana-press.com/kaiseki/machine/1140/36692/
+     https://nana-press.com/kaiseki/machine/1140/36687/
+     https://nana-press.com/kaiseki/machine/1140/36688/
+
+4. スマスロ鉄拳6
+   - Bonus ceiling: normal max 900pt+alpha (max average actual consumption about 747G+alpha); reset max 500pt+alpha -> initial bonus
+   - AT ceiling: 3 consecutive bonus failures -> next bonus red 7 / AT likely; reset etc. shortens to 2 failures
+   - Bonus ceiling alone does not guarantee AT
+   - Initial blue/red/episode BIG: 30G, about 2.5 medals/G
+   - Blue 7 AT expectation about 37%; red 7 / episode AT expectation 100%
+   - No unpublished fixed minimum acquisition value was created
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1069/33997/
+     https://nana-press.com/kaiseki/machine/1069/33998/
+     https://nana-press.com/kaiseki/machine/1069/
+
+Schema/UI:
+- No schema or UI changes in this batch.
+- Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+- Kept average blank where a directly scoped reliable published average was not appropriate.
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Service Worker: hall-scan-v3.15-r52
+
+QA results:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- installed edge/yutime unique display names: 199
+- benefit-audited installed edge/yutime names: 25 / 199
+- fallback references: 0
+- review references: 0
+- changed strategy records in this batch: exactly 4 intended machines
+- aliases unchanged vs batch50: PASS
+- fullrate-data-v314.js unchanged vs batch50: PASS
+- hallscan-v315.js unchanged vs batch50: PASS
+- hallscan-v315.css unchanged vs batch50: PASS
+- 10 factchecked low-rate HTML files unchanged vs batch50: PASS
+- UI benefit/minimum/initial/average fields remain wired: PASS

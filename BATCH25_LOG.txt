@@ -1,0 +1,37 @@
+HALL SCAN v3.15 BATCH25 LOG
+Date: 2026-09-21
+Scope: 店舗別交換条件表示 第2店舗（1店舗のみ）＋初心者向け文言明確化
+
+Target store
+- マルハン網走店
+
+Verified current lending information
+- P-WORLD current listing: 20スロ 1000円/46枚
+
+Verified external exchange information
+- スロレポ: 46枚貸/52枚交換
+- みんパチ: 21.73円スロ 5.2枚交換
+- 2ソース一致。ただし店舗公式の交換率公表ではないため「非公式」扱い。
+- 4パチ: 28玉交換（みんパチ。非公式）
+
+UI behavior
+- マルハン網走店の通常貸し欄に店舗交換条件を表示。
+- 52枚交換専用の公開期待値がない機種は、56枚交換側を安全側の暫定相談ラインとして使用。
+- 画面文言を「この店で使う基準」から「この店で使う暫定基準（安全側）」へ変更。
+- 52枚交換の専用G数を補間・推定して作らない。
+- 最終A/B/C/Dでは実交換条件と最新解析を再確認。
+
+Protected data
+- 設置機種リスト変更なし。
+- machine-strategy-v315.js変更なし。
+- 低貸データ変更なし。
+
+Files edited
+- fullrate-data-v314.js（マルハン網走の交換メタデータのみ）
+- hallscan-v315.js（表示文言のみ）
+- sw.js
+- README.md
+- BATCH25_LOG.txt
+
+Service Worker
+- hall-scan-v3.15-r26

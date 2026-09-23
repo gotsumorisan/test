@@ -1,0 +1,54 @@
+HALL SCAN v3.15 batch81
+Date: 2026-09-22
+Baseline: batch80 only
+
+Benefit/payout audit targets (exactly 4):
+1) S笑ゥせぇるすまん4
+   - Store: オーロラ北見店
+   - Ceiling: max 580G incl. prelude -> bonus; 119 mode shortens to 119/199/209/219G
+   - Sources: https://nana-press.com/kaiseki/machine/432/11960/ ; https://nana-press.com/kaiseki/machine/432/11967/
+2) パチスロ 青鬼
+   - Store: オーロラ北見店
+   - Ceiling: 444G+alpha -> Last Judge; AT is not guaranteed by ceiling arrival
+   - Sources: https://1geki.jp/slot/s_aooni/3/ ; https://1geki.jp/slot/s_aooni/41/ ; https://1geki.jp/slot/s_aooni/81/
+3) 花火絶景
+   - Store: オーロラ北見店
+   - Ceiling: max 950G -> Launch Chance or BIG; 10 fireworks-point cycles -> BIG
+   - Sources: https://nana-press.com/kaiseki/machine/444/12407/ ; https://nana-press.com/kaiseki/machine/444/12419/
+4) アナターのオット！？はーです
+   - Store: オーロラ北見店
+   - Ceiling: 555G+alpha -> Yuru Challenge; Dark Heaven max100G+alpha -> Judgment if entered
+   - Sources: https://nana-press.com/kaiseki/machine/78/1658/ ; https://nana-press.com/kaiseki/machine/78/1515/ ; https://nana-press.com/kaiseki/machine/78/1519/ ; https://nana-press.com/kaiseki/machine/78/1521/
+
+Separation rule:
+- ceiling reward / initial structure / average acquisition / fixed minimum are kept distinct.
+- no G x net-increase arithmetic is used to invent a guaranteed medal amount.
+
+Protected assets:
+- fullrate-data-v314.js unchanged
+- hallscan-v315.js unchanged
+- hallscan-v315.css unchanged
+- factchecked low-rate HTML unchanged
+- aliases unchanged
+- UI structure unchanged
+
+Project tracker after batch81: 145/199 audited, 54 remaining.
+Service Worker cache: hall-scan-v3.15-r82
+
+QA target/result:
+- full-rate records: 1,689 (4p 929 / 20s 760) PASS
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208 PASS
+- payoutChecked strategy records: 145 PASS
+- project tracker: 145/199, remaining 54 PASS
+- current live unaudited edge/yutime strategies: 49 (informational only)
+- fallback references: 0 PASS
+- review references: 0 PASS
+- unresolved installed strategies: 0 PASS
+- changed strategy records: exactly 4 intended machines PASS
+- aliases unchanged PASS
+- protected files unchanged vs batch80 PASS
+- benefit/minimum/initial/average/benefitSource fields present on all 4 audited cards PASS
+- node --check machine-strategy-v315.js PASS
+- node --check hallscan-v315.js PASS
+- node --check sw.js PASS
+- Service Worker revision hall-scan-v3.15-r82 PASS

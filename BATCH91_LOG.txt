@@ -1,0 +1,27 @@
+HALL SCAN v3.15 batch91 audit log
+Date: 2026-09-23
+Baseline: hallscan_v315_batch90_2026-09-23.zip
+Baseline SHA256: c7434ab8bb1f6b942345ad1972801ba237cc669721a03537b42cc4b6dafa8f74
+
+Targets (exactly 4):
+1. PFクィーンII「2020年」
+   - https://1geki.jp/pachinko/pa_feverqueen2/25/
+   - https://www.p-world.co.jp/machine/database/9225
+2. PFパワフル「2021年」
+   - https://www.p-world.co.jp/machine/database/9383
+   - https://1geki.jp/pachinko/p_fever_pwfl/26/
+3. P銀河鉄道999 Next Journey 1/100ver.
+   - https://nana-press.com/kaiseki/machine/562/14515/
+   - https://1geki.jp/pachinko/p_999nj100/27/
+4. デジハネPA真・北斗無双 第2章 連撃Edition
+   - https://1geki.jp/pachinko/pa_musorengekie/23/
+   - https://www.p-world.co.jp/machine/database/9427
+
+Audit principle:
+- Do not infer guaranteed payout from hit probability, ST/time length, or payout distribution.
+- Yutime entry itself has 0 direct payout unless the specification explicitly grants an award.
+- Distinguish low-probability count from ST/high-probability count and ordinary time-short count.
+
+Tracker: 185/199 audited; 14 remaining (inherited project tracker).
+Actual current installed unresolved edge/yutime after this batch: expected 9 (informational; tracker gap not reconciled).
+Service Worker: hall-scan-v3.15-r92

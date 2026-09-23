@@ -1,0 +1,34 @@
+HALL SCAN v3.15 batch 18
+Date: 2026-09-21
+Target store: パチンコパーラー東和 北見店 only
+
+New Web-audited machines: 7 / 10
+- P世紀末・天才バカボン～神 SPEC 凱旋～ -> no-g
+  source: https://www.p-world.co.jp/machine/database/9889
+- eルパン三世VSキャッツ・アイ157ver. 極限突破ブッた斬り7500 -> no-g
+  source: https://nana-press.com/kaiseki/machine/1164/35928/
+- PLTジューシーハニー極嬢 -> no-g
+  source: https://nana-press.com/kaiseki/machine/891/26133/
+- P緋弾のアリア～緋緋神降臨～199Ver. -> no-g
+  source: https://nana-press.com/kaiseki/machine/910/27542/
+- P冴えない彼女の育てかた 99ver. -> no-g
+  source: https://nana-press.com/kaiseki/machine/1113/34664/
+- P痛いのは嫌なので防御力に極振りしたいと思います。 極振り129ver -> no-g
+  source: https://nana-press.com/kaiseki/machine/1122/35459/
+- スマスロ交響詩篇エウレカセブン4 HI-EVOLUTION -> edge
+  source: https://nana-press.com/kaiseki/machine/741/21204/
+  +2000-yen consultation line: equal 550G / 5.6枚 650G
+
+Hard limits:
+- Stores: 1 / 1 -> stop after this store
+- New Web audits: 7 / 10
+- Reused/linked confirmed records: 0 / 50
+- Machine records processed: 7 / 60
+- Files edited/created: 4 / 6
+
+Protected:
+- fullrate-data-v314.js unchanged
+- existing low-rate/factchecked HTML unchanged
+- previously audited strategy records preserved
+
+Service Worker: v3.15-r18 -> v3.15-r19

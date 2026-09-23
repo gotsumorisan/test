@@ -1,0 +1,45 @@
+HALL SCAN v3.15 batch 07
+Date: 2026-09-21
+Store: マルハン網走店
+
+Hard limits:
+- stores: 1 / 1
+- new web-reviewed machines: 8 / 10
+- reused/linked machines: 0 / 50
+- edited files: 4 / 6
+- processed machine records: 8 / 60
+
+Reviewed 4-pachi machines:
+1. PHはねもの ハネ釈迦 -> G数狙いなし
+   Source: https://flick-fun.com/ph-haneshaka/
+   Note: 羽根物。遊タイム非搭載。G数ではなく拾球率・役物癖・釘で評価。
+2. P真・花の慶次3 -> G数狙いなし
+   Source: https://www.p-world.co.jp/machine/database/9532
+   Note: 遊タイム非搭載。
+3. Pゴブリンスレイヤー ラッキートリガーVer. -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4295/1/101688
+   Note: 遊タイム非搭載。
+4. e ゴジラ対エヴァンゲリオン2 超デカゴールド -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4675/1/113178
+   Note: 遊タイム非搭載。
+5. e86‐エイティシックス‐ -> G数狙いなし
+   Source: https://nana-press.com/kaiseki/machine/1130/
+   Note: 遊タイム非搭載。
+6. P 犬夜叉3.0 大入り 甘SPEC -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4747/1/115531
+   Note: 遊タイム非搭載。5段階設定付きのため設定評価は別軸。
+7. e ライザのアトリエ ～常闇の女王と秘密の隠れ家～ -> G数狙いなし
+   Source: https://pachiseven.jp/machines/7377/cutout/16
+   Note: 遊タイム非搭載。
+8. eソードアート・オンライン オルタナティブ ガンゲイル・オンライン -> G数狙いなし
+   Source: https://pachiseven.jp/machines/7387/cutout/16
+   Note: 遊タイム非搭載。
+
+Result:
+- マルハン網走店 pachi4 review: 8 -> 0
+- マルハン網走店 slot20 review: 0 -> 0
+- Next: パチンコパーラー東和網走店 pachi4 review 2 / slot20 review 0
+
+Protected data:
+- fullrate-data-v314.js unchanged
+- abashiri.html unchanged

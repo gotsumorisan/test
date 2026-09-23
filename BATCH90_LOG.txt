@@ -1,0 +1,25 @@
+HALL SCAN v3.15 batch90
+Date: 2026-09-23
+Baseline: batch89 only
+Baseline SHA256: 752a45dac68311482c8b66d04223a3854a50eef4478cdb20b3cf6206d394c41d
+
+Targets (exactly 4):
+1. PF革命機ヴァルヴレイヴ2Lightver.
+   https://1geki.jp/pachinko/p_valvrave2light/25/
+   https://1geki.jp/pachinko/p_valvrave2light/1/
+   https://www.p-world.co.jp/machine/database/9544
+2. Pデビルマン黄金黙示録
+   https://www.p-world.co.jp/machine/database/9867
+3. Pバジリスク～甲賀忍法帖～2 朧の章
+   https://1geki.jp/pachinko/p_bjlskkn2_obr/24/
+   https://1geki.jp/pachinko/p_bjlskkn2_obr/1/
+   https://www.p-world.co.jp/machine/database/9342
+4. 新世紀エヴァンゲリオン 決戦 プレミアムモデル
+   https://1geki.jp/pachinko/pa_evasinkpm/25/
+   https://1geki.jp/pachinko/pa_evasinkpm/1/
+   https://www.p-world.co.jp/machine/database/9317
+
+Audit scope: benefit / minimum / initial / average / benefitSource / payoutChecked only.
+Tracker: 177 -> 181 / 199; remaining 18.
+Current live unaudited edge/yutime: 17 -> 13 (informational only; inherited tracker gap not reconciled).
+Service worker: hall-scan-v3.15-r91

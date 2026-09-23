@@ -1,0 +1,34 @@
+HALL SCAN v3.15 batch 10
+Date: 2026-09-21
+Store: パーラーDAIGORO Z
+Processed: 4 machines (pachi4=2, slot20=2)
+
+1. 羽根モノ スカイレーサー -> G数狙いなし
+   Source: https://www.p-world.co.jp/machine/database/9028
+   Note: 設定付き羽根物。遊タイムなし。G数ではなく拾球・役物癖・設定/調整を評価。
+2. P沖ドキ！ドキドキ弾丸ツアー -> G数狙いなし
+   Source: https://nana-press.com/kaiseki/machine/1072/33362/
+   Note: 役物LT機。遊タイム非搭載。
+3. 桃太郎電鉄 ～パチスロも定番！～ -> 期待値候補
+   Primary EV source: https://flick7.net/slot/momotetsu__c.php
+   Cross-check: https://p.hisshobon.jp/machine/4392/1/105014
+   Note: 通常3年≈720G、定番チャンス6スルー→7回目AT。リセット時2年/最大3回目へ短縮。スルー別+2,000円ラインを相談基準へ採用。
+4. Sister Quest -> 期待値候補
+   Source: https://nana-press.com/kaiseki/machine/906/27930/
+   Yame/condition source: https://nana-press.com/kaiseki/machine/906/27932/
+   Note: AT間2000G+α/CZ間1400EXP+α/CZ5スルー。リセット時999G+α/500EXP+α。設定1EV表から+2,000円目安を保守的に採用。
+
+Result:
+- パーラーDAIGORO Z pachi4 review: 2 -> 0
+- パーラーDAIGORO Z slot20 review: 2 -> 0
+- edge candidates added: 桃太郎電鉄 ～パチスロも定番！～, Sister Quest
+
+Batch limits used:
+- stores: 1/1
+- new web analyses: 4/10
+- edited files: 4/6 (machine-strategy-v315.js, sw.js, README.md, BATCH10_LOG.txt)
+- machine records: 4/60
+
+Protected data:
+- fullrate-data-v314.js unchanged
+- existing HTML files unchanged

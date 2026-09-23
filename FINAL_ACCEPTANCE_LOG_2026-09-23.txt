@@ -1,0 +1,40 @@
+HALL SCAN v3.15 FINAL ACCEPTANCE TEST / batch95
+Date: 2026-09-23
+Baseline: batch94 only
+
+RESULT: PASS WITH TWO CORRECTIONS APPLIED
+
+1. PWA/static structure
+- manifest.webmanifest: start_url/scope/display/icons present
+- sw.js CORE local assets: no missing files
+- HTML local href/src targets: no missing files
+- duplicate HTML ids: none
+- viewport: present in all checked HTML
+- JS syntax: PASS
+- Service Worker cache: hall-scan-v3.15-r96
+
+2. Search acceptance
+- Existing fuzzy search examples such as 東京グール/東京グル/tokyoghoul/モンキ/きんしょ/ヴヴヴ resolve.
+- Found issue: すますろ北斗 normalized to 北斗の拳, causing pachinko 北斗 records to tie.
+- Correction: alias target changed to スマスロ北斗の拳.
+
+3. Payout/benefit spot audit
+- Deterministic random sample of 10 audited unique machines was cross-checked against current/reliable web sources.
+- No contradiction found in sampled core ceiling/benefit/payout facts.
+- This is a spot audit; it is not a re-audit of all 194 machines.
+
+4. Store freshness
+- Current P-WORLD loan-rate structures spot-checked for all 14 target stores: no contradiction found with HALL SCAN rate classification.
+- Found one concrete full-rate lineup omission at DAIGORO X: e 七つの大罪3.
+- Added only that confirmed machine. No speculative broad lineup changes.
+- Store inventories remain time-sensitive and should be refreshed before future real-world use when P-WORLD changes.
+
+5. Audit completion status
+- Display names: 199
+- Unique strategy keys: 194
+- Duplicate-name variants reconciled: 5
+- Payout/benefit audited unique machines: 194/194
+- Current installed edge/yutime unaudited: 0
+
+Physical-device caveat:
+Actual iPhone/Safari PWA installation, launch-from-home-screen and offline recovery cannot be executed in this environment. One final user-side smoke test is still required for physical-device acceptance.

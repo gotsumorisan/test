@@ -1,0 +1,26 @@
+HALL SCAN v3.15 batch 08
+Date: 2026-09-21
+Store: パチンコパーラー東和網走店
+
+Hard limits:
+- stores: 1 / 1
+- new web-reviewed machines: 2 / 10
+- reused/linked machines: 0 / 50
+- edited files: 4 / 6
+- processed machine records: 2 / 60
+
+Reviewed 4-pachi machines:
+1. e魔法少女リリカルなのは -> G数狙いなし
+   Source: https://nana-press.com/kaiseki/machine/1180/
+   Note: 遊タイム非搭載。時短100回・ST70回・LTはハマリG到達型の天井ではない。
+2. eF デッドマウント・デスプレイ 魂神9000 -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4741/1/115046
+   Note: 遊タイム非搭載。LT搭載だが通常時G数天井なし。
+
+Result:
+- パチンコパーラー東和網走店 pachi4 review: 2 -> 0
+- パチンコパーラー東和網走店 slot20 review: 0 -> 0
+
+Protected data:
+- fullrate-data-v314.js unchanged
+- abashiri.html unchanged

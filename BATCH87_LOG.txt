@@ -1,0 +1,44 @@
+HALL SCAN v3.15 batch87
+Date: 2026-09-23
+Baseline: batch86 only
+Baseline SHA256: f2cbc58ef694e6fa6b9375446f01c302aecf53c53e7d8acb77588ddf60744abc
+
+Benefit/payout audit targets (exactly 4):
+1. P J-RUSH5 HSJ / ロイヤル北見店
+   - no yutime; all hits -> CT 88/89/next; 89-end confirms internal high probability, 88-end does not
+   - low 1/288.7 -> high 1/35.7; 72% high probability
+   - 2R high probability payout 6 balls (effectively no output); 3R ~378 / 10R ~1260 payout
+   - Sources: https://www.p-world.co.jp/machine/database/9490 ; https://www.sankyo-fever.jp/collection/924/
+2. PA大海物語4スペシャル Withアグネス・ラム / パーラー太陽 山下通店
+   - low-probability 299 -> time-shortening 379; ST10 excluded from low-probability count
+   - hit expectation ~97.8%; expected output at yutime arrival 1260 balls
+   - hits: 4R432 / 6R648 / 10R1080 payout balls
+   - Sources: https://nana-press.com/kaiseki/machine/291/6961/ ; /6958/ ; https://www.p-world.co.jp/machine/database/9296
+3. PFクィーンRUSH / パーラー太陽 山下通店
+   - RAM clear or after hit, 599 between hits -> time-shortening 254
+   - right-hand effective hit rate ~1/6.922; practical next hit near-certain
+   - every hit 10R ~1000 payout; yutime itself has 0 immediate payout
+   - Sources: https://nana-press.com/kaiseki/machine/453/11718/ ; /11723/ ; https://www.p-world.co.jp/machine/database/9708
+4. Pとある科学の超電磁砲 最強御坂ver. / パーラー太陽 山下通店
+   - RAM clear / after LBC or RUSH end, 299 normal spins -> 一撃チャンス; LBC/RUSH spins excluded
+   - 2R/3R hit then ~35% RUSH; expected output at arrival 1432 balls
+   - right-hand payouts ~200/450 balls depending 2R/3R; payout != net profit minimum
+   - Sources: https://nana-press.com/kaiseki/machine/510/14105/ ; /13970/ ; https://www.p-world.co.jp/machine/database/9794
+
+Separation rules retained:
+- yutime/special state reward != fixed minimum payout
+- payout balls != net profit guarantee
+- expected output != minimum guarantee
+- ST/time-shortening/internal-high count rules must not be conflated with data-counter raw spins
+
+Protected data/UI unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- aliases
+- low-rate factchecked HTML
+- normal-rate installation DB
+- exchange conditions / fuzzy search / favorites / rate toggles / PWA UI
+
+Project tracker inherited: 169/199 audited, 30 remaining.
+Current live edge/yutime unresolved-by-payout after batch87: 25 (informational; tracker discrepancy not reconciled).
+Service Worker cache: hall-scan-v3.15-r88

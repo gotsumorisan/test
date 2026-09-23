@@ -1,0 +1,24 @@
+HALL SCAN v3.15 batch 04
+Date: 2026-09-21
+Store: パーラー太陽 山下通店
+New web-audited machines: 6
+Existing confirmed data reused: 0
+Files changed/created this batch: machine-strategy-v315.js, sw.js, README.md, BATCH04_LOG.txt
+
+Batch04 audited:
+1. Pだるまっしゅ2 -> G数狙いなし
+2. CYBORG 009 RULE OF SACRIFICE VS SCARL BODY EDITION 199 -> G数狙いなし
+3. PFマクロスフロンティア5 -> G数狙いなし
+4. PFかぐや様は告らせたい -> G数狙いなし
+5. P魔王学院の不適合者 -> G数狙いなし
+6. Pいくさの子 織田三郎信長伝 -> G数狙いなし
+
+Store status:
+- パーラー太陽 山下通店 4パチ未監査: 0 (26件の監査完了)
+
+Hard limits:
+- Stores: 1/1 (STOP)
+- New web-audited machines: 6/10
+- Existing confirmed data reused: 0/50
+- Machine records processed: 6/60
+- Files edited/created: 4/6

@@ -1,0 +1,68 @@
+HALL SCAN v3.15 batch44
+Date: 2026-09-21
+Purpose: numeric consultation-line audit, 4 machines per user instruction
+
+Web-audited strategies: 4
+1. パチスロ 炎炎ノ消防隊
+   - Normal +2,000 yen guide: equal 600G+ / 5.6 700G+
+   - Confirmed setting-change +2,000 yen guide: equal 400G+ / 5.6 500G+
+   - Normal ceiling: max 850G+alpha -> bonus; setting change max 650G+alpha
+   - Keep this machine separate from L炎炎ノ消防隊; do not import the smart-slot 2500G 炎炎激闘 interval
+   - Source: https://nana-press.com/kaiseki/machine/526/14736/
+2. マジカルハロウィン8
+   - Normal +2,000 yen guide: equal 650G+ / 5.6 700G+
+   - Normal ceiling: 333/444/555/666/777G+alpha, max 777G+alpha -> ART + 2 stocks
+   - Setting change: max 600G+alpha, randomly shortened
+   - After an ART entered via the game-count ceiling ends without a bonus, the next ceiling is 333G+alpha
+   - No published dedicated +2,000-yen table for reset/333G-short state was confirmed; no invented start line
+   - Source: https://nana-press.com/kaiseki/machine/627/18064/
+3. ローティス
+   - Normal +2,000 yen guide from provisional EV table: equal 600G+ / 5.6 700G+
+   - Mode ceilings: normal A/B & heaven-prep 900G; morning 200G; chance 400G; heaven+ 32G; comeback A/B 200G/100G
+   - After bonus, follow through 32G; 100G-or-less abandoned machines after 32G chaining are separate comeback-mode consultations
+   - Setting change: morning ~25%, chance ~13%, normal A ~49%, normal B ~13%; special short modes total ~38%, so reset is not always a short ceiling
+   - Source: https://nana-press.com/kaiseki/machine/1182/37728/
+4. 戦国コレクション6
+   - Game-count +2,000 yen guide from provisional EV table: equal 650G+ / 5.6 700G+
+   - Normal AT ceiling: 999G+alpha or max 6 cycles; setting change cycle ceiling max 3 cycles
+   - Game-count ceiling after setting change is still under investigation; no invented reset G threshold
+   - Oni-ga-shima/CZ interval over 130G -> next rare role gives Oni-ga-shima or CZ; first cycle is <=222 collection and ~40.2% AT by first cycle
+   - AT <=120 coins has ~50% special-high possibility; final-battle loss -> first-cycle AT, so no immediate quit
+   - Source: https://nana-press.com/kaiseki/machine/1156/37682/
+
+Affected normal-rate installation records: 24
+- パチスロ 炎炎ノ消防隊: 5
+- マジカルハロウィン8: 2
+- ローティス: 9
+- 戦国コレクション6: 8
+
+Numericization progress:
+- edge/yutime strategies with zero numeric token in target: 8 -> 4
+- Remaining: 押忍！番長4 / 沖ドキ！DUO / 沖ドキ！GOLD / 麻雀格闘倶楽部 覚醒
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Safety:
+- Consultation line remains screening only; it is not an automatic seating line.
+- +2,000-yen thresholds were used only where a published expectation table directly supported them.
+- Mahjong 8 short/reset states and Sengoku Collection 6 reset G ceiling did not receive invented thresholds.
+- Rotis reset is not treated as guaranteed short because only ~38% enters the 200G/400G special modes.
+
+Service Worker: hall-scan-v3.15-r45
+
+QA
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- fallback: 0 / review: 0
+- classification: no-g 837 / yutime 90 / edge 554 / setting 208
+- changed central strategies vs batch43: exactly 4
+- aliases unchanged: PASS
+- remaining zero-numeric edge/yutime targets: 4
+- fullrate-data-v314.js / hallscan-v315.js / hallscan-v315.css unchanged vs batch43: PASS

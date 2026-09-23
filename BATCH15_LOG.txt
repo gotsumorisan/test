@@ -1,0 +1,28 @@
+HALL SCAN v3.15 batch 15
+Date: 2026-09-21
+Store: オーロラ北見店
+Scope: 20スロ未監査 先頭10機種
+
+Audited / classification:
+1. アナターのオット！？はーです -> 期待値候補
+2. パチスロ戦国乙女 暁の関ヶ原-DARKNESS- -> 期待値候補
+3. パチスロ麻雀物語4 -> 期待値候補
+4. Sスーパー海物語 IN JAPAN祭 -> 期待値候補
+5. ボンバーガール -> 期待値候補
+6. 花火絶景 -> 期待値候補
+7. パチスロハードボイルド -> 期待値候補
+8. パチスロペルソナ5 -> 期待値候補
+9. パチスロラブ嬢2プラス -> 期待値候補
+10. スロドル -> 期待値候補
+
+Notes:
+- Consultation line is not an automatic A decision.
+- For mismatched EV estimates, the conservative/deeper condition was selected.
+- Protected low-rate files and fullrate-data-v314.js were not edited.
+
+Hard-limit usage:
+- Stores: 1 / 1 (STOP)
+- New Web-audited machines: 10 / 10 (STOP)
+- Existing-data reuse/link: 0 / 50
+- Machine records: 10 / 60
+- Files edited/created: 4 / 6

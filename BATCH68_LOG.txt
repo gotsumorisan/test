@@ -1,0 +1,70 @@
+HALL SCAN v3.15 batch68
+Date: 2026-09-22
+Base: batch67
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) Lパチスロうみねこのなく頃に2
+   - CZ interval 200G -> CZ "運命分岐モード".
+   - CZ ceiling does not guarantee ART; direct payout guarantee at ceiling is 0 coins.
+   - ART "幻想論戦" is 30/50/90G per set, approx.1.0 coins/G.
+   - Bonus maxima (same-color BIG 202 / mixed BIG 160 / REG 56) are not fixed ceiling rewards.
+   - Sources: https://nana-press.com/kaiseki/machine/1089/34703/ , https://nana-press.com/kaiseki/machine/1089/34727/ , https://nana-press.com/kaiseki/machine/1089/
+
+2) パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2
+   - Bonus/CZ interval 555G+alpha -> CZ.
+   - Ceiling does not guarantee ART; direct payout guarantee is 0 coins.
+   - ART "ファミリア・ミィス" pure increase approx.0.4 coins/G.
+   - Familia bonus 203/150 and Familia Chance 56 coins are separate bonus structures, not fixed ceiling rewards.
+   - Sources: https://nana-press.com/kaiseki/machine/728/20947/ , https://nana-press.com/kaiseki/machine/728/20962/ , https://nana-press.com/kaiseki/machine/728/20957/
+
+3) パチスロ武装神姫
+   - After 8 consecutive CZ losses, the 9th CZ is win-strongly-expected -> AT "神姫RUSH".
+   - AT is 20G+alpha per set, approx.3.0 coins/G, continuation-rate managed.
+   - No fixed minimum payout inferred from G x pure increase.
+   - Sources: https://nana-press.com/kaiseki/machine/647/18822/ , https://nana-press.com/kaiseki/machine/647/18828/
+
+4) モグモグ風林火山 大海戦の巻
+   - CZ interval 699G+alpha -> CZ only.
+   - Max 8 CZ misses or max 6 point cycles -> AT.
+   - Reset shortens to 299G+alpha / max 4 misses / max 3 cycles.
+   - Normal AT starts with 150 coins, pure increase approx.3.1 coins/G; 150 is an initial amount, not final net-profit guarantee.
+   - Source: https://nana-press.com/kaiseki/machine/1226/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r69
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 93 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 93 / 199
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch67: PASS
+- batch67 base SHA256 verified: 4eaaf7e0e8b7f3978f20637d8fa9453c9272558efc7d82a20d237a3fbb84f078

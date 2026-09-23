@@ -1,0 +1,79 @@
+HALL SCAN v3.15 batch64
+Date: 2026-09-22
+Base: batch63
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) Lパチスロ 喰霊‐零‐Re
+   - Bonus/ART interval max 999G+alpha -> infinite ART "Garei Chance Mugen".
+   - Mugen continues until a bonus is hit or ending begins.
+   - Pure increase approx.1.0 coins/G (approx.1.4 including bonuses); no fixed minimum coin guarantee inferred.
+   - Source: https://nana-press.com/kaiseki/machine/1171/
+
+2) 七つの魔剣が支配する
+   - Game ceiling max 1000G+alpha / reset max 650G+alpha -> Prologue BONUS.
+   - 4 Kimberly BONUS ST misses -> next bonus is Prologue BONUS.
+   - Prologue BONUS: 30G, approx.4.0 coins/G, ST entry highly likely/confirmed by analysis wording.
+   - No minimum coin guarantee inferred from G x pure increase.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/877/26839/
+     https://nana-press.com/kaiseki/machine/877/26852/
+
+3) GI優駿倶楽部黄金
+   - 333/555/777/999G ceilings -> G1 Bonus.
+   - Maximum 1111G -> G1 Bonus + AT.
+   - 5 G1 Bonus misses -> AT on the 6th bonus.
+   - G1 Bonus initial difference approx.50-100 coins, approx.5.2 coins/G; AT 30G+alpha or 100G+alpha, approx.2.7 coins/G.
+   - Initial difference is not treated as final minimum net output.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/686/19355/
+     https://nana-press.com/kaiseki/machine/686/19405/
+     https://nana-press.com/kaiseki/machine/686/19407/
+
+4) アナザーゴッドハーデス-解き放たれし槍撃ver.-
+   - 666G -> upper CZ only; AT is not guaranteed, direct output guarantee 0 coins.
+   - 1400G -> all-reel freeze, selecting GOD / Purple 7 / Hades equally at 1/3, then Judgment.
+   - GOD: AT initial 100G + 3 or more Judgment stocks. Purple 7: Persephone or better. Hades: Hades or better.
+   - Published expected payouts including comeback: Purple 7 approx.830, Hades approx.1340, GOD approx.2250 coins; these are expectations, not minimum guarantees.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/530/13785/
+     https://nana-press.com/kaiseki/machine/530/13792/
+     https://nana-press.com/kaiseki/machine/530/13790/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r65
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 77 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 77 / 199
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch63: PASS
+- batch63 base SHA256 verified: a7225c31532a78a020d59ec67c24bcc56dc70abe886da0f2f38a7d2778c762e3

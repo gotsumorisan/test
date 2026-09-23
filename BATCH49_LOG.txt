@@ -1,0 +1,81 @@
+HALL SCAN v3.15 batch49
+Date: 2026-09-22
+Purpose: continue ceiling-arrival benefit / payout-information audit, next 4 machines
+
+Selection rule:
+- Continue in 4-machine batches.
+- Prioritized installed unprocessed edge machines with the widest exact-name store coverage in fullrate-data-v314.js.
+- The four selected machines are each installed at 10 target stores by exact current-name match.
+- Researched 4 actual machines only.
+
+Web-audited machines: 4
+
+1. スマスロ リコリス・リコイル
+   - CZ interval ceiling: 600G -> CZ; reset/AT-run-through: 250G -> CZ
+   - Normal AT interval ceiling: 850G+alpha -> AT + V-stock lottery
+   - Reset/AT-run-through: AT interval 600G+alpha -> success-guaranteed CZ
+   - After upper-CZ failure: AT interval 250G+alpha -> success-guaranteed CZ
+   - AT initial hit enters Prologue with 100-medal payout, then Lycoris Rush; AT net increase about 8.4 medals/G
+   - 100 medals is payout, not a fixed minimum final net win; V-stock at the normal AT ceiling is a lottery, not guaranteed
+   - Source:
+     https://nana-press.com/kaiseki/machine/1166/
+
+2. スマスロ 化物語
+   - Game ceiling: 1000G; reset 600G -> AT Kofuku Time + Bai-Bai Chance
+   - If AT has already been won before ceiling completion during CZ, ceiling additionally grants one AT stock
+   - Normal AT Kofuku Time: initial 150 medals, net increase about 2.7 medals/G
+   - Initial 150 medals is an AT starting quota, not a guaranteed final net acquisition amount
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1055/33276/
+     https://nana-press.com/kaiseki/machine/1055/33292/
+
+3. スマスロ 攻殻機動隊
+   - AT interval ceiling: 999G; reset 699G -> AT
+   - CZ interval ceiling: max 550G+alpha; reset 350G+alpha -> CZ
+   - After White Boundary failure: 400G+alpha -> Tachikoma CZ
+   - Main AT S.A.C. Mode: initial 200 medals+alpha, net increase about 4.0 medals/G
+   - CZ ceilings guarantee CZ only; initial 200+alpha is not treated as a fixed minimum final net acquisition
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1096/34844/
+     https://nana-press.com/kaiseki/machine/1096/34858/
+
+4. 真打 吉宗
+   - Max 6-cycle ceiling or CZ interval 1000G -> CZ Akunin Seibai Chance
+   - AT interval 1500G -> AT Kanjin Choaku Rush
+   - Reset shortens AT ceiling to 1000G; after Shin BIG, 700G+alpha -> AT
+   - Main AT: initial 150 medals+alpha, net increase about 2.7 medals/G
+   - Cycle/CZ ceilings do not guarantee AT or payout; initial 150+alpha is not a fixed minimum final net acquisition
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1124/36100/
+     https://nana-press.com/kaiseki/machine/1124/
+     https://nana-press.com/kaiseki/machine/1124/36497/
+
+Schema/UI:
+- No schema or UI changes in this batch.
+- Reused optional fields added in batch46: benefit / minimum / initial / average / benefitSource / payoutChecked.
+- average remains empty unless a reliable published average directly applicable to the displayed scope is confirmed.
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Service Worker: hall-scan-v3.15-r50
+
+QA results:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- installed edge/yutime unique names: 199 (existing project resolver basis; unchanged)
+- benefit-audited installed edge/yutime names: 17 / 199
+- fallback references: 0 (classification/name resolution unchanged from batch48)
+- review references: 0 (classification/name resolution unchanged from batch48)
+- changed strategy records in this batch: exactly 4 intended machines
+- fullrate-data-v314.js unchanged vs batch48: PASS
+- hallscan-v315.js unchanged vs batch48: PASS
+- hallscan-v315.css unchanged vs batch48: PASS
+- 10 factchecked low-rate HTML files unchanged: PASS

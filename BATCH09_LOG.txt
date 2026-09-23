@@ -1,0 +1,51 @@
+HALL SCAN v3.15 batch 09
+Date: 2026-09-21
+Store: 北見ひまわり
+
+Hard limits:
+- stores: 1 / 1
+- new web-reviewed machines: 10 / 10
+- reused/linked machines: 0 / 50
+- edited files: 4 / 6
+- processed machine records: 10 / 60
+
+Reviewed 4-pachi machines:
+1. eタクトオーパス デスティニー -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4808/1/1
+   Note: 遊タイム非搭載。
+2. e 甲鉄城のカバネリ2 輪廻の果報119ver. -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4775/1/116075
+   Note: 遊タイム非搭載。
+3. e一方通行 最狂 -> G数狙いなし
+   Source: https://hisshobon.com/machineinfo/138202/
+   Note: 遊タイム非搭載。
+4. PA愛の不時着 99スイート ver. -> 期待値候補（特殊状態）
+   Source: https://universal-777.com/product/pachinko/ainofujichaku_99/
+   Note: 遊タイム非搭載。ただしRUSH非突入の初当り2連続後は次回初当りでRUSH突入濃厚。液晶「愛の降臨」表示を確認できる台のみ相談候補。
+5. PA清流物語4 ウキウキ79ver. -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4644/1/112254
+   Note: 遊タイム非搭載。
+6. e ぱちんこ押忍！番長 漢の頂 99ver. -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4790/1/1
+   Note: 遊タイム非搭載。
+7. e 化物語 鬼99ver. -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4718/1/114473
+   Note: 遊タイム非搭載。
+8. PF彼女、お借りします LT-Light ver. -> G数狙いなし
+   Source: https://nana-press.com/kaiseki/machine/1083/33210/
+   Note: 遊タイム非搭載。
+9. eゾン100～ゾンビになるまでにしたい100のこと～ -> G数狙いなし
+   Source: https://p.hisshobon.jp/machine/4791/1/1
+   Note: 遊タイム非搭載。
+10. eひきこまり吸血姫の悶々 -> G数狙いなし
+    Source: https://p.hisshobon.jp/machine/4733/1/114752
+    Note: 遊タイム非搭載。CZはG数到達型の遊タイムではない。
+
+Result:
+- 北見ひまわり pachi4 review: 10 -> 0
+- 北見ひまわり slot20 review: 0 -> 0
+- special edge candidate added: PA愛の不時着 99スイート ver.
+
+Protected data:
+- fullrate-data-v314.js unchanged
+- existing HTML files unchanged

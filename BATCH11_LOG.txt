@@ -1,0 +1,42 @@
+HALL SCAN v3.15 batch 11
+Date: 2026-09-21
+Store: マルハン北見店
+Processed: 10 machines (pachi4=10, slot20=0)
+
+Result: all 10 -> G数狙いなし
+1. P真・北斗無双 第4章 下剋上闘
+   Source: https://pachiseven.jp/machines/6819/cutout/16
+2. Pyes！高須クリニック～超整形BLACK～
+   Source: https://www.p-world.co.jp/machine/database/9540
+   Note: 役物機。G数ではなく飛び込み・役物癖・実質スタート率を評価。
+3. Pこの素晴らしい世界に祝福を！199LT「このラッキートリガーに祝福を！」
+   Source: https://nana-press.com/kaiseki/machine/700/19116/
+4. P化物語 199ver.
+   Source: https://pachiseven.jp/machines/6905/cutout/3
+5. P FAIRY TAIL これが七炎竜の力だ
+   Source: https://p.hisshobon.jp/machine/4287/1/101490
+6. P義風堂々!!～兼続と慶次～3 199ver.
+   Source: https://p.hisshobon.jp/machine/list.php?c=1&d=104892&mid=4389&p=2
+7. P江頭2:50inナナシーLT
+   Source: https://nana-press.com/kaiseki/machine/820/24203/
+   Note: C時短抽選はあるが、ハマリG到達型の遊タイムではない。
+8. P FAIRY TAIL 89Ver.
+   Source: https://p.hisshobon.jp/machine/4466/1/107224
+9. Pアナザーゴッドハーデス‐獄炎‐
+   Source: https://hide-expectedvalue.com/2025/8056/patinko/
+10. デジハネP頭文字D せかんど
+    Source: https://p.hisshobon.jp/machine/4581/1/110613
+
+Result counts:
+- マルハン北見店 pachi4 review: 14 -> 4
+- マルハン北見店 slot20 review: remains 1
+
+Batch limits used:
+- stores: 1/1
+- new web analyses: 10/10
+- edited files: 4/6 (machine-strategy-v315.js, sw.js, README.md, BATCH11_LOG.txt)
+- machine records: 10/60
+
+Protected data:
+- fullrate-data-v314.js unchanged
+- existing HTML files unchanged

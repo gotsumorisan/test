@@ -1,0 +1,67 @@
+HALL SCAN v3.15 batch42
+Date: 2026-09-21
+Purpose: numeric consultation-line audit, 4 machines per user instruction
+
+Web-audited strategies: 4
+1. スマスロ 秘宝伝
+   - BIG after +2,000 yen guide: equal 550G+ / 5.6 600G+
+   - REG after +2,000 yen guide: equal 400G+ / 5.6 450G+
+   - Confirmed reset +2,000 yen guide: equal 300G+ / 5.6 350G+
+   - Ceilings: BIG 799G+alpha / REG 649G+alpha / reset 499G+alpha
+   - Data-counter warning retained: 2-credit high-probability play can cause a display/real-G mismatch on 3-credit-per-G counters
+   - Source: https://nana-press.com/kaiseki/machine/1074/33800/
+2. スマスロネオプラネット
+   - Normal +2,000 yen guide: equal 600G+ / 5.6 650G+
+   - Confirmed reset +2,000 yen guide: equal 350G+ / 5.6 400G+
+   - Ceiling: normal 777G / reset 500G
+   - Libra constellation (てんびん座) = mode C strong/confirmed is kept as a separate state check; no unsupported fixed yen conversion
+   - Source: https://nana-press.com/kaiseki/machine/1030/33067/
+3. スマスロバジリスク～甲賀忍法帖～絆2 天膳 BLACK EDITION
+   - BC-interval 300G+ is +2,000 yen guide for both equal and 5.6 (published table: +2545 / +2155)
+   - BC ceiling 333G+alpha; max 7 BC skips -> 8th BC gives BT
+   - 3 BC skips+ remains a separate published target, but is not labelled a fixed +2,000-yen line
+   - Reset gives BC-skip-ceiling preference but no fixed skip count was invented
+   - Source: https://nana-press.com/kaiseki/machine/666/18317/
+4. スマスロ痛いのは嫌なので防御力に極振りしたいと思います。
+   - Normal 550G+ numericized as a strong consultation line because published setting-1 machine rate is 105%+
+   - 350G+ is published as setting-1 machine rate 100%+
+   - 150G / 300G CZ zones and 450G after both zones miss are separate consultation conditions
+   - Reset ceiling: 450G+alpha (70%) or 650G+alpha (30%); short ceiling continues while post-reset first hits remain single
+   - No major-analysis exchange-specific +2,000-yen table was confirmed, so no such fixed threshold was invented
+   - Source: https://nana-press.com/kaiseki/machine/764/21884/
+
+Affected normal-rate installation records: 15
+- スマスロ 秘宝伝: 4
+- スマスロネオプラネット: 2
+- スマスロバジリスク～甲賀忍法帖～絆2 天膳 BLACK EDITION: 7
+- スマスロ痛いのは嫌なので防御力に極振りしたいと思います。: 2
+
+Numericization progress:
+- edge/yutime strategies with zero numeric token in target: 16 -> 12
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Safety:
+- Consultation line remains screening only; it is not an automatic seating line.
+- HALL SCAN +2,000-yen preference was used only where published expectation tables directly support it.
+- BOFURI did not receive an invented +2,000-yen line; its 550G figure is explicitly machine-rate based.
+- Reset/shortened conditions require actual evidence and are not assumed.
+
+Service Worker: hall-scan-v3.15-r43
+
+QA
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- fallback: 0 / review: 0
+- classification: no-g 837 / yutime 90 / edge 554 / setting 208
+- changed central strategies vs batch41: exactly 4
+- aliases unchanged: PASS
+- remaining zero-numeric edge/yutime targets: 12
+- fullrate-data-v314.js / hallscan-v315.js / hallscan-v315.css unchanged vs batch41: PASS

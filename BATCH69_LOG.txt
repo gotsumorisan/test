@@ -1,0 +1,68 @@
+HALL SCAN v3.15 batch69
+Date: 2026-09-22
+Base: batch68
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) パチスロ ガメラ2
+   - No game-count ceiling.
+   - BIG-end Gamera lamp stays lit for 30G; if a bonus is won during the lamp period, BIG is strongly expected.
+   - Twilight stage raises battle-win expectation when battle develops.
+   - BIG: JAC 5+alpha guaranteed, average about 560 coins. REG: JAC 1, average about 90 coins.
+   - No ceiling-arrival minimum payout exists.
+   - Sources: https://nana-press.com/kaiseki/machine/695/19833/ , https://nana-press.com/kaiseki/machine/695/19839/ , https://nana-press.com/kaiseki/machine/695/19840/
+
+2) P戦国乙女6～暁の関ヶ原～甘デジ
+   - After 777 low-probability spins, including post-jackpot time-short spins when applicable, Yu-Time starts: 171 time-short spins.
+   - Arrival itself pays 0 balls; time-short is not the same as an immediate jackpot.
+   - Jackpot payout design: 200-1000 balls.
+   - Source: https://www.p-world.co.jp/machine/database/9377
+
+3) PAひぐらしのなく頃に 輪廻転生99Ver.
+   - After 199 low-probability spins, Yu-Time / True Tragedy RUSH continues effectively until the next jackpot.
+   - Arrival itself pays 0 balls.
+   - Jackpot payout: 4R about 360 balls / 10R about 900 balls; these are jackpot payouts, not Yu-Time initial balls.
+   - Source: https://www.p-world.co.jp/machine/database/10222
+
+4) PA元祖ギンギラパラダイス 強99ver.
+   - After 250 low-probability spins, including post-jackpot time-short spins, Yu-Time / Gingira Time starts: 379 time-short spins.
+   - Arrival itself pays 0 balls and does not itself guarantee a jackpot.
+   - Jackpot payout: 5R about 450 balls / 10R about 900 balls.
+   - Source: https://www.p-world.co.jp/machine/database/9813
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r70
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 97 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 97 / 199
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch68: PASS

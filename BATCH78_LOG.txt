@@ -1,0 +1,87 @@
+HALL SCAN v3.15 batch78
+Date: 2026-09-22
+Base: batch77 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining live candidates were 1-store installations, so selection prioritized multi-ceiling / multi-counter complexity and the loss risk of confusing a CZ threshold with an AT guarantee.
+- Project tracker remains on inherited 199-machine basis: 129 -> 133 / 199; remaining 66. No denominator reconciliation in this batch.
+
+Selected / audited machines:
+1) パチスロ戦国乙女 暁の関ヶ原-DARKNESS-
+   - Store: オーロラ北見店
+   - CZ ceiling: 634G -> CZ「戦国モード」. AT is not guaranteed by this ceiling.
+   - AT ceiling: 969G + premonition -> AT「乙女ラッシュ」.
+   - Setting change can select 634/969G, 300/635G, or 100/435G CZ/AT ceiling pairs.
+   - AT starts with an initial-game add-on feature; its result becomes the AT initial game count. Pure increase about 2.2 medals/G. Do not calculate a fixed minimum payout from game count × pure increase.
+   - Sources: https://nana-press.com/kaiseki/machine/157/6385/ ; https://nana-press.com/kaiseki/machine/157/5923/ ; https://nana-press.com/kaiseki/machine/157/5929/ ; https://hazuse.com/machine/pachislot/1S1071/genre/207/
+
+2) パチスロ バイオハザード7 レジデント イービル
+   - Store: オーロラ北見店
+   - Mode ceilings: Normal A 753G / B 603G / C 503G / Heaven 153G+α -> CZ「クライマックスバトル」.
+   - Game ceiling guarantees CZ only, not AT, so direct payout guarantee at ceiling is 0 medals.
+   - CZ is a two-stage battle: 1st 15G, 2nd 7G. Both must be cleared for AT.
+   - AT「ハザードラッシュ」 is a game-add-on AT with pure increase about 5.0 medals/G; initial games are decided by an entry feature.
+   - Sources: https://nana-press.com/kaiseki/machine/105/2580/ ; https://nana-press.com/kaiseki/machine/105/2478/ ; https://nana-press.com/kaiseki/machine/105/2479/
+
+3) ボンバーガール
+   - Store: オーロラ北見店
+   - Chance-interval ceiling: 460G+α from CZ / bonus / AT -> AT「ボンバータイム」.
+   - Bonus-interval ceiling: 960G+α from bonus / AT -> AT「ボンバータイム」.
+   - The two counters have different reset triggers and must not be merged.
+   - AT is 100G+α per set; pure increase about 0.7 medals/G, or about 2.5 medals/G during Rush Time. No fixed minimum medal payout is created from these values.
+   - Sources: https://nana-press.com/kaiseki/machine/408/10951/ ; https://nana-press.com/kaiseki/machine/408/11082/
+
+4) 新世紀エヴァンゲリオン ～魂の共鳴～
+   - Store: オーロラ北見店
+   - Game-count ceilings: 222 / 333 / 666G, with 700G as premium ceiling -> bonus (AT). Basic maximum is 666G.
+   - CZ「ゼルエル決戦」 max 5 misses -> next bonus (AT).
+   - AT first hit can be 暴走ボーナス (30G, pure increase about 3.4 medals/G) or 覚醒ボーナス (initial 100 medals + two Longinus Spear add-on guarantees, expected about 560 medals including the bonus).
+   - The ~560 medals is an expected/average figure, not a ceiling minimum guarantee.
+   - Sources: https://nana-press.com/kaiseki/machine/285/7573/ ; https://nana-press.com/kaiseki/machine/285/7581/ ; https://nana-press.com/kaiseki/machine/285/7582/
+
+Edited strategy records only:
+- ぱちすろ戦国乙女暁の関ゖ原darkness
+- ぱちすろばいおはざーど7れじでんといーびる
+- ぼんばがる
+- 新世紀えゔぁんげりおん~魂の共鳴~
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r79
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 133 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch77
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards
+- Service Worker revision r79
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 133 / 199 (project tracker basis; remaining 66)
+- payoutChecked strategy records in current strategy DB: 133
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch77: PASS
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards: PASS
+- Service Worker revision: hall-scan-v3.15-r79 PASS
+- current live unaudited edge/yutime strategies after batch78: 61. This live count is informational only and does not alter the inherited 199-machine project tracker.

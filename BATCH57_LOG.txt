@@ -1,0 +1,61 @@
+HALL SCAN v3.15 batch57
+Date: 2026-09-22
+Base: batch56
+
+Scope:
+- Ceiling benefit / minimum guarantee caution / initial payout or AT structure audit.
+- Exactly 4 machines.
+
+Machines:
+1. PA大海物語5 Withアグネス・ラム
+   - Low-probability 299G -> Yutime: 379-game time-short.
+   - Yutime entry itself pays 0 balls; big-hit expectation about 97.8%, not 100%.
+   - Big-hit payouts: 4R about 432 / 6R about 648 / 10R about 1080 balls (payout basis).
+   - Sources: https://www.p-world.co.jp/machine/database/9833 , https://nana-press.com/kaiseki/machine/567/14611/
+
+2. P宇宙戦艦ヤマト2202 ‐ONLY ONE‐ LIGHT Ver.
+   - Low-probability 255G -> Yutime: one time-short game in Chou-Hadou RUSH.
+   - Right-side effective hit rate is 1/1, so next hit is effectively expected.
+   - Yutime entry itself pays 0 balls; big-hit payouts range from about 140 balls (2R) to about 700 balls (10R).
+   - Source: https://www.p-world.co.jp/machine/database/9791
+
+3. スマスロ 東京リベンジャーズ
+   - 1190G+alpha -> AT. After 4 Tokyo Manji Chance skips, next first hit -> AT.
+   - Max 6-cycle ceiling -> Tokyo Manji Chance OR AT; cycle ceiling alone does not guarantee AT or payout.
+   - Main AT starts at 150 medals or more, net about 3.2 medals/G. Initial difference is not a final minimum payout guarantee.
+   - Sources: https://nana-press.com/kaiseki/machine/1014/31676/ , https://nana-press.com/kaiseki/machine/1014/31699/
+
+4. パチスロ 炎炎ノ消防隊
+   - Normal max 850G+alpha / reset max 650G+alpha -> first-hit bonus.
+   - Ceiling does not guarantee Enen Gekitou.
+   - Enen Bonus: 40G, net about 5.0 medals/G, about 200 medals. REG: 10 bell navigations, about 75 medals.
+   - Approximate bonus outputs are not recorded as a fixed minimum ceiling payout guarantee.
+   - Sources: https://nana-press.com/kaiseki/machine/526/14736/ , https://nana-press.com/kaiseki/machine/526/14746/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r58
+
+QA:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 49 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged vs batch56: PASS
+- fullrate-data-v314.js unchanged vs batch56: PASS
+- hallscan-v315.js unchanged vs batch56: PASS
+- hallscan-v315.css unchanged vs batch56: PASS
+- factchecked low-rate HTML unchanged vs batch56: PASS

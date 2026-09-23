@@ -1,0 +1,81 @@
+HALL SCAN v3.15 batch63
+Date: 2026-09-22
+Base: batch62
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) L 無職転生 ～異世界行ったら本気だす～
+   - Bonus ceiling: max 19 stage changes -> bonus; AT is not guaranteed.
+   - AT ceiling: 40 stage changes -> Episode Bonus, AT highly likely/confirmed by analysis wording.
+   - Regular initial bonus structures are approx.50 or 70 coins depending on type; not treated as fixed final net-difference guarantees.
+   - Normal AT: 30G/set, approx.2.8 coins/G; average 5.7 sets is an average, not a guarantee.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1058/33836/
+     https://nana-press.com/kaiseki/machine/1058/33849/
+     https://nana-press.com/kaiseki/machine/1058/33850/
+     https://nana-press.com/kaiseki/machine/1058/33851/
+     https://nana-press.com/kaiseki/machine/1058/33854/
+
+2) Lアクダマドライブ
+   - Game ceiling: max 967G+alpha / shortened max 589G+alpha -> bonus; AT is not guaranteed.
+   - Bonus-through ceiling: max 6 misses -> next bonus upgrades to Episode Bonus, AT highly likely.
+   - Akudama Bonus: 8 bell navigations, average approx.90 coins, approx.7.1 coins/G; average is not a minimum final net guarantee.
+   - AT: first round 30G+alpha, later rounds 20G+alpha, approx.7.1 coins/G.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1109/36234/
+     https://nana-press.com/kaiseki/machine/1109/36247/
+     https://nana-press.com/kaiseki/machine/1109/36250/
+
+3) Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE
+   - CZ ceiling: 800G+alpha / reset 400G+alpha -> CZ only.
+   - AT ceiling: 1400 LCD G+alpha / reset 1000 LCD G+alpha -> AT.
+   - 6 CZ misses -> next successful CZ gives bonus (= AT).
+   - CZ ceiling direct output guarantee: 0 coins.
+   - Initial bonus approx.100 coins; normal AT initial 20G, approx.2.0 coins/G, starts with one AT stock.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1123/36306/
+     https://nana-press.com/kaiseki/machine/1123/
+
+4) Pギンギラパラダイス 夢幻カーニバル 199ver.
+   - 599 spins since last jackpot -> Yutime, 759 time-shortening spins.
+   - Direct output at Yutime entry: 0 balls.
+   - Jackpot payout 430-1270 balls is payout after a hit, not minimum balls guaranteed by reaching Yutime.
+   - Source:
+     https://www.p-world.co.jp/machine/database/9360
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r64
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 73 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208 (type fields unchanged)
+- benefit-audited strategy records: 73 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch62: PASS
+- batch62 base SHA256 verified: af707614e2cd92880ad3f24a9770fafa37f806131149e5c2cb92272d4b95d697

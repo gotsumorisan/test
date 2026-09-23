@@ -1,0 +1,49 @@
+HALL SCAN v3.15 BATCH35 LOG
+Date: 2026-09-21
+Scope: 店舗別交換条件表示 第12店舗（1店舗のみ）
+
+Target store
+- オーロラ北見店
+
+Verified current lending information
+- P-WORLD current listing (last updated 2026-09-20):
+  - 20スロ: 1000円/46枚
+  - パチンコ: 1000円/890玉 / 1000円/5000玉
+  - 現行4円パチンコ掲載なし
+
+External exchange information
+- みんパチ現行表:
+  - 21.73円スロ: 5.2枚交換（1000円分の景品=52枚相当）
+- 交換率は店舗公式公表ではなく外部1ソースのため「非公式・要確認」として保持。
+
+UI behavior
+- オーロラ北見店の通常20スロ欄に店舗交換条件を表示。
+- 52枚交換専用の公開期待値がない機種は56枚交換側を「この店で使う暫定基準（安全側）」として表示。
+- 52枚専用ラインを補間・推定しない。
+- 現行4円パチンコがないためpachiExchangeProfileは追加しない。
+- 最終A/B/C/Dでは当日の交換条件を確認する。
+
+Protected data
+- 設置機種リスト変更なし。
+- machine-strategy-v315.js変更なし。
+- 低貸データ変更なし。
+
+Files edited
+- fullrate-data-v314.js（オーロラ北見店の交換メタデータのみ）
+- sw.js
+- README.md
+- BATCH35_LOG.txt
+
+Service Worker
+- hall-scan-v3.15-r36
+
+BATCH35 QA
+- node --check fullrate-data-v314.js: PASS
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- Full-rate records: 1689 (4p 929 / 20s 760)
+- Changed store record: kitami:aurora only
+- Aurora current normal-rate registration: 4p 0 / 20s 100
+- Protected strategy/UI/low-rate factchecked data: unchanged
+- Service Worker CORE refs: 61 / missing 0

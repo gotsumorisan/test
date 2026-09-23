@@ -1,0 +1,25 @@
+HALL SCAN v3.15 batch 03
+Date: 2026-09-21
+Store: パーラー太陽 山下通店
+New web-audited machines: 10
+Recovered prior confirmed batch02 classifications: 10 (existing confirmed data reuse)
+Files changed this batch: machine-strategy-v315.js, sw.js, README.md, BATCH03_LOG.txt
+
+Batch03 audited:
+1. 新世紀エヴァンゲリオン～シト、新生～PREMIUM MODEL -> G数狙いなし
+2. Pビッグドリーム3 77ver. -> G数狙いなし
+3. PFブルーロック Light ver. -> G数狙いなし
+4. P Re:ゼロから始める異世界生活 鬼がかり 199ver. -> G数狙いなし
+5. PF戦姫絶唱シンフォギア（甘デジ） -> 遊タイム
+6. P緋弾のアリア ～緋緋神降臨～ ラッキートリガーVer. -> G数狙いなし
+7. Pギルティクラウン2 -> G数狙いなし
+8. P 百花繚乱 -> G数狙いなし
+9. P ToLOVEるダークネス 199ver. -> G数狙いなし
+10. ぱちんこ GANTZ覚醒 RUSH180 -> G数狙いなし
+
+Hard limits:
+- Stores: 1/1
+- New web-audited machines: 10/10 (STOP)
+- Existing confirmed data reused: 10/50
+- Machine records processed: 20/60
+- Files edited/created: 4/6

@@ -1,0 +1,114 @@
+HALL SCAN v3.15 batch74
+Date: 2026-09-22
+Base: batch73 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining current live candidates were still 1-store installations, so selection prioritized practical encounter likelihood, multi-ceiling/counter complexity, and loss risk from misreading the benefit.
+- Project tracker remains on inherited 199-machine basis: 113 -> 117 / 199; remaining 82. Current live resolvable edge/yutime total differs from that inherited tracker, and no denominator reconciliation was performed in this batch.
+
+Selected / audited machines:
+1) 押忍！番長4
+   - Store: オーロラ北見店
+   - Game ceiling: 699G+alpha in the bonus interval -> 番長ボーナス.
+   - Training ceiling: mode-dependent max 249G -> 特訓 only; not a direct payout trigger.
+   - AT skip ceiling: rescue points MAX / normally max 9 skips then 10th bonus -> AT 頂RISE, with initial AT stage improved. Reset shortens this to max 6 skips then 7th bonus.
+   - 番長ボーナス: 30G+alpha, pure increase about 2.7 medals/G. AT 頂RISE: initial 50G+alpha, pure increase about 2.7 medals/G.
+   - Do not convert G x pure-increase into a fixed minimum medal guarantee.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/736/20456/
+     https://nana-press.com/kaiseki/machine/736/20466/
+     https://nana-press.com/kaiseki/machine/736/20468/
+     https://1geki.jp/slot/l_osu_bancho4/
+
+2) スマスロ とある魔術の禁書目録
+   - Store: オーロラ北見店
+   - Mode ceilings: A/B 999G, Chance A 600G, Chance B 200G.
+   - Benefit: win-guaranteed CZ BREAK BATTLE -> AT 幻想殺しRUSH.
+   - AT pure increase about 2.7 medals/G; initial差枚 is decided by 幻想BURST.
+   - Published 幻想BURST character-specific average additions range from about 190 to 1000 medals; these are averages by character, not a fixed minimum and not a single overall AT average.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/608/17550/
+     https://nana-press.com/kaiseki/machine/608/17561/
+     https://nana-press.com/kaiseki/machine/608/
+
+3) スマスロ バイオハザード ヴィレッジ
+   - Store: オーロラ北見店
+   - Mode ceilings: normal A 750G / B 650G / C 600G / heaven 150G / reset 550G.
+   - Benefit: first hit; usually CLIMAX BATTLE, rarely direct AT HAZARD RUSH.
+   - CLIMAX BATTLE: 22G (15G episode + 7G CLIMAX7), AT breakthrough expectation about 63%, so game ceiling does not guarantee AT.
+   - AT begins through SHOOTING ATTACK; average initial G addition about 100G. HAZARD RUSH pure increase about 2.5 medals/G, average acquisition about 607 medals (setting 1).
+   - Average values are not minimum guarantees; do not derive a fixed minimum from battle G or pure increase.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/661/18439/
+     https://nana-press.com/kaiseki/machine/661/18447/
+     https://nana-press.com/kaiseki/machine/661/18448/
+     https://nana-press.com/kaiseki/machine/661/18449/
+     https://1geki.jp/slot/l_biovillage/
+
+4) パチスロ 革命機ヴァルヴレイヴ
+   - Store: ロイヤル北見店
+   - Four ceiling systems kept separate:
+     * CZ interval: mode-dependent max about 1000G+alpha -> 共闘Vチャレンジ only.
+     * Bonus & AT interval: about 1500G+alpha -> 革命ボーナス or 決戦ボーナス.
+     * Max 7 CZ skips -> next CZ success guaranteed.
+     * 4 consecutive 決戦ボーナス -> next bonus is 革命ボーナス.
+   - CZ ceiling has direct payout guarantee 0 because it only reaches CZ.
+   - Bonus-interval ceiling does not guarantee AT. 革命ボーナス averages about 470 medals / 決戦ボーナス about 110 medals; these are averages, not fixed minimums.
+   - 革命ボーナス: 50G+alpha, pure increase about 7.2 medals/G, AT expectation about 55%. 決戦: 8 bell-navigations + battle, about 35%. 革命RUSH: 10-100G+alpha, about 7.2 medals/G, continuation about 77%.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/463/12532/
+     https://nana-press.com/kaiseki/machine/463/12535/
+     https://nana-press.com/kaiseki/machine/463/12536/
+     https://nana-press.com/kaiseki/machine/463/12537/
+
+Edited strategy records only:
+- 押忍番長4
+- すますろとある魔術の禁書目録
+- すますろばいおはざーどゔぃれっじ
+- ぱちすろ革命機ゔぁるゔれいゔ
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r75
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 117 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch73
+- benefit/minimum/initial fields present on all 4 audited strategy cards
+- average field present where published average figures are useful (とある / バイオヴィレッジ / ヴァルヴレイヴ)
+- Service Worker revision r75
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 117 / 199 (project tracker basis; remaining 82)
+- payoutChecked strategy records in current strategy DB: 117
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch73: PASS (directory diff shows only strategy / README / sw.js / new BATCH74_LOG)
+- benefit/minimum/initial fields present on all 4 audited strategy cards: PASS
+- average field present for とある / バイオヴィレッジ / ヴァルヴレイヴ: PASS
+- Service Worker revision: hall-scan-v3.15-r75 PASS
+- current live unaudited edge/yutime strategies after batch74: 77; all have max store coverage 1. This live count is informational only and does not alter the inherited 199-machine project tracker.

@@ -1,0 +1,68 @@
+HALL SCAN v3.15 batch43
+Date: 2026-09-21
+Purpose: numeric consultation-line audit, 4 machines per user instruction
+
+Web-audited strategies: 4
+1. スマスロ頭文字D 2nd
+   - Normal +2,000 yen guide: equal 450G+ / 5.6 450G+
+   - Confirmed 299G-short ceiling +2,000 yen guide: equal 150G+ / 5.6 200G+
+   - Normal ceiling: max 599G+alpha -> LB; next game-count ceiling shortens to 299G+alpha
+   - LB skip ceiling: 6 skips -> 7th LB gives AT; 4 skips+ is a strong separate consultation condition
+   - Source: https://nana-press.com/kaiseki/machine/818/24489/
+2. スロット ワールドダイスター
+   - Normal +2,000 yen guide from published provisional EV table: equal 650G+ / 5.6 750G+
+   - Confirmed 600G-short ceiling +2,000 yen guide: equal 350G+ / 5.6 400G+
+   - Normal ceiling 999 real G+alpha; 600G+alpha after setting change, upper ST, or Nostalgia mode
+   - Not every lucky mode shortens the ceiling; Nostalgia is the relevant lucky-mode condition
+   - Source: https://nana-press.com/kaiseki/machine/1177/
+3. パチスロ かぐや様は告らせたい
+   - BIG after +2,000 yen guide: equal 650G+ / 5.6 750G+
+   - REG after +2,000 yen guide: equal 500G+ / 5.6 600G+
+   - Confirmed reset +2,000 yen guide: equal 400G+ / 5.6 500G+
+   - Normal CZ skip consultation: 5 skips+; max normal ceiling is 7 skips -> 8th CZ BIG+
+   - Confirmed setting change: max 4 CZ skips -> 5th CZ BIG+
+   - Source: https://nana-press.com/kaiseki/machine/804/23721/
+4. パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2
+   - Numeric consultation line: bonus/CZ interval 400G+
+   - Major-analysis source still has no published fixed +2,000-yen EV table; 400G is a secondary-guide consultation line only, not an automatic seating line
+   - Ceiling: bonus/CZ interval 555G+alpha -> CZ
+   - Familia Bonus resets ceiling count 50% of the time; Familia Chance carries it over
+   - Exact interval should be checked on the menu screen
+   - Primary ceiling reference: https://nana-press.com/kaiseki/machine/728/20947/
+   - Numeric secondary reference: https://ichikatsu.com/danmachi2/
+
+Affected normal-rate installation records: 14
+- スマスロ頭文字D 2nd: 1
+- スロット ワールドダイスター: 5
+- パチスロ かぐや様は告らせたい: 6
+- パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2: 2
+
+Numericization progress:
+- edge/yutime strategies with zero numeric token in target: 12 -> 8
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Safety:
+- Consultation line remains screening only; it is not an automatic seating line.
+- +2,000-yen thresholds were used only where a published EV table directly supported them.
+- Danmachi 2 did not receive an invented +2,000-yen threshold; its 400G figure is explicitly a secondary consultation line.
+- Reset/shortened conditions require actual evidence and are not assumed.
+
+Service Worker: hall-scan-v3.15-r44
+
+QA
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- fallback: 0 / review: 0
+- classification: no-g 837 / yutime 90 / edge 554 / setting 208
+- changed central strategies vs batch42: exactly 4
+- aliases unchanged: PASS
+- remaining zero-numeric edge/yutime targets: 8
+- fullrate-data-v314.js / hallscan-v315.js / hallscan-v315.css unchanged vs batch42: PASS

@@ -1,0 +1,39 @@
+HALL SCAN v3.15 BATCH37 LOG
+Date: 2026-09-21
+Scope: 店舗別交換条件表示 第14店舗（1店舗のみ）
+
+Target store
+- パーラーダイマン
+
+Verified current lending information
+- P-WORLD current listing:
+  - パチンコ: 4円 / 1円
+  - パチスロ: 1000円/46枚
+  - 4円パチンコ = 1000円/250玉相当
+
+External exchange information
+- みんパチ現行表:
+  - 20円スロット: 5.6枚交換（1000円分の景品=56枚相当）
+  - 4円パチンコ: 28玉交換
+- 交換率は店舗公式公表ではなく外部1ソースのため、非公式・要確認として保持。
+
+UI behavior
+- パーラーダイマンの通常20スロ欄に店舗交換条件を表示。
+- 外部掲載56枚交換と公開期待値の56枚条件が一致するため「この店で使う暫定基準」と表示。
+- 52枚交換店舗のような「安全側」ラベルは付けない。
+- 4パチは28玉交換注記のみ。回転率と交換条件を組み合わせた期待値自動計算は未実装。
+- 最終A/B/C/Dでは当日の交換条件を再確認する。
+
+Protected data
+- 設置機種リスト変更なし。
+- machine-strategy-v315.js変更なし。
+- 低貸データ変更なし。
+
+Files edited
+- fullrate-data-v314.js（パーラーダイマンの交換メタデータのみ）
+- sw.js
+- README.md
+- BATCH37_LOG.txt
+
+Service Worker
+- hall-scan-v3.15-r38

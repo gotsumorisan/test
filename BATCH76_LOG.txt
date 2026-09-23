@@ -1,0 +1,88 @@
+HALL SCAN v3.15 batch76
+Date: 2026-09-22
+Base: batch75 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining current live candidates were 1-store installations, so selection prioritized practical encounter likelihood, multi-ceiling/mode complexity, and loss risk from confusing a CZ/bonus ceiling with an AT guarantee.
+- Project tracker remains on inherited 199-machine basis: 121 -> 125 / 199; remaining 74. No denominator reconciliation in this batch.
+
+Selected / audited machines:
+1) スマスロ 鬼武者3
+   - Store: パーラーダイマン
+   - Mode ceilings: A 1350G+α / B 950G+α / C 750G+α / D 450G+α / heaven-family 128G+α; reset mode 700G+α.
+   - Ceiling benefit: bonus (REG or better); 1000G+ hammers result in SUPER BIG.
+   - Published acquisition guides: SUPER BIG about 711 medals / BIG about 318 / REG about 104. These are not final-net minimum guarantees.
+   - Sources: https://nana-press.com/kaiseki/machine/828/24473/ ; https://www.p-world.co.jp/machine/database/10104 ; https://nana-press.com/post/1622057
+
+2) スマスロ交響詩篇エウレカセブン4 HI-EVOLUTION
+   - Store: パチンコパーラー東和 北見店
+   - Game ceiling: max 999G+α -> AT.
+   - WAVE ceiling: max 1550WAVE -> episode bonus + AT + Aerial Chance; reset max 950WAVE.
+   - AT starts 50G+α, pure increase about 2.1 medals/G. Episode bonus 25G, pure increase about 4.5 medals/G.
+   - Do not convert game-count × pure-increase into a fixed minimum payout.
+   - Sources: https://nana-press.com/kaiseki/machine/741/21204/ ; https://nana-press.com/kaiseki/machine/741/21218/ ; https://www.p-world.co.jp/machine/database/10011
+
+3) スロット ソードアート・オンライン
+   - Store: オーロラ北見店
+   - CZ interval 400G -> CZ only.
+   - Bonus interval 999G then next CZ -> bonus. Max 6 CZ failures -> next (7th) CZ -> bonus.
+   - First boss-battle loss shortens bonus reach to within max 3 CZ failures.
+   - SAO bonus 20G, pure increase about 2.5 medals/G and requires boss-battle win for AT; episode bonus 40G, pure increase about 2.5 medals/G and grants AT.
+   - Sources: https://nana-press.com/kaiseki/machine/490/14838/ ; https://nana-press.com/kaiseki/machine/490/14844/ ; https://nana-press.com/kaiseki/machine/490/14845/
+
+4) パチスロ盾の勇者の成り上がり
+   - Store: オーロラ北見店
+   - Other/normal: 1173G+α -> AT with 10G base ST.
+   - Setting change: 800G+α -> AT with 10G base ST.
+   - Continued advantageous section: 800G+α -> AT with 5G base ST.
+   - AT pure increase about 2.6 medals/G; base ST normally 5G+α; average loop about 80%.
+   - ST game count / average loop rate are not a fixed minimum medal guarantee.
+   - Sources: https://nana-press.com/kaiseki/machine/500/13694/ ; https://nana-press.com/kaiseki/machine/500/13701/ ; https://www.p-world.co.jp/machine/database/9771
+
+Edited strategy records only:
+- すますろ鬼武者3
+- すますろ交響詩篇えうれかせぶん4hievolution
+- すろっとそーどあーとおんらいん
+- ぱちすろ盾の勇者の成り上がり
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r77
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 125 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch75
+- benefit/minimum/initial fields present on all 4 audited strategy cards
+- Service Worker revision r77
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 125 / 199 (project tracker basis; remaining 74)
+- payoutChecked strategy records in current strategy DB: 125
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch75: PASS (directory diff shows only strategy / README / sw.js / new BATCH76_LOG)
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards: PASS
+- average field used only where a published average is useful (鬼武者3 / 盾の勇者)
+- Service Worker revision: hall-scan-v3.15-r77 PASS
+- current live unaudited edge/yutime strategies after batch76: 69; all prior remaining coverage was 1 store. This live count is informational only and does not alter the inherited 199-machine project tracker.

@@ -1,0 +1,65 @@
+HALL SCAN v3.15 batch58
+Date: 2026-09-22
+Base: batch57
+
+Scope:
+- Ceiling benefit / minimum guarantee caution / initial payout or AT structure audit.
+- Exactly 4 machines.
+
+Machines:
+1. L ULTRAMAN 最終決戦
+   - AT ceiling: 1500G+alpha (reset 1000G+alpha) -> AT "Ultra Rush".
+   - CZ ceiling: 700G+alpha (reset 500G+alpha) -> CZ only; AT/payout not guaranteed.
+   - AT structure: 40G+alpha, net about 7.0 medals/G.
+   - Do not convert 40G x net rate into a fixed minimum payout guarantee.
+   - Sources: https://nana-press.com/kaiseki/machine/1195/37660/ , https://nana-press.com/kaiseki/machine/1195/37670/
+
+2. PA大海物語Withアグネス・ラム Premium Edition
+   - Low-probability 239G -> Premium Yutime: 10,000-game time-short.
+   - Hit expectation during Yutime: about 99.9%; this is not a 100% guarantee.
+   - Yutime entry itself pays 0 balls.
+   - Big-hit payouts: 4R about 432 / 6R about 648 / 10R about 1080 balls (payout basis).
+   - Source: https://www.p-world.co.jp/machine/database/10511
+
+3. アニマルスロットドッチ
+   - BIG/ST end +999G or REG end +499G -> BIG.
+   - Jungle Bonus interval 2500G (normal + ST combined) -> BIG + 3 gold tickets + Jungle Bonus.
+   - BIG: 50-medal set x 2-6 sets, about 100-300 medals + CZ, net about 2.5 medals/G.
+   - The 100-300 structure is not labeled as a final net minimum guarantee at ceiling.
+   - Sources: https://nana-press.com/kaiseki/machine/1126/ , https://news.p-world.co.jp/articles/32770/yugitsushin
+
+4. スロット ワールドダイスター
+   - Normal 999G+alpha -> first-hit bonus.
+   - Reset / post-upper-ST / Nostalgia mode -> 600G+alpha ceiling.
+   - Reset 600G ceiling also has Opera-conversion item guaranteed + ST-game item lottery.
+   - First-hit bonus continues to at least 100 medals of payout, net about 8.0 medals/G, then ST (10G+alpha).
+   - 100+ payout is not described as a 100-medal final net guarantee.
+   - Sources: https://p.hisshobon.jp/vpage/2797/1 , https://data.hazuse.com/index.php?genre=209&machine_code=6S0003
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r59
+
+QA:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208 (classification fields unchanged vs batch57)
+- benefit-audited strategy records: 53 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged vs batch57: PASS
+- fullrate-data-v314.js unchanged vs batch57: PASS
+- hallscan-v315.js unchanged vs batch57: PASS
+- hallscan-v315.css unchanged vs batch57: PASS
+- factchecked low-rate HTML unchanged vs batch57: PASS

@@ -1,0 +1,42 @@
+HALL SCAN v3.15 BATCH30 LOG
+Date: 2026-09-21
+Scope: 店舗別交換条件表示 第7店舗（1店舗のみ）
+
+Target store
+- パーラーDAIGORO X
+
+Verified current lending information
+- P-WORLD current listing (last updated 2026-09-20):
+  - 20スロ: 1000円/46枚
+  - 4パチ: 500円/125玉
+  - 低貸パチ: 200円/178玉（今回の通常貸し基準には不使用）
+
+External exchange information
+- みんパチ現行掲載:
+  - 21.73円スロ: 5.2枚交換（1000円分の景品=52枚）
+  - 4円パチンコ: 28玉交換
+- スロマップAI現行掲載:
+  - スロ: 5.2枚
+- 20スロ交換率は外部2ソース一致。ただし店舗公式公表ではないため「非公式」として保持。
+- 4パチ28玉は外部1ソースのため「非公式」として保持。
+
+UI behavior
+- パーラーDAIGORO Xの通常貸し欄に店舗交換条件を表示。
+- 20スロは52枚交換だが、52枚専用の公開期待値がない機種は56枚交換側を「この店で使う暫定基準（安全側）」として表示。
+- 52枚専用ラインを補間・推定しない。
+- 4パチは交換条件を注記するだけで、期待値ラインの自動変換は行わない。
+- 最終A/B/C/Dでは当日の交換条件を確認する。
+
+Protected data
+- 設置機種リスト変更なし。
+- machine-strategy-v315.js変更なし。
+- 低貸データ変更なし。
+
+Files edited
+- fullrate-data-v314.js（パーラーDAIGORO Xの交換メタデータのみ）
+- sw.js
+- README.md
+- BATCH30_LOG.txt
+
+Service Worker
+- hall-scan-v3.15-r31

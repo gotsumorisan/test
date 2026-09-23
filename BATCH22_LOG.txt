@@ -1,0 +1,115 @@
+HALL SCAN v3.15 BATCH22 NUMERIC CONSULTATION-LINE AUDIT LOG
+Date: 2026-09-21
+Scope: normal-rate abstract consultation-line numericization, phase 1 only
+
+New Web audits: 10 / 10 (hard limit reached; batch ends here)
+Processed central strategy records: 10 / 60
+Files edited/created: 4 / 6
+- machine-strategy-v315.js
+- sw.js
+- README.md
+- BATCH22_LOG.txt
+
+Purpose
+Replace beginner-unusable wording such as "深め", "条件が見える台", and "周期深め" with source-supported numeric consultation thresholds. No unsupported number is invented. Consultation line remains a screening line, not an automatic seating line.
+
+Audited / rewritten strategies (10)
+1. スマスロ北斗の拳
+   - Normal: equal 650G+ / 5.6 750G+
+   - Confirmed reset: equal 250G+ / 5.6 350G+
+   - Source: NanaPress machine 514/13775
+
+2. スロット ソードアート・オンラインII
+   - AT interval: equal 650G+ / 5.6 750G+
+   - CZ interval ceiling remains separately tracked at 499 actual G + alpha
+   - Source: NanaPress machine 1158/37243
+
+3. スマスロスーパーブラックジャック
+   - Non-shortened BB interval: 580G+
+   - Confirmed shortened state: 300G+
+   - RB 3 throughs+
+   - Red sub-LCD background: consult regardless of G
+   - Source: Slot Diary super-blackjack-tenjo; ceiling/background details cross-checked with NanaPress
+
+4. 真打 吉宗
+   - Normal: equal 650G+ / 5.6 850G+
+   - Confirmed reset: equal 350G+ / 5.6 500G+
+   - After 真BIG: equal 200G+ / 5.6 300G+
+   - Cycle ceiling hunt: 5th cycle+
+   - Source: NanaPress machine 1124/36100
+
+5. スマスロ 攻殻機動隊
+   - Normal AT interval: equal 450G+ / 5.6 600G+
+   - Confirmed reset: equal 150G+ / 5.6 300G+
+   - CZ ceilings explicitly separated (normal max 550G+alpha / reset 350G+alpha)
+   - Source: NanaPress machine 1096/34845
+
+6. スマスロ 化物語
+   - After AT: equal 600G+ / 5.6 700G+
+   - Confirmed reset: equal 250G+ / 5.6 350G+
+   - Source: NanaPress machine 1055/33276
+
+7. スマスロ マギアレコード 魔法少女まどか☆マギカ外伝
+   - Normal: equal 350G (~525pt)+ / 5.6 400G (~600pt)+
+   - Confirmed reset: equal 200G (~300pt)+ / 5.6 250G (~375pt)+
+   - Source: NanaPress machine 914/28426
+
+8. Lパチスロ 革命機ヴァルヴレイヴ2
+   - Normal: equal 750G+ / 5.6 950G+
+   - Confirmed reset: equal 400G+ / 5.6 550G+
+   - 3 consecutive 決戦ボーナス AT throughs -> next bonus 革命ボーナス濃厚
+   - Source: NanaPress machine 1040/32811
+
+9. Lパチスロ 炎炎ノ消防隊2
+   - Bonus interval normal: equal 500G+ / 5.6 600G+
+   - Confirmed reset: equal 350G+ / 5.6 400G+
+   - 伝導者の罠: consult at 4-5 throughs
+   - Source: NanaPress machine 1088/34533
+
+10. 押忍！番長ZERO
+   - Game-count ceiling hunt: equal 400G+ / 5.6 450G+ (ZERO mode not included)
+   - Source: NanaPress machine 167/7649
+
+Impact
+- These 10 strategies resolve to 104 normal-rate installation records.
+- Central edge/yutime strategies with zero numeric token in target: 45 -> 35.
+- All 1,689 normal-rate installation records still resolve to a strategy; fallback/review remain 0.
+
+Safety / interpretation
+- Published source thresholds are preserved as consultation/screening lines even when the source describes a +1,000-yen or other practical line.
+- HALL SCAN's global rule remains: consultation line != seating line. Final A/B/C/D must re-check today's exchange condition, cash/medal state, remaining time/money and estimated EV; only A may be played.
+- Reset/shortened lines are used only when the condition is confirmed. Unknown is not treated as reset.
+
+Protected / unchanged
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- all low-rate fact-checked HTML
+- store installation/rate data
+
+Service Worker cache:
+- hall-scan-v3.15-r22 -> hall-scan-v3.15-r23
+
+QA after audit
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS (unchanged)
+- node --check sw.js: PASS
+- Stores: 14
+- Full-rate installations: 1,689 (4-pachi 929 / 20-slot 760)
+- strategy resolution fallback: 0
+- installed review: 0
+- installed type counts unchanged: no-g 837 / yutime 90 / edge 554 / setting 208
+- edge/type consistency mismatch: 0
+- numeric-line-audit strategies: 10; affected full-rate installs: 104
+- edge/yutime strategies with no numeric token in target: 45 -> 35
+- Service Worker CORE: 61 / missing 0
+- HTML literal local static refs: missing 0 (template-expression href/src excluded from literal-file check)
+- Representative search.html / stores.html / abashiri.html still reference fullrate-data-v314.js, machine-strategy-v315.js, hallscan-v315.js, hallscan-v315.css
+- Batch21 -> Batch22 changed files only: machine-strategy-v315.js, sw.js, README.md, BATCH22_LOG.txt
+- UI/CSS code was not changed. Existing strategy text containers already use overflow-wrap:anywhere, so longer numeric consultation text remains wrap-safe. Direct Chromium rendering was not re-run in this environment for Batch22; Batch21 representative mobile rendering remains the latest direct render QA.
+
+Remaining work
+- 35 edge/yutime strategies still have no numeric token in the target field.
+- Additional targets still mix numeric values with abstract modifiers such as "深め" / "優先"; these require source-by-source clarification in later batches.
+- Do not invent thresholds. Continue in new batches, max 10 new Web audits per batch.
+- Ceiling payout / minimum-guarantee display is a separate future feature and was not mixed into this batch.

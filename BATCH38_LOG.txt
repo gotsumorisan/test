@@ -1,0 +1,21 @@
+HALL SCAN v3.15 batch38
+Date: 2026-09-21
+Purpose: timeout-safe numeric audit, 2 machines only
+
+Web-audited strategies:
+1. GI優駿倶楽部黄金
+   - +2,000円目安: 等価700G～ / 5.6枚750G～
+   - 5スルー済み -> 次回6回目GⅠボーナスでAT
+   - Source: https://nana-press.com/kaiseki/machine/686/19355/
+2. L ダーリン・イン・ザ・フランキス
+   - 通常 +2,000円目安: 等価500G～ / 5.6枚550G～
+   - リセット確定 +2,000円目安: 等価250G～ / 5.6枚300G～
+   - REG3スルー～は解析上の実戦予想
+   - Source: https://nana-press.com/kaiseki/machine/989/31175/
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- low-rate factchecked HTML
+- store exchange profiles
+
+Service Worker: hall-scan-v3.15-r39

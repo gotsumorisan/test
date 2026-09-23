@@ -1,0 +1,29 @@
+HALL SCAN v3.15 batch 14
+Date: 2026-09-21
+Store: ロイヤル北見店
+Processed: 6 machines (pachi4=6, slot20=0)
+
+1. P絶超電役ドラドラ天国2400-99Ver. -> G数狙いなし
+   Source: https://www.p-world.co.jp/machine/database/9430
+   Note: 一般電役。遊タイムなし。
+2. PLT世界でいちばん強くなりたい！2 -> G数狙いなし
+   Source: https://pachiseven.jp/machines/7156/cutout/16
+   Note: LT搭載だが遊タイム非搭載。
+3. eF戦姫絶唱シンフォギア4 キャロルver. -> G数狙いなし
+   Source: https://nana-press.com/kaiseki/machine/862/25088/
+   Note: 遊タイム・潜伏確変とも非搭載。
+4. P J-RUSH5 HSJ -> 期待値候補（特殊状態）
+   Source: https://nana-press.com/kaiseki/machine/260/6647/
+   Cross-check: https://p-town.dmm.com/machines/4008/shops?prefecture=17
+   Note: 遊タイムなし。電サポ88回終了後は潜伏確変の可能性あり。88回抜けだけでは潜伏確定ではない。
+5. Pうまい棒4500～10500 -> G数狙いなし
+   Source: https://www.p-world.co.jp/machine/database/9449
+   Note: 遊タイムなし。役物機のためハマリGでは狙わない。
+6. Pドラムだ！金ドン 花火外伝 -> G数狙いなし
+   Source: https://nana-press.com/kaiseki/machine/789/22115/
+   Note: LT搭載。一種二種混合機だが遊タイム・潜伏確変は非搭載。
+
+Result: ロイヤル北見店 pachi4 review 6 -> 0; slot20 review 0.
+Batch limits used: stores 1/1; new web analyses 6/10; edited files 4/6; machine records 6/60.
+Protected: fullrate-data-v314.js unchanged; existing low-rate fact-checked data unchanged; existing HTML unchanged.
+Service Worker: v3.15-r15.

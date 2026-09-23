@@ -1,0 +1,88 @@
+HALL SCAN v3.15 batch52
+Date: 2026-09-22
+Purpose: continue ceiling-arrival benefit / payout-information audit, next 4 machines
+
+Selection rule:
+- Continued strictly from batch51.
+- Kept the 4-machine batch cap.
+- Ranked unprocessed installed edge/yutime names by current store coverage in fullrate-data-v314.js.
+- Prioritized the highest-coverage names and practical play relevance.
+- Researched exactly 4 actual machines.
+
+Web-audited machines: 4
+
+1. スマスロ ミリオンゴッド‐神々の軌跡‐
+   - Normal GG ceiling: 1480G+alpha; reset ceiling: 510 / 1000 / 1480G+alpha
+   - Ceiling -> GG + loop-stock additional benefit
+   - GG: 1 set 50G, about 7.0 medals/G, average about 350 medals per set
+   - Average 350 medals is not a fixed minimum net guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1112/35715/
+     https://nana-press.com/kaiseki/machine/1112/35723/
+
+2. L邪神ちゃんドロップキック
+   - Game ceiling: normal 799G / reset 599G -> bonus, not automatic AT
+   - Chance-line max 5-cycle ceiling -> CZ, not AT
+   - Small Devil Bonus: 20G, about 5.0 medals/G, about 100 medals
+   - BIG: 30G, about 5.0 medals/G, about 150 medals
+   - Episode Bonus: 35G, about 5.0 medals/G, AT likely/confirmed by published analysis
+   - Normal AT: initial 50G, about 2.5 medals/G
+   - About 100/150 medals are bonus acquisition guides, not ceiling minimum net guarantees
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1181/38248/
+     https://nana-press.com/kaiseki/machine/1181/38361/
+     https://nana-press.com/kaiseki/machine/1181/38363/
+     https://nana-press.com/kaiseki/machine/1181/
+
+3. 戦国コレクション6
+   - Normal 999G+alpha or max 6 cycles -> AT
+   - Reset cycle ceiling shortened to max 3 cycles
+   - Oni-ga-shima/CZ interval 130G+ then next rare role -> Oni-ga-shima or CZ, not automatic AT
+   - Normal AT: about 3.0 medals/G; first set starts at 100 medals (200 medals for SR direct hit)
+   - Initial 100 medals is a starting difference-medal allocation, not a fixed final net minimum guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1156/37682/
+     https://nana-press.com/kaiseki/machine/1156/
+
+4. スマスロ 新鬼武者3
+   - Game ceiling 1000G+alpha -> AT
+   - Cycle ceiling: normal max 6 cycles / reset max 4 cycles -> AT
+   - Heaven mode -> AT in 1 cycle
+   - Normal AT: first set 40G+alpha, continuation sets 30G+alpha, about 2.5 medals/G
+   - Initial games are not a fixed minimum net acquisition guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1015/32201/
+     https://nana-press.com/kaiseki/machine/1015/32873/
+
+Schema/UI:
+- No schema or UI changes in this batch.
+- Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+- Kept average blank where a directly scoped reliable published average was not appropriate.
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Service Worker: hall-scan-v3.15-r53
+
+QA results:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- installed edge/yutime unique display names: 199
+- benefit-audited installed edge/yutime strategy names: 29 / 199
+- fallback references: 0
+- review references: 0
+- changed strategy records in this batch: exactly 4 intended machines
+- aliases unchanged vs batch51: PASS
+- fullrate-data-v314.js unchanged vs batch51: PASS
+- hallscan-v315.js unchanged vs batch51: PASS
+- hallscan-v315.css unchanged vs batch51: PASS
+- factchecked low-rate HTML files unchanged vs batch51: PASS
+- UI benefit/minimum/initial/average fields remain wired: PASS

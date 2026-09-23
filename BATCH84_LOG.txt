@@ -1,0 +1,66 @@
+HALL SCAN v3.15 batch84
+Date: 2026-09-22
+Baseline: batch83 only
+
+Benefit/payout audit targets (exactly 4):
+1) Sキャッツ・アイ
+   - Store: オーロラ北見店
+   - Ceiling: liquid-crystal normal counter 999G -> AT "キャッツ・タイム"
+   - AT start: 1G "キャッツ・チャレンジ" decides initial G; published table lowest listed result 10G
+   - AT pure increase: about 0.7 medals/G; no G x net-increase conversion to a fixed medal minimum
+   - Bonus averages: HBB about 125 / BB about 104 / CB about 72 medals; bonus averages are separate from ceiling-AT guarantee
+   - Sources: https://1geki.jp/slot/s_cats_eye/3/ ; https://1geki.jp/slot/s_cats_eye/81/ ; https://1geki.jp/slot/s_cats_eye/82/ ; https://nana-press.com/kaiseki/machine/368/
+2) パチスロ ファイヤードリフト
+   - Store: パーラー太陽 山下通店
+   - Ceiling: normal 900G+alpha -> bonus; reset 600G+alpha -> bonus
+   - Reset also performs internal random G addition and mission-high G lottery, so visible G alone is not treated as exact remaining ceiling
+   - 3 consecutive REG -> next bonus BIG or higher likely
+   - Bonus guides: HYPER BIG about 400 / BIG about 245 / REG about 87 medals
+   - Sources: https://nana-press.com/kaiseki/machine/648/18391/ ; https://nana-press.com/kaiseki/machine/648/18400/ ; https://nana-press.com/kaiseki/machine/648/18401/ ; https://nana-press.com/kaiseki/machine/648/18402/ ; https://1geki.jp/slot/s_firedrift/3/
+3) パチスロ鉄拳5
+   - Store: オーロラ北見店
+   - Ceiling: after advantageous-section transition, normal bonus/AT interval 750G+alpha -> AT "鉄拳ラッシュ"
+   - Data counter can show up to about 780G+alpha after bonus because post-bonus prelude is included
+   - If the ceiling is reached while already in a real premonition, "平八無双" is likely
+   - AT: initial 50G+alpha, pure increase about 1.3 medals/G; average AT G 303G at setting 1
+   - Sources: https://nana-press.com/kaiseki/machine/377/10407/ ; https://nana-press.com/kaiseki/machine/377/10209/ ; https://nana-press.com/kaiseki/machine/377/ ; https://1geki.jp/slot/s_tekken5/3/
+4) 麻雀格闘倶楽部参
+   - Store: パーラーダイマン
+   - Ceiling: after 777G+alpha, the following match is guaranteed to be won -> AT "格闘倶楽部RUSH"
+   - It is not an immediate AT announcement at exactly 777G; the match is completed first
+   - AT: difference-medal management, pure increase about 5 medals/G; agari score is converted to initial medals
+   - AT end: 40G "真龍ロード" rematch for an AT return; kept separate from ceiling initial guarantee
+   - Sources: https://1geki.jp/slot/s_mahjongfight3/3/ ; https://1geki.jp/slot/s_mahjongfight3/81/ ; https://1geki.jp/slot/s_mahjongfight3/41/
+
+Separation rule:
+- ceiling reward / initial structure / average acquisition / fixed minimum are kept distinct.
+- no G x net-increase arithmetic is used to invent a guaranteed medal amount.
+
+Protected assets:
+- fullrate-data-v314.js unchanged
+- hallscan-v315.js unchanged
+- hallscan-v315.css unchanged
+- factchecked low-rate HTML unchanged
+- aliases unchanged
+- UI structure unchanged
+
+Project tracker after batch84: 157/199 audited, 42 remaining.
+Service Worker cache: hall-scan-v3.15-r85
+
+QA result:
+- full-rate records: 1,689 (4p 929 / 20s 760) PASS
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208 PASS
+- payoutChecked strategy records: 157 PASS
+- project tracker: 157/199, remaining 42 PASS
+- current live unaudited edge/yutime strategies: 37 (informational only)
+- fallback references: 0 PASS
+- review references: 0 PASS
+- unresolved installed strategies: 0 PASS
+- changed strategy records: exactly 4 intended machines PASS
+- aliases unchanged PASS
+- protected files unchanged vs batch83 PASS
+- benefit/minimum/initial/average/benefitSource fields present on all 4 audited cards PASS
+- node --check machine-strategy-v315.js PASS
+- node --check hallscan-v315.js PASS
+- node --check sw.js PASS
+- Service Worker revision hall-scan-v3.15-r85 PASS

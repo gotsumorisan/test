@@ -1,0 +1,79 @@
+HALL SCAN v3.15 batch62
+Date: 2026-09-22
+Base: batch61
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) スマスロ バイオハザード5
+   - Normal 999G+alpha / reset 666G+alpha -> AT Hazard Rush.
+   - Normal ceiling arrival also shortens next ceiling to 99G+alpha except after upper CZ.
+   - AT: 50G+alpha, approx.2.5 coins/G (approx.4.0 coins/G after upper route).
+   - No fixed minimum payout inferred from G x net increase.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/904/27891/
+     https://nana-press.com/kaiseki/machine/904/27849/
+
+2) スマスロ とある科学の超電磁砲2
+   - AT ceiling: max 999G+alpha / reset 699G+alpha -> AT.
+   - CZ ceiling: max 499G+alpha -> GIRLS JUDGE only, not AT confirmed.
+   - CZ ceiling direct output guarantee: 0 coins.
+   - AT: 50G+alpha, approx.2.6 coins/G.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1041/32750/
+     https://nana-press.com/kaiseki/machine/1041/32766/
+
+3) L南国育ち
+   - Normal A/B/first-gen max 996G, return/chance max 200G, Hisho modes max 32G -> bonus.
+   - Ceiling bonus type is not fixed to BIG.
+   - REG approx.85 / red BIG approx.230 / blue BIG approx.240 coins, approx.6.0 coins/G.
+   - These are bonus-type acquisition figures, not a final ceiling minimum guarantee.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/703/19753/
+     https://nana-press.com/kaiseki/machine/703/19747/
+
+4) Lパチスロ 炎炎ノ消防隊
+   - Bonus interval max 850G+alpha / reset max 650G+alpha -> initial bonus.
+   - Fire Force Battle interval 2500G -> next bonus is Episode Bonus, Fire Force Battle confirmed.
+   - Fire Force Bonus approx.230 / REG approx.85 coins; Episode Bonus approx.85 coins.
+   - Bonus amounts are not treated as fixed final net-difference guarantees.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/738/21300/
+     https://nana-press.com/kaiseki/machine/738/21308/
+     https://nana-press.com/kaiseki/machine/738/21309/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r63
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 69 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208 (type fields unchanged)
+- benefit-audited strategy records: 69 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch61: PASS
+- batch61 base SHA256 verified: a10fa43a23a1e3d8b06639f9d2cebcabf65acf6d384e3ac40103ffb243c94d55

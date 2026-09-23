@@ -1,0 +1,63 @@
+HALL SCAN v3.15 batch83
+Date: 2026-09-22
+Baseline: batch82 only
+
+Benefit/payout audit targets (exactly 4):
+1) SLOT忍者じゃじゃ丸くん
+   - Store: パーラー太陽 山下通店
+   - Ceiling: normal A/B/Sakura max 1000G; Hayagake 200G; heaven/Gama-related 32G -> BIG or REG
+   - Reset: normal A/B/Sakura can shorten to 400G at 37.5%
+   - Bonus guide: REG 30G / about 90 medals; BIG 70G / about 210 medals; pure increase about 3.0 medals/G
+   - Project threshold correction: public EV table first 50G step >= +2,000 yen is equal 600G / 5.6 exchange 700G (media recommendation 500/600 is not the project A threshold)
+   - Sources: https://nana-press.com/kaiseki/machine/721/20063/ ; https://nana-press.com/kaiseki/machine/721/20070/ ; https://nana-press.com/kaiseki/machine/721/20065/
+2) パチスロ頭文字D
+   - Store: オーロラ北見店
+   - Ceiling: max 555G+alpha -> Legend Battle (mostly Keisuke); not direct AT guarantee
+   - If ceiling Legend Battle is won, ceiling-dedicated special AT level is selected
+   - AT LEGEND RUSH: 1 set 40G+alpha, pure increase about 2.5 medals/G
+   - Sources: https://nana-press.com/kaiseki/machine/93/2409/ ; https://nana-press.com/kaiseki/machine/93/2252/ ; https://1geki.jp/slot/s_intiald/3/
+3) シャア専用パチスロ 逆襲の赤い彗星
+   - Store: オーロラ北見店
+   - Ceiling: 250G+alpha -> CZ "百式BATTLE"; AT is not guaranteed
+   - Existing project card AT expectation about 28%; CZ must be cleared to reach NEO ZEON RUSH
+   - AT NEO ZEON RUSH: pure increase about 8 medals/G; initial G decided by MS ATTACK
+   - Sources: https://nana-press.com/kaiseki/machine/51/1344/ ; https://nana-press.com/kaiseki/machine/51/1345/ ; https://nana-press.com/kaiseki/machine/51/1506/
+4) パチスロラブ嬢2プラス
+   - Store: オーロラ北見店
+   - Ceiling: 10th cycle -> AT; 3 After Date Chance failures in same advantageous section -> AT next cycle
+   - AT GOHOUBI RUSH: pure increase about 2.7 medals/G, initial bonus-zone start, first AT initial 100 medals guaranteed
+   - 100 medals is initial AT structure, not +100 medals final net guarantee
+   - Sources: https://1geki.jp/slot/s_lovejyo2plus/3/ ; https://1geki.jp/slot/s_lovejyo2plus/81/ ; https://nana-press.com/kaiseki/machine/112/3137/
+
+Separation rule:
+- ceiling reward / initial structure / average acquisition / fixed minimum are kept distinct.
+- no G x net-increase arithmetic is used to invent a guaranteed medal amount.
+
+Protected assets:
+- fullrate-data-v314.js unchanged
+- hallscan-v315.js unchanged
+- hallscan-v315.css unchanged
+- factchecked low-rate HTML unchanged
+- aliases unchanged
+- UI structure unchanged
+
+Project tracker after batch83: 153/199 audited, 46 remaining.
+Service Worker cache: hall-scan-v3.15-r84
+
+QA result:
+- full-rate records: 1,689 (4p 929 / 20s 760) PASS
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208 PASS
+- payoutChecked strategy records: 153 PASS
+- project tracker: 153/199, remaining 46 PASS
+- current live unaudited edge/yutime strategies: 41 (informational only)
+- fallback references: 0 PASS
+- review references: 0 PASS
+- unresolved installed strategies: 0 PASS
+- changed strategy records: exactly 4 intended machines PASS
+- aliases unchanged PASS
+- protected files unchanged vs batch82 PASS
+- benefit/minimum/initial/average/benefitSource fields present on all 4 audited cards PASS
+- node --check machine-strategy-v315.js PASS
+- node --check hallscan-v315.js PASS
+- node --check sw.js PASS
+- Service Worker revision hall-scan-v3.15-r84 PASS

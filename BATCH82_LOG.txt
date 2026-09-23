@@ -1,0 +1,58 @@
+HALL SCAN v3.15 batch82
+Date: 2026-09-22
+Baseline: batch81 only
+
+Benefit/payout audit targets (exactly 4):
+1) L ひぐらしのなく頃に 業
+   - Store: パーラーDAIGORO Z
+   - Ceiling: CZ cycle 200G or 400G -> CZ "運命分岐モード"; not direct ART
+   - Key correction: previous CZ drop technical intervention success -> next 200G, failure -> 400G
+   - Sources: https://nana-press.com/kaiseki/machine/636/ ; https://nana-press.com/kaiseki/machine/636/17520/ ; https://nana-press.com/kaiseki/machine/636/17573/ ; https://nana-press.com/kaiseki/machine/636/17523/ ; https://nana-press.com/kaiseki/machine/636/17526/
+2) パチスロ 戦国‡恋姫
+   - Store: オーロラ北見店
+   - Ceiling: 900G+alpha -> BIG + 50% Harem Mode
+   - BIG: 30G+alpha, average about 350 medals; average is not a fixed minimum
+   - Sources: https://nana-press.com/kaiseki/machine/573/ ; https://nana-press.com/kaiseki/machine/573/15818/ ; https://nana-press.com/kaiseki/machine/573/15822/ ; https://nana-press.com/kaiseki/machine/573/15823/
+3) スーパービンゴネオクラシック
+   - Store: オーロラ北見店
+   - Ceiling: 999G+alpha -> BC AT, about 50% Hooah! at ceiling
+   - BC: 33G+alpha / Hooah! 111G+, pure increase about 2.8 medals/G
+   - Sources: https://nana-press.com/kaiseki/machine/589/
+4) パチスロ幼女戦記
+   - Store: オーロラ北見店
+   - Ceiling: normal A 512G+alpha / B 384G / heaven 128G -> bonus; AT not guaranteed
+   - Bonus guide: Yojo Senki Bonus about 100 medals / Fairy Bonus about 50 medals
+   - Sources: https://nana-press.com/kaiseki/machine/447/12712/ ; https://nana-press.com/kaiseki/machine/447/12721/ ; https://nana-press.com/kaiseki/machine/447/12722/ ; https://nana-press.com/kaiseki/machine/447/
+
+Separation rule:
+- ceiling reward / initial structure / average acquisition / fixed minimum are kept distinct.
+- no G x net-increase arithmetic is used to invent a guaranteed medal amount.
+
+Protected assets:
+- fullrate-data-v314.js unchanged
+- hallscan-v315.js unchanged
+- hallscan-v315.css unchanged
+- factchecked low-rate HTML unchanged
+- aliases unchanged
+- UI structure unchanged
+
+Project tracker after batch82: 149/199 audited, 50 remaining.
+Service Worker cache: hall-scan-v3.15-r83
+
+QA target/result:
+- full-rate records: 1,689 (4p 929 / 20s 760) PASS
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208 PASS
+- payoutChecked strategy records: 149 PASS
+- project tracker: 149/199, remaining 50 PASS
+- current live unaudited edge/yutime strategies: 45 (informational only)
+- fallback references: 0 PASS
+- review references: 0 PASS
+- unresolved installed strategies: 0 PASS
+- changed strategy records: exactly 4 intended machines PASS
+- aliases unchanged PASS
+- protected files unchanged vs batch81 PASS
+- benefit/minimum/initial/average/benefitSource fields present on all 4 audited cards PASS
+- node --check machine-strategy-v315.js PASS
+- node --check hallscan-v315.js PASS
+- node --check sw.js PASS
+- Service Worker revision hall-scan-v3.15-r83 PASS

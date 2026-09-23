@@ -1,0 +1,39 @@
+HALL SCAN v3.15 batch96
+Date: 2026-09-23
+Baseline: batch95 only
+Purpose: rate visibility UX requested by user
+
+Implemented
+- Default display is now BOTH normal-rate and low-rate content.
+- Replaced legacy 3-mode view control (low / edge / all) with two independent persistent toggles:
+  - 通常レート
+  - 低貸
+- Each toggle can be turned off/on independently.
+- State persists across page navigation and reload via localStorage key hallscan_rate_visibility_v2.
+- A new key is used intentionally so existing legacy low-only/view-mode state does not override the new default. First load after update is both ON.
+- Search page filters low-rate DATA and normal-rate FULLRATE independently according to the two toggles.
+- Store pages hide/reveal the existing low-rate content and the injected normal-rate section independently.
+- Stores page hides/reveals low-rate subtitles and normal-rate count chips independently.
+- If both are OFF, a visible notice explains that both rate groups are hidden.
+- Normal-rate store section title now includes the store name, helping normal-only use on pages whose legacy low-rate hero is hidden.
+- User-facing terminology standardized from 通常貸し to 通常レート in the injected normal-rate UI.
+
+Not changed
+- fullrate-data-v314.js
+- machine-strategy-v315.js
+- 194/194 payout/ceiling audit status
+- low-rate source HTML/data
+- favorites data model
+- strategy aliases
+- store exchange conditions
+- fuzzy search aliases/scoring
+- image guide
+
+QA
+- hallscan-v315.js syntax: PASS
+- independent rate-state unit test: PASS (default both ON; normal-only / low-only / both-off persistence and body classes)
+- search pool count: low-rate 569 + normal-rate 1690 = combined 2259 rows before existing search/filter/limit rules
+- normal-rate DB remains 1690 = pachi 930 / slot 760
+- common hallscan-v315.js + hallscan-v315.css present on all 13 rate-controlled pages
+- protected fullrate and strategy hashes unchanged from batch95
+- Service Worker cache: hall-scan-v3.15-r97

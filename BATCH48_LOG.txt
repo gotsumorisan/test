@@ -1,0 +1,89 @@
+HALL SCAN v3.15 batch48
+Date: 2026-09-22
+Purpose: continue ceiling-arrival benefit / payout-information audit, next 4 machines
+
+Selection rule:
+- Continue in 4-machine batches.
+- Prioritized installed unprocessed edge machines with the widest exact-name store coverage in fullrate-data-v314.js.
+- Researched 4 actual machines only.
+
+Web-audited machines: 4
+
+1. Lパチスロ 炎炎ノ消防隊2
+   - Bonus-interval ceiling: 850G+alpha; reset 650G+alpha -> initial bonus
+   - Fire Force loop interval: 2000G+alpha; reset 1500G+alpha -> Special Episode Bonus
+   - After 5 Evangelist's Trap misses, next bonus -> Special Episode Bonus likely
+   - Initial REG: net increase about 5.8 medals/G, published acquisition about 85 medals
+   - Special Episode Bonus: net increase about 5.8 medals/G, published acquisition about 200 medals; Fire Force loop after completion
+   - 85/200 are published bonus acquisition figures, not a fixed minimum net-win guarantee at ceiling
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1088/34532/
+     https://nana-press.com/kaiseki/machine/1088/34544/
+     https://nana-press.com/kaiseki/machine/1088/34545/
+
+2. Lパチスロ 革命機ヴァルヴレイヴ2
+   - Bonus/AT interval: 1500G; reset 1000G -> bonus or AT
+   - CZ interval 999G / max 6 cycles (reset max 3 cycles) -> CZ only
+   - After 3 consecutive Kessen Bonus misses, next bonus -> Kakumei Bonus likely
+   - Kakumei Bonus: 45G+alpha, net increase about 9.0 medals/G, average acquisition about 460 medals
+   - AT Kakumei Rush: 10G or more/set, net increase about 9.0 medals/G, continuation expectation about 75%
+   - CZ/cycle ceilings have zero guaranteed payout at the moment of ceiling completion; 460 is Kakumei Bonus average only, not ceiling average/minimum
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1040/32805/
+     https://nana-press.com/kaiseki/machine/1040/32824/
+     https://nana-press.com/kaiseki/machine/1040/
+
+3. スマスロ ゴッドイーター リザレクション
+   - Normal ceiling 1000G+alpha / shortened 600G+alpha -> AT Aragami Burst
+   - AT net increase about 9.0 medals/G
+   - First Story Part payout: 100 medals
+   - Then Aragami Battle: 25G+alpha, average win expectation about 76%
+   - Basic win reward “Kami wo Kurae”: +200 medals or more
+   - 100 medals is a payout amount, not a fixed net acquired-medal guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/767/22716/
+     https://nana-press.com/kaiseki/machine/767/22725/
+     https://nana-press.com/kaiseki/machine/767/22784/
+
+4. スマスロ マギアレコード 魔法少女まどか☆マギカ外伝
+   - Normal max 950pt+alpha / reset max 699pt+alpha -> bonus likely
+   - Ceiling does not itself guarantee AT Magia Rush
+   - Big Bonus: 30G+alpha pseudo-bonus with AT lottery
+   - Mitama Bonus: 8 bell navigations + 1 judge game; determines reward
+   - AT Magia Rush: net increase about 2.6 medals/G; initial games set by Magia Attack
+   - No reliable fixed minimum acquired-medal guarantee confirmed
+   - Sources:
+     https://nana-press.com/kaiseki/machine/914/28426/
+     https://nana-press.com/kaiseki/machine/914/28442/
+     https://nana-press.com/kaiseki/machine/914/28443/
+     https://nana-press.com/kaiseki/machine/914/28447/
+
+Schema/UI:
+- No schema or UI changes in this batch.
+- Reused optional fields added in batch46: benefit / minimum / initial / average / benefitSource / payoutChecked.
+- Average field is used only when a published number is directly applicable and clearly scoped.
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Service Worker: hall-scan-v3.15-r49
+
+QA results:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- installed edge/yutime unique names: 199
+- benefit-audited installed edge/yutime names: 13 / 199
+- fallback references: 0
+- review references: 0
+- changed strategy records in this batch: exactly 4 intended machines
+- fullrate-data-v314.js unchanged vs batch47: PASS
+- hallscan-v315.js unchanged vs batch47: PASS
+- hallscan-v315.css unchanged vs batch47: PASS
+- 10 factchecked low-rate HTML files unchanged: PASS

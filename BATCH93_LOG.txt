@@ -1,0 +1,13 @@
+HALL SCAN v3.15 batch93
+Date: 2026-09-23
+Baseline: batch92 only
+Baseline SHA256: 736fbab6469bf8bd5eb2ecbc3c8458cb7141c6344d117ced25c0d87d419949af
+Targets (exactly 4):
+1. PA乗物娘GO「PB機」
+2. PAぱちんこ乗物娘 with CYBERJAPANDANCERS 2nd season 77ver.
+3. PAナナシー～お江戸77ver.～
+4. PAぱちんこ乗物娘 with CYBERJAPANDANCERS 2nd season 59ver.「PB機」
+Tracker: 189/199 -> 193/199 (remaining 6)
+Expected live unaudited: 5 -> 1
+SW: hall-scan-v3.15-r93 -> hall-scan-v3.15-r94
+Protected files/UI structure: unchanged

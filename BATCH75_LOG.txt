@@ -1,0 +1,110 @@
+HALL SCAN v3.15 batch75
+Date: 2026-09-22
+Base: batch74 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining current live candidates were still 1-store installations, so selection prioritized newer/current machines, practical encounter likelihood, multi-counter complexity, and loss risk from confusing a CZ/bonus ceiling with an AT guarantee.
+- Project tracker remains on inherited 199-machine basis: 117 -> 121 / 199; remaining 78. Current live resolvable edge/yutime total differs from that inherited tracker, and no denominator reconciliation was performed in this batch.
+
+Selected / audited machines:
+1) L 絶対衝激IV
+   - Store: ロイヤル北見店
+   - Period ceiling: mode A 9th / B 7th / C 5th / D 2nd Sunday -> internally stores PLATONIC BONUS BLACK (PBB).
+   - Reset: mode C or D, so max 5 cycles.
+   - PBB itself: about 100 medals, pure increase about 5.5 medals/G; PBB implies CZ 「絶対領域」 entry.
+   - Ceiling does not directly guarantee AT 「プラトニックタイム」. Normal AT has 50G guarantee, average initial 80G, pure increase about 0.5 medals/G; upper AT about 5.5 medals/G.
+   - Do not treat the published ~100-medal PBB figure or average 80G AT start as a fixed final net-win guarantee.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1043/32613/
+     https://nana-press.com/kaiseki/machine/1043/32628/
+     https://1geki.jp/slot/l_zetai4/63/
+
+2) Sister Quest
+   - Store: パーラーDAIGORO Z
+   - CZ interval ceiling: max 1400EXP+alpha -> CZ Quest Battle only (reset 500EXP+alpha; some post-AT conditions 700EXP+alpha).
+   - AT interval ceiling: max 2000G+alpha -> AT; reset 999G+alpha.
+   - CZ skip ceiling: max 5 failed CZs -> next CZ (6th) grants AT.
+   - Normal AT 「冒険RUSH」 is a difference-medal AT, pure increase about 3 medals/G and initial 150+ medals. Initial allocator gives 150 medals on the base result, 200 medals on replay/bell, or a feature zone on rare roles.
+   - CZ ceiling is not an AT guarantee. AT initial 150+ medals is the AT starting difference value, not a guarantee that total play profit from the ceiling point is +150 medals.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/906/27930/
+     https://nana-press.com/kaiseki/machine/906/27945/
+     https://www.p-world.co.jp/machine/database/10209
+     https://1geki.jp/slot/l_sisterquest/81/
+
+3) プリズムナナ
+   - Store: オーロラ北見店
+   - Normal game ceiling 899G+alpha / max 7 cycles -> first hit; reset or ST walk-through condition shortens to 555G+alpha / max 5 cycles.
+   - First hit flows through 14G 「プロローグ」 -> ST 「バーニングゾーン」.
+   - Burning Zone: 7G+alpha, continuation about 80%; first-ST-success expected acquisition about 777 medals.
+   - ST bonuses: Super Prism Bonus about 280 medals, Prism Bonus about 120 medals, Prism Chance about 60 medals.
+   - The ~777 figure is an expectation conditional on first ST success, not a minimum payout from reaching the ceiling. Upper ST expected acquisition about 3000 medals is also an average, not a guarantee.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1068/33392/
+     https://nana-press.com/kaiseki/machine/1068/33407/
+     https://nana-press.com/kaiseki/machine/1068/33408/
+     https://nana-press.com/kaiseki/machine/1068/
+
+4) 桃太郎電鉄 ～パチスロも定番！～
+   - Store: パーラーDAIGORO Z
+   - Year ceiling: normally max 3 years (about 720G average) -> CZ 「定番チャンス」; shortened max 2 years in applicable states.
+   - Skip ceiling: max 6 consecutive 定番チャンス failures -> 7th 定番チャンス grants AT; reset max 2 failures -> 3rd grants AT.
+   - Year ceiling only guarantees the CZ and does not guarantee AT. The CZ has pure increase about 2.5 medals/G but no independent fixed ceiling payout is created from that rate.
+   - AT 「電鉄ボーナス」 begins at 150 difference-medals, pure increase about 2.5 medals/G. Upper AT begins at 150 difference-medals, pure increase about 4.0 medals/G.
+   - 150 medals is an AT initial difference amount, not a guarantee of +150 medals net profit from the ceiling play.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/827/25536/
+     https://nana-press.com/kaiseki/machine/827/25551/
+     https://1geki.jp/slot/l_momotetsu/81/
+
+Edited strategy records only:
+- l絶対衝激iv
+- sisterquest
+- ぷりずむなな
+- 桃太郎電鉄~ぱちすろも定番~
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r76
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 121 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch74
+- benefit/minimum/initial fields present on all 4 audited strategy cards
+- average field used only where a published average is useful (絶対衝激IV / プリズムナナ)
+- Service Worker revision r76
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 121 / 199 (project tracker basis; remaining 78)
+- payoutChecked strategy records in current strategy DB: 121
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch74: PASS (directory diff shows only strategy / README / sw.js / new BATCH75_LOG)
+- benefit/minimum/initial fields present on all 4 audited strategy cards: PASS
+- average field present for 絶対衝激IV / プリズムナナ: PASS
+- Service Worker revision: hall-scan-v3.15-r76 PASS
+- current live unaudited edge/yutime strategies after batch75: 73; all have max store coverage 1. This live count is informational only and does not alter the inherited 199-machine project tracker.

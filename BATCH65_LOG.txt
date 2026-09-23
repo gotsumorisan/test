@@ -1,0 +1,64 @@
+HALL SCAN v3.15 batch65
+Date: 2026-09-22
+Base: batch64
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) 沖ドキ！DUO
+   - Normal modes max 800G -> bonus; chance max 200G; heaven-family max 32G.
+   - Ceiling bonus is not BIG-guaranteed. BIG approx.210 coins / REG max 95 coins, approx.4.0 coins/G.
+   - Source: https://nana-press.com/kaiseki/machine/223/7071/
+
+2) パチスロ 新鬼武者2
+   - CZ interval 333G -> CZ only. Direct output guarantee 0 coins.
+   - Sub-display AT interval 1000G -> guaranteed-success CZ -> AT.
+   - AT first set 40G+alpha, later sets 30G+alpha, approx.2.0 coins/G.
+   - Source: https://nana-press.com/kaiseki/machine/397/10677/
+
+3) スマスロ痛いのは嫌なので防御力に極振りしたいと思います。
+   - Normal max 950G+alpha -> infinite CZ, bonus highly likely. At maximum ceiling, another CZ follows the bonus.
+   - REG approx.100 coins; BIG approx.150 or 250 coins; these are payout structures, not final net guarantees.
+   - Source: https://nana-press.com/kaiseki/machine/764/21884/
+
+4) マジカルハロウィン8
+   - Max 777G+alpha -> ART + 2 ART stocks.
+   - ART 1 set 30G, approx.1.0 coin/G. No minimum coin amount inferred from set count or pure increase.
+   - Source: https://nana-press.com/kaiseki/machine/627/18064/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r66
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 81 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 81 / 199
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch64: PASS
+- batch64 base SHA256 verified: f23437cf00060cd7a7cb1a0921a60134bd0a8ce62fb1404aaaea372b5801aa3f

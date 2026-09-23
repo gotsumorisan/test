@@ -1,0 +1,39 @@
+HALL SCAN v3.15 BATCH26 LOG
+Date: 2026-09-21
+Scope: 店舗別交換条件表示 第3店舗（1店舗のみ）
+
+Target store
+- パーラー太陽 山下通店
+
+Verified current lending information
+- P-WORLD current listing (updated 2026-09-21):
+  - 20スロ: 1000円/46枚
+  - 4円系パチンコ: 1000円/228玉（約4.38円）
+
+External exchange information
+- みんパチ現行掲載:
+  - 21.73円スロ: 5.2枚交換（1000円分の景品=52枚）
+  - 4.38円パチンコ: 25.6玉交換
+- ただし2018年の同ページ投稿には「スロ5.6枚 / パチ28玉」と旧情報があり、現行掲載と不一致。
+- 店舗公式の交換率公表ではないため、HALL SCANでは「外部1ソース・非公式・要現地確認」として保持。
+
+UI behavior
+- パーラー太陽 山下通店の通常貸し欄に店舗交換条件を表示。
+- 52枚交換専用の公開期待値がない機種は、56枚交換側を「この店で使う暫定基準（安全側）」として表示。
+- 52枚専用のG数ラインを補間・推定して作らない。
+- 実交換条件が不明・旧情報と不一致のため、最終A/B/C/Dでは当日の交換条件を確認する。
+- 4パチは交換情報を注記するだけで、期待値ラインの自動変換はまだ行わない。
+
+Protected data
+- 設置機種リスト変更なし。
+- machine-strategy-v315.js変更なし。
+- 低貸データ変更なし。
+
+Files edited
+- fullrate-data-v314.js（パーラー太陽 山下通店の交換メタデータのみ）
+- sw.js
+- README.md
+- BATCH26_LOG.txt
+
+Service Worker
+- hall-scan-v3.15-r27

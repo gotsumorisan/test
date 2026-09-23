@@ -1,0 +1,40 @@
+HALL SCAN v3.15 BATCH16 LOG
+Date: 2026-09-21
+Store: オーロラ北見店
+
+Hard limits
+- stores: 1/1 STOP
+- new Web-audited machines: 10/10 STOP
+- reuse/link existing confirmed data: 0/50
+- edited/created files: 4/6
+- machine records processed: 10/60
+
+Audited machines (all => edge / 期待値候補)
+1. パチスロ モンスターハンター：ワールドTM
+2. パチスロ学園黙示録ハイスクール・オブ・ザ・デッド ゴールド
+3. Sキャッツ・アイ
+4. Sヤッターマン絶対正義
+5. パチスロ 青鬼
+6. パチスロ 戦国‡恋姫
+7. 超ギラギラ爺サマー
+8. スーパービンゴネオクラシック
+9. パチスロ鉄拳5
+10. 新世紀エヴァンゲリオン ～魂の共鳴～
+
+Key safeguards
+- consultation line != automatic A
+- no favorable assumptions for reset/mode/technical skill
+- HOTD: confirmed advantageous segment carryover is required for 0G special-state target
+- Monster Hunter World: quest count and advantageous-section G are separate
+- Cats Eye / Sengoku Koihime: beginner technical-skill assumption
+- conservative thresholds used when source assumptions differ
+
+Next planned Aurora batch (8 machines)
+- 十字架5
+- パチスロ戦姫絶唱シンフォギア 勇気の歌
+- パチスロなめ猫～液晶ないけどなめんじゃねぇ～
+- シャア専用パチスロ 逆襲の赤い彗星
+- パチスロ頭文字D
+- パチスロ真・北斗無双
+- パチスロ北斗の拳 宿命
+- プリズムナナ

@@ -1,0 +1,20 @@
+HALL SCAN v3.15 batch 13
+Date: 2026-09-21
+Store: マルハン端野店
+Processed: 3 machines (pachi4=3, slot20=0)
+
+1. P GO!GO!マリン 3000 -> G数狙いなし
+   Source: https://www.p-world.co.jp/machine/database/9858
+   Note: 遊タイム非搭載。通常時ハマリG到達型の天井なし。
+2. Pシュタインズ・ゲート ゼロ -> G数狙いなし
+   Source: https://pachiseven.jp/machines/7031/cutout/16
+   Note: 遊タイム非搭載。RUSH/LT・時短は通常時天井ではない。
+3. e黄門ちゃま寿限無 LLサイズ -> G数狙いなし
+   Source: https://nana-press.com/kaiseki/machine/972/
+   Cross-check: https://www.p-world.co.jp/machine/database/10295
+   Note: 遊タイム非搭載。中央攻略DBで同一スペックへ共有。P黄門ちゃま寿限無259/99ver.とは分離。
+
+Result: マルハン端野店 pachi4 review 3 -> 0; slot20 review 0.
+Batch limits used: stores 1/1; new web analyses 3/10; edited files 4/6; machine records 3/60.
+Protected: fullrate-data-v314.js unchanged; existing low-rate fact-checked data unchanged; existing HTML unchanged.
+Service Worker: v3.15-r14.

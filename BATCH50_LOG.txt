@@ -1,0 +1,90 @@
+HALL SCAN v3.15 batch50
+Date: 2026-09-22
+Purpose: continue ceiling-arrival benefit / payout-information audit, next 4 machines
+
+Selection rule:
+- Continue in 4-machine batches.
+- Started strictly from batch49.
+- Prioritized installed unprocessed edge machines with the widest exact-name store coverage in fullrate-data-v314.js.
+- The four selected machines are each installed at 9 target stores by exact current-name match.
+- Researched 4 actual machines only.
+
+Web-audited machines: 4
+
+1. L戦国乙女5 業火を穿つ宿焔の双刃
+   - Normal game ceiling: 999 real G+alpha -> AT "強カワラッシュ"
+   - Cycle ceiling: max 6 cycles -> AT
+   - Reset: 650 real G+alpha / max 4 cycles -> AT
+   - AT "強カワラッシュ": first set 45G+alpha, continued set 50G, net increase about 2.7 medals/G
+   - 45G+alpha is the initial AT game count, not a fixed minimum acquired-medal guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1160/
+     https://nana-press.com/kaiseki/machine/1160/37315/
+
+2. いざ！番長
+   - Normal max 999G+alpha -> AT "頂ZBASH"
+   - Internal modes can shorten to 600G+alpha / 300G+alpha / 100G+alpha
+   - Reset / after upper AT: Chance A or better, max 600G+alpha
+   - AT "頂ZBASH": initial 150 medals+alpha, net increase about 2.8 medals/G
+   - Upper AT "青頂ZBASH": net increase about 5.0 medals/G
+   - Initial 150+alpha is a starting差枚 quota, not a fixed minimum final net acquisition
+   - Sources:
+     https://nana-press.com/kaiseki/machine/946/
+     https://nana-press.com/kaiseki/machine/946/29777/
+     https://nana-press.com/kaiseki/machine/946/29792/
+
+3. ローティス
+   - Ceiling according to mode -> bonus
+   - Normal A/B and Heaven Preparation: max 900G
+   - Morning 200G / Chance 400G / Pullback A 200G / Pullback B 100G / Heaven+ 32G
+   - Bonus approximate acquired amounts: SBB 507 / BIG 206 / REG 66 medals
+   - Net increase about 5.0 medals/G
+   - Ceiling does not guarantee BIG/SBB; approximate REG 66 is not labeled as a fixed minimum guarantee
+   - Source:
+     https://nana-press.com/kaiseki/machine/1182/
+
+4. 押忍！番長ZERO
+   - Max 600G+alpha -> "番長ボーナス" or better
+   - Ceiling does not normally add a special AT-guarantee benefit
+   - If REG appears at the ceiling, "次次回予告" occurs and AT "頂ロード" is entered
+   - 番長ボーナス: 30G, net increase about 2.7 medals/G
+   - REG: 8 bell navigations
+   - AT "頂ロード": 1 set 30G, net increase about 2.7 medals/G
+   - 30G x nominal net increase is not treated as a fixed minimum acquired-medal guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/167/7649/
+     https://nana-press.com/kaiseki/machine/167/7661/
+     https://nana-press.com/kaiseki/machine/167/7662/
+     https://nana-press.com/kaiseki/machine/167/7665/
+
+Schema/UI:
+- No schema or UI changes in this batch.
+- Reused optional fields added in batch46: benefit / minimum / initial / average / benefitSource / payoutChecked.
+- average remains empty unless a reliable published average directly applicable to the displayed scope is confirmed.
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Service Worker: hall-scan-v3.15-r51
+
+QA results:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- installed edge/yutime unique display names: 199
+- benefit-audited installed edge/yutime names: 21 / 199
+- fallback references: 0
+- review references: 0
+- changed strategy records in this batch: exactly 4 intended machines
+- fullrate-data-v314.js unchanged vs batch49: PASS
+- hallscan-v315.js unchanged vs batch49: PASS
+- hallscan-v315.css unchanged vs batch49: PASS
+- 10 factchecked low-rate HTML files unchanged vs batch49: PASS
+- UI benefit/minimum/initial/average fields remain wired: PASS

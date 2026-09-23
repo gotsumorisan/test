@@ -1,0 +1,67 @@
+HALL SCAN v3.15 batch66
+Date: 2026-09-22
+Base: batch65
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) Lラブ嬢3～Wご指名はいかがですか？～
+   - Mode ceiling -> AT. Normal A/B max 750G; normal C 500G; heaven 100G. Reset -> max 500G+alpha.
+   - Opening Attack explicitly guarantees 100 initial difference coins. This is an AT initial-allocation guarantee, not a final session net-profit guarantee.
+   - Normal AT pure increase approx.2.7 coins/G.
+   - Sources: https://nana-press.com/kaiseki/machine/651/18112/ , https://nana-press.com/kaiseki/machine/651/18121/
+
+2) L南国育ち SPECIAL
+   - Mode ceiling -> bonus. Normal A/B max 799G+alpha; reset / post-super-flight max 500G+alpha.
+   - Ceiling bonus type is not fixed. REG 80+ coins; BIG 210+ coins; approx.3.0 coins/G.
+   - The bonus-body minimum class is separated from final net result.
+   - Sources: https://nana-press.com/kaiseki/machine/1173/37759/ , https://nana-press.com/kaiseki/machine/1173/37764/
+
+3) L少女☆歌劇 レヴュースタァライト -The SLOT-
+   - Bonus/AT interval 900G+alpha -> AT. Reset 600G+alpha -> upper AT.
+   - Normal/upper AT 30G+alpha, approx.2.2 or 3.4 coins/G.
+   - No fixed minimum coin amount inferred from G count x pure increase.
+   - Sources: https://nana-press.com/kaiseki/machine/886/27700/ , https://nana-press.com/kaiseki/machine/886/27714/ , https://nana-press.com/kaiseki/machine/886/27717/
+
+4) L虚構推理
+   - Kyokou-Shingi interval max 1000G -> bonus + at least 1 Yuki-onna stock. Reset max 700G.
+   - At least 1 Yuki-onna stock is explicit; no fixed minimum coin amount is inferred.
+   - Standard red7 bonus approx.100 coins, approx.6.0 coins/G, but this is one bonus type rather than a ceiling-fixed minimum.
+   - Sources: https://nana-press.com/kaiseki/machine/1111/36134/ , https://nana-press.com/kaiseki/machine/1111/36152/ , https://nana-press.com/kaiseki/machine/1111/36155/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r67
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 85 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 85 / 199
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch65: PASS
+- batch65 base SHA256 verified: 47447e014a6b0c318412c554ff0b3d644ae35b083a7491d7297b8d0560b03b2b

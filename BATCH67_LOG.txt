@@ -1,0 +1,67 @@
+HALL SCAN v3.15 batch67
+Date: 2026-09-22
+Base: batch66
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) 沖ドキ！ゴージャス 25Φ
+   - Normal A/B max 999G, return/chance 200G, heaven+ 32G -> bonus.
+   - On advantageous-section reset, 25% of normal A/B cases shorten to 399G.
+   - Ceiling does not fix BIG; BIG approx.210 coins / REG approx.90 coins, pure increase approx.3.5 coins/G.
+   - Sources: https://nana-press.com/kaiseki/machine/856/25724/ , https://nana-press.com/kaiseki/machine/856/25733/
+
+2) スマスロネオプラネット
+   - Normal 777G / reset 500G -> bonus.
+   - Initial bonus is generally BIG or REG; ceiling does not guarantee BIG.
+   - REG avg.95 / BIG avg.367 / SBIG avg.616 coins, pure increase approx.8.8 coins/G. Averages are not minimum guarantees.
+   - Sources: https://nana-press.com/kaiseki/machine/1030/33067/ , https://nana-press.com/kaiseki/machine/1030/33124/
+
+3) パチスロアラジンAクラシック
+   - 1200 normal G -> AC + state entry strongly expected + right to enter the post-state pullback section.
+   - AC is 30G/set, approx.2.9 coins/G.
+   - No fixed minimum payout inferred from 30G x pure increase; state/pullback expectations are not guaranteed extra AC counts.
+   - Sources: https://nana-press.com/kaiseki/machine/275/7518/ , https://nana-press.com/kaiseki/machine/275/7531/ , https://nana-press.com/kaiseki/machine/275/7532/
+
+4) PA新海物語
+   - 299 low-probability spins -> 379-spin time-shortening Yutime.
+   - Yutime activation itself pays 0 balls.
+   - Jackpot payout 500-1000 balls is payout on a hit, not a minimum Yutime reward.
+   - Source: https://www.p-world.co.jp/machine/database/9652
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r68
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 89 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 89 / 199
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch66: PASS
+- batch66 base SHA256 verified: da1790e3530e802186094088e8575ed61130142a41825e98b65feb9c9c0b7188

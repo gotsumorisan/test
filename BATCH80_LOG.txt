@@ -1,0 +1,88 @@
+HALL SCAN v3.15 batch80
+Date: 2026-09-22
+Base: batch79 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining live candidates were 1-store installations, so selection prioritized mode/ceiling complexity, practical encounter value, and the loss risk of mistaking a conditional ceiling for guaranteed AT/output.
+- Project tracker remains on inherited 199-machine basis: 137 -> 141 / 199; remaining 58. No denominator reconciliation in this batch.
+
+Selected / audited machines:
+1) 沖ドキ！GOLD-30
+   - Store: マルハン北見店
+   - Normal A/B max 999G; 引き戻し/チャンス 200G; 天国/ドキドキ/超ドキドキ/保障/金ドキ 32G -> bonus.
+   - Setting change can trigger 399G shortening; do not assume reset without evidence.
+   - Ceiling guarantees a bonus, not heaven-mode entry or a streak.
+   - BIG 70G about 210 medals / REG 30G about 90 medals are acquisition guides, not fixed final net guarantees.
+   - Sources: https://nana-press.com/kaiseki/machine/478/12848/ ; https://nana-press.com/post/1575213
+
+2) パチスロ モンスターハンター：ワールドTM
+   - Store: オーロラ北見店
+   - Ceiling rights exist only when the carry-over lottery at advantageous-section entry has won.
+   - If eligible: three quest failures within 750G -> bonus before quest 4, or 750G -> bonus when the cycle ceiling has not fired first.
+   - If the carry-over lottery lost, the section resets after the quest and the machine can be effectively ceilingless from an external observer's simple G-count perspective.
+   - Ceiling benefit is bonus notification. Fixed minimum acquisition is not confirmed; machine AT pure increase about 3.0 medals/G and variable BB structure must not be converted into an invented minimum.
+   - Sources: https://nana-press.com/kaiseki/machine/88/2151/ ; https://nana-press.com/kaiseki/machine/88/ ; https://nana-press.com/kaiseki/machine/88/2044/
+
+3) 十字架5
+   - Store: オーロラ北見店
+   - Mode ceilings directly award AT: A1000 / B700 / C500 / 引き戻し100 or 300 / 天国0 or 100G; carried advantageous section max 700G or less.
+   - Separate cross-symbol skip ceiling: 10 crosses in one section with no AT -> ダークサイドチャレンジ, which continues until ダークサイドノア -> Darkside Noah + AT guaranteed.
+   - AT initial G is determined by セクシーマジカルタイム or ダークサイドノア. AT pure increase about 2.7 medals/G; do not derive a fixed minimum medal total.
+   - Sources: https://nana-press.com/kaiseki/machine/333/8737/ ; https://nana-press.com/kaiseki/machine/333/9013/ ; https://nana-press.com/kaiseki/machine/333/9016/
+
+4) パチスロ機動戦士ガンダムユニコーン
+   - Store: オーロラ北見店
+   - Maximum 999G -> AT ユニコーンRUSH.
+   - A portion of 999G ceilings enters ミネバモード; major analysis cites roughly one in nine as a guide, so it is not a guaranteed ceiling reward.
+   - Normal AT: pure increase about 2.4 medals/G, first set 50G+alpha, later sets 30G+alpha.
+   - 50G is a duration structure, not a fixed 120-medal guarantee. Minerva-mode average ~9 ミネバチャンス stocks is not an average acquisition figure.
+   - Sources: https://nana-press.com/kaiseki/machine/518/13901/ ; https://nana-press.com/kaiseki/machine/518/13907/
+
+Edited strategy records only:
+- 沖どきgold30
+- ぱちすろもんすたーはんたーわーるどtm
+- 十字架5
+- ぱちすろ機動戦士がんだむゆにこーん
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r81
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 141 / 199 (project tracker basis)
+- payoutChecked strategy records in current strategy DB: 141
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch79
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards
+- Service Worker revision r81
+- current live unaudited edge/yutime strategies after batch80: 53
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 141 / 199 (project tracker basis; remaining 58)
+- payoutChecked strategy records in current strategy DB: 141
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch79: PASS
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards: PASS
+- Service Worker revision: hall-scan-v3.15-r81 PASS
+- current live unaudited edge/yutime strategies after batch80: 53. This live count is informational only and does not alter the inherited 199-machine project tracker.

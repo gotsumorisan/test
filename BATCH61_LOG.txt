@@ -1,0 +1,78 @@
+HALL SCAN v3.15 batch61
+Date: 2026-09-22
+Base: batch60
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: highest remaining installation count, then practical value for live decisions.
+
+Audited machines:
+1) P大海物語5スペシャル
+   - Low-probability 950 spins -> Yutime, time-short 350 spins.
+   - Yutime jackpot expectation approx. 66.1%.
+   - Reaching Yutime itself guarantees 0 balls.
+   - Jackpot payout: 10R approx. 1500 balls.
+   - Source: https://www.p-world.co.jp/machine/database/10112
+
+2) L戦国乙女4 戦乱に閃く炯眼の軍師
+   - Game-count ceiling: up to 799G+alpha depending on mode -> bonus.
+   - Six consecutive bonuses without AT -> 7th bonus is episode bonus, AT confirmed.
+   - Standard Sengoku Otome Bonus: 30-50G, approx. 2.5 coins/G.
+   - Episode Bonus: 30G, approx. 2.5 coins/G, AT confirmed.
+   - Normal AT: 50G, approx. 2.5 coins/G.
+   - Setting 1 AT initial expected acquisition: 577.3 coins; not a minimum guarantee.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/597/16395/
+     https://nana-press.com/kaiseki/machine/597/
+
+3) チバリヨ2
+   - Game-count ceiling: max 999G -> bonus.
+   - Cherry-count ceiling: max 45 cherries -> bonus.
+   - Reset: game ceiling shortened to 350G or 600G.
+   - Bonus type is not fixed at ceiling.
+   - SBB approx.315 / BIG approx.210 / REG approx.90 coins are bonus-type acquisition amounts, not a ceiling minimum guarantee.
+   - Source: https://nana-press.com/kaiseki/machine/722/19937/
+
+4) パチスロ バイオハザードRE:2
+   - 1000G then replay/rare role -> bonus + AT.
+   - Max 7 CZ failures -> next CZ succeeds, bonus + AT.
+   - Initial Hazard Bonus approx.100 coins, approx.4.5 coins/G.
+   - AT Hazard Rush: 40G+alpha, approx.1.0 coin/G.
+   - Approx.100 coins is not treated as a fixed final minimum difference.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/438/
+     https://nana-press.com/kaiseki/machine/438/11808/
+     https://nana-press.com/kaiseki/machine/438/11809/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r62
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 65 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 65 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- protected files unchanged vs batch60: PASS
+- batch60 base SHA256 verified: 0e2e0b00dcc921521a5766b96df5adbb22df3e4a94282e193d30c52ae2028bff

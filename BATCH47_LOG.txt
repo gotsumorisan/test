@@ -1,0 +1,86 @@
+HALL SCAN v3.15 batch47
+Date: 2026-09-22
+Purpose: continue ceiling-arrival benefit / payout-information audit, next 4 machines
+
+Selection rule:
+- Continue in 4-machine batches.
+- Prioritized installed unprocessed edge machines with the widest exact-name store coverage in fullrate-data-v314.js.
+- Researched 4 actual machines only.
+
+Web-audited machines: 4
+
+1. スマスロ北斗の拳
+   - Normal ceiling: 1268G+alpha; reset ceiling: 800G+alpha -> AT "バトルボーナス"
+   - Max-ceiling benefit: AT continuation rate is favored + Hokuto-zoroi expectation increases
+   - 777G shortcut-hit benefit: Hokuto-zoroi confirmed
+   - Normal AT: small-role part 30G+alpha + battle part 8G; net increase about 4.1 medals/G
+   - Published expected acquisition per set: about 110 medals
+   - IMPORTANT: about 110 medals is an expected value per set, not a fixed minimum guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/514/13775/
+     https://nana-press.com/kaiseki/machine/514/13780/
+
+2. スマスロ 北斗の拳 転生の章2
+   - Normal maximum: 1536 abeshi -> AT "闘神演舞"
+   - AT won at/after 1473 abeshi: AT level 3 or higher
+   - Reset maximum: 1280 abeshi -> AT
+   - Normal AT: 30G per set, net increase about 4.0 medals/G, then 神拳勝舞
+   - No reliable fixed minimum acquired-medal guarantee confirmed
+   - Do not turn 30G x pure increase into a minimum payout claim
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1059/33018/
+     https://nana-press.com/kaiseki/machine/1059/33031/
+     https://1geki.jp/slot/l_hokuto_tensei2/3/
+
+3. スロット ソードアート・オンラインII
+   - AT interval 1200 real G+alpha -> AT "バレットオブバレッツ"
+   - CZ interval 499 real G+alpha or liquid-crystal max 800G+alpha -> CZ "スコードロンバトル"
+   - Reset: CZ real-G ceiling shortened to 256G+alpha
+   - CZ-only ceiling therefore has no guaranteed payout from simply reaching the ceiling
+   - AT initial amount: 150 medals+alpha, net increase about 3.6 medals/G
+   - IMPORTANT: initial 150+alpha is not a fixed final-acquisition guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1158/37243/
+     https://1geki.jp/slot/l_sao2/3/
+     https://1geki.jp/slot/l_sao2/81/
+
+4. スマスロスーパーブラックジャック
+   - Normal game ceiling 999G+alpha / shortened 666G+alpha -> BIG
+   - BIG interval: after max 4 REGs, next bonus is BIG
+   - Skewer-count ceiling: ST direct
+   - Initial BIG payout: 100 or 300 medals; net increase about 5.1 medals/G; BIG -> RC high
+   - 100/300 are payout amounts, NOT guaranteed net acquired medals
+   - ST: 50G+alpha (max 777G), net increase about 0.4 medals/G, average stock count 2
+   - Sources:
+     https://nana-press.com/kaiseki/machine/876/27137/
+     https://nana-press.com/kaiseki/machine/876/27146/
+     https://1geki.jp/slot/l_sbj/81/
+
+Schema/UI:
+- No schema or UI changes in this batch.
+- Reused optional fields added in batch46: benefit / minimum / initial / average / benefitSource / payoutChecked.
+- Average field is left blank when the published number is not a directly comparable average acquired-payout figure.
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Service Worker: hall-scan-v3.15-r48
+
+QA results:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- installed edge/yutime unique names: 199
+- benefit-audited installed edge/yutime names: 9 / 199
+- fallback/review classification unchanged
+- changed strategy records in this batch: exactly 4 intended machines
+- fullrate-data-v314.js unchanged vs batch46: PASS
+- hallscan-v315.js unchanged vs batch46: PASS
+- hallscan-v315.css unchanged vs batch46: PASS
+- 10 factchecked low-rate HTML files unchanged vs batch46: PASS

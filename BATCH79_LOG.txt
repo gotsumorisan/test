@@ -1,0 +1,91 @@
+HALL SCAN v3.15 batch79
+Date: 2026-09-22
+Base: batch78 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining live candidates were 1-store installations, so selection prioritized multi-ceiling / point-ceiling complexity, practical encounter value, and the loss risk of confusing a CZ threshold with a direct AT/output guarantee.
+- Project tracker remains on inherited 199-machine basis: 133 -> 137 / 199; remaining 62. No denominator reconciliation in this batch.
+
+Selected / audited machines:
+1) Sスーパー海物語 IN JAPAN祭
+   - Store: オーロラ北見店
+   - Bonus ceiling: 110-573G selected + max 26G premonition, max 599G -> 海祭ボーナス.
+   - If the section is carried over after AT, the next bonus ceiling becomes 299G, but the machine has no section lamp and exact identification is difficult.
+   - AT interval ceiling: 1700-2000G + max 26G -> bonus; if self-selected AT fails during the bonus, お詫び魚群 guarantees 海ラッシュ.
+   - 海祭ボーナス: 30G, pure increase about 2.8 medals/G. 海ラッシュ initial medals are decided by 海乗せフェスティバル; pure increase about 2.7 medals/G. Do not derive a fixed minimum medal payout from G x pure increase.
+   - Sources: https://nana-press.com/kaiseki/machine/348/9243/ ; https://nana-press.com/kaiseki/machine/348/9249/ ; https://nana-press.com/kaiseki/machine/348/9252/ ; https://www.p-world.co.jp/machine/database/9603 ; https://hazuse.com/machine/pachislot/1S1823/genre/207/
+
+2) Sヤッターマン絶対正義
+   - Store: オーロラ北見店
+   - Game ceiling: 799G from section entry -> pseudo-bonus ヤッターチャンス (YC).
+   - Yatter counter: mode-dependent max 767pt -> CZ ボカンゾーン. Doron counter: max 64pt -> upper CZ ライブステージ.
+   - Point ceilings are CZ thresholds and do not directly guarantee YC or the main AT.
+   - YC: 30G, pure increase about 2.8 medals/G, main-AT expectation about 34%.
+   - Main AT starts with 絶対正義/真/極 to determine initial medals. A major-media trial article cites about 190 medals average for 絶対正義; this is an average, not a fixed minimum.
+   - Sources: https://1geki.jp/slot/s_yatterman_z/3/ ; https://1geki.jp/slot/s_yatterman_z/43/ ; https://1geki.jp/slot/s_yatterman_z/41/ ; https://nana-press.com/kaiseki/machine/41/755/ ; https://www.p-world.co.jp/machine/database/9174
+
+3) SLOT劇場版 魔法少女まどか☆マギカ[前編]始まりの物語/[後編]永遠の物語
+   - Store: オーロラ北見店
+   - Normal mode ceiling: 660G + premonition (max 700G) -> AT マギカラッシュ.
+   - Special mode: 700G + premonition -> AT; game-count release while in special mode produces an episode bonus.
+   - マギカラッシュ: initial 100 medals or more, pure increase about 2.5 medals/G.
+   - The 100+ medals is explicit AT initial difference, not a guarantee of +100 medals net after the cost to reach the ceiling.
+   - Sources: https://nana-press.com/kaiseki/machine/140/4216/ ; https://nana-press.com/kaiseki/machine/140/4224/ ; https://nana-press.com/kaiseki/machine/140/4460/ ; https://www.p-world.co.jp/machine/database/9413
+
+4) パチスロ麻雀物語4
+   - Store: オーロラ北見店
+   - Corrected existing card: Normal A max is 930G+α, not 999G+α.
+   - Mode ceilings: Normal A 930G+α / B 700G / C 500G / Heaven 128G -> AT 麻雀グランプリ.
+   - Setting change: Normal B or higher and max 550G.
+   - AT: initial 100 medals+α, pure increase about 2.6 medals/G.
+   - AT-entry expected acquisition: setting 1 about 273.8 medals (settings 2-6 about 272.5-266.8). These are averages, not minimum guarantees.
+   - Sources: https://nana-press.com/kaiseki/machine/141/4914/ ; https://nana-press.com/kaiseki/machine/141/4918/ ; https://nana-press.com/kaiseki/machine/141/4706/ ; https://www.p-world.co.jp/machine/database/9428
+
+Edited strategy records only:
+- sすぱ海物語injapan祭
+- sやったーまん絶対正義
+- slot劇場版魔法少女まどか☆まぎか前編始まりの物語後編永遠の物語
+- ぱちすろ麻雀物語4
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r80
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 137 / 199 (project tracker basis)
+- payoutChecked strategy records in current strategy DB: 137
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch78
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards
+- Service Worker revision r80
+- current live unaudited edge/yutime strategies after batch79: 57
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 137 / 199 (project tracker basis; remaining 62)
+- payoutChecked strategy records in current strategy DB: 137
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch78: PASS
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards: PASS
+- Service Worker revision: hall-scan-v3.15-r80 PASS
+- current live unaudited edge/yutime strategies after batch79: 57. This live count is informational only and does not alter the inherited 199-machine project tracker.

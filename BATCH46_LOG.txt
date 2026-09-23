@@ -1,0 +1,88 @@
+HALL SCAN v3.15 batch46
+Date: 2026-09-21
+Purpose: start ceiling-arrival benefit / payout-information audit, first 4 machines
+
+Web-audited machines: 4
+1. L 東京喰種
+   - CZ ceiling: max 600G+alpha -> CZ (not guaranteed AT)
+   - AT ceiling: 1200 real G+alpha -> AT "東京喰種咬"
+   - AT initial amount: about 150 medals + alpha; net increase about 4.0 medals/G
+   - Do NOT relabel "initial about 150 medals" as "minimum guaranteed 150 medals"
+   - CZ-only ceiling therefore has no guaranteed payout from simply reaching the ceiling
+   - Sources:
+     https://nana-press.com/kaiseki/machine/889/27250/
+     https://nana-press.com/kaiseki/machine/889/27261/
+
+2. スマスロモンキーターンV
+   - Game ceiling 795G+alpha / max 6 cycles; shortened 495G+alpha / max 4 cycles -> AT "SGラッシュ"
+   - No reliable fixed minimum acquired-medal guarantee confirmed
+   - Normal AT: net increase about 2.5 medals/G
+   - One set structure: 波多野周回モード 31G+alpha + SGレース 9G
+   - Do not invent a "minimum XXX medals" by multiplying pure increase and nominal games
+   - Sources:
+     https://nana-press.com/kaiseki/machine/644/18016/
+     https://nana-press.com/kaiseki/machine/644/18265/
+
+3. スマスロ 甲鉄城のカバネリ 海門（うなと）決戦
+   - Normal ceiling 996G / max 6 cycles; shortened 596G / max 4 cycles
+   - Benefit: episode bonus -> ST entry confirmed/very strong (published as 100%)
+   - Ceiling arrival is also a black-smoke-point acquisition trigger
+   - Episode bonus is listed as ending after payout exceeds 150 medals; this is payout, NOT a guarantee of 150 net acquired medals
+   - Episode bonus net increase about 6.0 medals/G; normal ST 25G+alpha, continuation about 76%
+   - Both central name variants were updated identically because both exist in the installation DB
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1097/35403/
+     https://1geki.jp/slot/l_kabaneri2/61/
+     https://1geki.jp/slot/l_kabaneri2/
+
+4. Lパチスロ からくりサーカス2
+   - CZ ceiling: liquid-crystal max 1200G / real 890G -> CZ "機械仕掛けの女神"
+   - 4 consecutive CZ failures -> 5th CZ: AT + one guaranteed-success 激情ジャッジ
+   - AT ceiling real 2500G -> AT + one guaranteed-success 激情ジャッジ
+   - CZ-only ceiling has no guaranteed payout from simply reaching the ceiling
+   - Normal AT initial amount 150 medals, net increase about 2.8 medals/G
+   - Do NOT relabel initial 150 medals as a guaranteed 150-medal final acquisition
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1144/
+     https://nana-press.com/kaiseki/machine/1144/37439/
+
+UI/schema changes:
+- Added optional strategy fields: benefit, minimum, initial, average, benefitSource, payoutChecked.
+- Cards now show, only when data exists:
+  * 天井到達時の恩恵
+  * 最低保証・注意
+  * 初期枚数・AT構造 (or 初期玉数・構造 for pachinko)
+  * 平均獲得目安
+- benefitSource is shown as a separate "天井・出玉元を開く" link when different from the existing source.
+- Enhanced normal-rate search now includes benefit/minimum/initial/average text.
+- Existing cards without these new fields remain unchanged visually.
+
+Important interpretation rules:
+- "最低保証", "初期枚数", "払出", "獲得枚数", "純増", "平均獲得" are separate concepts.
+- If a ceiling only awards CZ, record guaranteed payout as 0 from the ceiling itself; do not imply AT.
+- If a source gives an initial amount, do not automatically call it the minimum final payout.
+- If average payout is not reliably published, leave average blank rather than estimate it.
+
+Progress:
+- Installed edge/yutime machine names with benefit data: 5 / 199
+  (5 names because Kabaneri exists under two installation-name variants; this batch researched 4 actual machines.)
+- Remaining installed edge/yutime machine names without benefit data: 194
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Service Worker: hall-scan-v3.15-r47
+
+QA
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- fallback/review classification unchanged
+- benefit fields present for the intended 4 researched machines (5 strategy-name records due Kabaneri duplicate naming)
+- fullrate-data-v314.js unchanged vs batch45: PASS
+- hallscan-v315.css unchanged vs batch45: PASS

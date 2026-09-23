@@ -1,0 +1,43 @@
+HALL SCAN v3.15 batch 19
+Date: 2026-09-21
+Target store: パーラーダイマン only
+
+New Web-audited machines: 10 / 10
+- PA聖闘士星矢4 The Battle of ”限界突破” -> no-g
+  source: https://www.p-world.co.jp/machine/database/9006
+- PFバイオハザード リベレーションズ LIGHT VER. -> no-g
+  source: https://www.p-world.co.jp/machine/database/8943
+- P真・黄門ちゃま -> no-g
+  source: https://www.p-world.co.jp/machine/database/9127
+  note: 1/319.6ミドル版。遊タイム搭載の甘デジ版と別スペック。
+- PA FAIRY TAIL 設定付 -> no-g
+  source: https://www.p-world.co.jp/machine/database/8752
+- PA設定付牙狼GOLDSTORM翔RH -> no-g
+  source: https://www.p-world.co.jp/machine/database/8872
+- P頭文字D Non-Stop 3000Edition -> no-g
+  source: https://www.p-world.co.jp/machine/database/9884
+- Pドラム海物語IN沖縄 桜バージョン -> no-g
+  source: https://www.p-world.co.jp/machine/database/8967
+- Pリング バースデイ 呪いの始まり設定付 -> no-g
+  source: https://www.p-world.co.jp/machine/database/8983
+- スマスロ 鬼武者3 -> edge
+  source: https://nana-press.com/kaiseki/machine/828/24473/
+  +2000-yen consultation line: normal equal 850G / 5.6枚 950G; confirmed reset equal 300G / 5.6枚 350G
+- 麻雀格闘倶楽部参 -> edge
+  source: https://slotmethod.jp/archives/12694/
+  +2000-yen consultation line: equal 600G / 5.6枚 650G
+
+Hard limits:
+- Stores: 1 / 1 -> stop after this store
+- New Web audits: 10 / 10 -> hard stop
+- Reused/linked confirmed records: 0 / 50
+- Machine records processed: 10 / 60
+- Files edited/created: 4 / 6
+
+Protected:
+- fullrate-data-v314.js unchanged
+- existing low-rate/factchecked HTML unchanged
+- previously audited strategy records preserved
+
+Global review count after central DB resolution: 0
+Service Worker: v3.15-r19 -> v3.15-r20

@@ -1,0 +1,116 @@
+HALL SCAN v3.15 BATCH20 QA LOG
+Date: 2026-09-21
+Scope: v3.15 normal-rate completion QA only
+
+No new feature implementation.
+New machine Web audits: 1 / 10 (source-completeness fix for L虚構推理 only)
+Files edited/created: 4 / 6
+- machine-strategy-v315.js
+- sw.js
+- README.md
+- BATCH20_LOG.txt
+
+1. Central strategy resolution
+- Stores: 14
+- Full-rate installation records: 1689
+  - pachi4: 929
+  - slot20: 760
+- strategyFor fallback: 0
+- installed records resolving to type=review: 0
+- resolved installed type counts:
+  - no-g: 837
+  - yutime: 90
+  - edge: 616
+  - setting: 146
+
+2. Strategy DB cleanup found by QA
+Before cleanup:
+- strategies: 545
+- raw review entries: 19
+- normalized-name strategy collisions: 20 groups
+- broken strategy aliases: 3
+- edge:true records missing required source: 1 (L虚構推理)
+
+Minimal fixes:
+- Removed 20 obsolete duplicate strategy records where the canonical normalized-key record already existed.
+  - 19 were stale pre-audit review records.
+  - 1 was a duplicate no-g record for Pシュタインズ・ゲート ゼロ.
+- Removed 3 broken/ambiguous strategy aliases:
+  - 東京ぐーる -> 東京喰種
+  - とうきょうぐーる -> 東京喰種
+  - ぐーる -> 東京喰種
+  Search fuzzy aliases remain in hallscan-v315.js and were not changed.
+- Added source for L虚構推理:
+  https://nana-press.com/kaiseki/machine/1111/36134/
+
+After cleanup:
+- strategies: 525
+- aliases: 1
+- raw review entries: 0
+- normalized-name strategy collisions: 0
+- broken alias targets: 0
+- edge:true strategies: 206
+- edge required-field missing: 0
+- edge source URL format failures: 0
+- invalid checked dates: 0
+- edge/type consistency mismatches: 0
+
+3. Distinct-spec / normalization check
+- Installation-name normalization collision groups: 9
+- All 9 are typography-only variants (hyphen/space/exclamation formatting); numeric spec tokens remain equal.
+- No differing-spec collision found in the current full-rate installation data.
+- Pre/post strategy resolution comparison over all 1689 installed records found 0 changes to:
+  name/type/edge/check/target/ceiling/short/stop/note.
+  (Only cleanup metadata/source completeness changed.)
+
+4. Static integrity
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- Service Worker CORE entries: 61, missing: 0
+- HTML local static refs (excluding JS template placeholders): missing 0
+- Relevant pages contain fullrate-data-v314.js, machine-strategy-v315.js, hallscan-v315.js, hallscan-v315.css.
+
+5. UI / behavior smoke QA
+Method: local Chromium with CSS/JS inlined and QA-only pathname injection because this environment blocks browser navigation to file:// and local HTTP URLs. Production/GitHub Pages network deployment was not claimed/tested.
+
+Search page 393px:
+- document scrollWidth = 393 (no document horizontal overflow)
+- default mode = low, normal-rate rendered rows = 0
+- all mode total count = 2258
+- query "東京グール" = 33 hits; normal-rate matches present
+- typo query "東京グル" = same 33-hit set; fuzzy search works
+- unique normal-rate query L虚構推理 rendered normal rows and favorite buttons
+- favorite save -> shared key persisted in test localStorage and favorite filter returned the saved row
+- low mode after switching back -> normal-rate rows = 0
+- Runtime exceptions: 0
+
+Stores page 375px:
+- scrollWidth = 375
+- 14 store rows / 14 normal-rate count badges
+- Runtime exceptions: 0
+
+Aurora store page 393px:
+- full-rate section injected successfully
+- expectation-candidate mode rendered only data-edge=1 cards (non-edge count 0)
+- scrollWidth = 393
+- Runtime exceptions: 0
+
+Abashiri Royal representative 375px:
+- full-rate section injected successfully
+- scrollWidth = 375
+- Runtime exceptions: 0
+
+6. Protected files
+Unchanged from batch19 baseline:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- all existing HTML pages / low-rate fact-checked content
+
+7. Documentation
+- Restored missing README batch17 summary from BATCH17_LOG.txt.
+- Added this batch20 QA summary.
+
+Service Worker cache:
+- v3.15-r20 -> v3.15-r21

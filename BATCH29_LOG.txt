@@ -1,0 +1,46 @@
+HALL SCAN v3.15 BATCH29 LOG
+Date: 2026-09-21
+Scope: 店舗別交換条件表示 第6店舗（1店舗のみ）
+
+Target store
+- パーラーDAIGORO Z
+
+Verified current lending information
+- P-WORLD current listing (last updated 2026-09-20):
+  - 20スロ: 1000円/46枚
+  - 4パチ: 500円/125玉
+
+External exchange information
+- みんパチ現行掲載:
+  - 21.73円スロ: 5.2枚交換（1000円分の景品=52枚）
+  - 4円パチンコ: 28玉交換
+- スロマップAI現行掲載:
+  - スロ: 5.2枚
+- 20スロ交換率は外部2ソース一致。ただし店舗公式公表ではないため「非公式」として保持。
+- 4パチ28玉は外部1ソースのため「非公式」として保持。
+
+UI behavior
+- パーラーDAIGORO Zの通常貸し欄に店舗交換条件を表示。
+- 20スロは52枚交換だが、52枚専用の公開期待値がない機種は56枚交換側を「この店で使う暫定基準（安全側）」として表示。
+- 52枚専用ラインを補間・推定しない。
+- 4パチは交換条件を注記するだけで、期待値ラインの自動変換は行わない。
+- 最終A/B/C/Dでは当日の交換条件を確認する。
+
+Protected data
+- 設置機種リスト変更なし。
+- machine-strategy-v315.js変更なし。
+- 低貸データ変更なし。
+
+Files edited
+- fullrate-data-v314.js（パーラーDAIGORO Zの交換メタデータのみ）
+- sw.js
+- README.md
+- BATCH29_LOG.txt
+
+Service Worker
+- hall-scan-v3.15-r30
+
+Minor UI bugfix
+- 「リセット5.6枚は～」のような説明文まで店舗基準ラベルへ置換されるケースを修正。
+- 数値直前の5.6枚表記だけを「56枚=1000円交換」の基準ラベルへ変換し、説明文中は「56枚交換」と表示する。
+- 相談ライン数値そのもの・攻略DBは変更なし。

@@ -1,0 +1,89 @@
+HALL SCAN v3.15 batch77
+Date: 2026-09-22
+Base: batch76 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining current live candidates were 1-store installations, so selection prioritized multi-ceiling / multi-counter complexity and loss risk from confusing a CZ/BC threshold with an AT guarantee.
+- Project tracker remains on inherited 199-machine basis: 125 -> 129 / 199; remaining 70. No denominator reconciliation in this batch.
+
+Selected / audited machines:
+1) SLOTバジリスク～甲賀忍法帖～絆2
+   - Store: オーロラ北見店
+   - Game ceiling: 800G from advantageous-section start, excluding BC games -> same-color BC.
+   - If no BC occurred before the 800G ceiling, episode BC is awarded -> BT + Kizuna high state.
+   - BC-skip ceiling: normally 6 misses -> 7th BC gives BT; table 5 can require 7 misses -> 8th BC, with loop-stock lottery at that ceiling.
+   - Regular 800G ceiling after prior BC is not an automatic BT guarantee.
+   - BC 16G; episode BC 30G; BT averages about 40G/set, pure increase about 2.9 medals/G. Do not multiply game count by pure increase into a fixed minimum payout.
+   - Sources: https://nana-press.com/kaiseki/machine/6/48/ ; https://nana-press.com/kaiseki/machine/6/61/ ; https://nana-press.com/kaiseki/machine/6/64/ ; https://www.p-world.co.jp/machine/database/9114
+
+2) パチスロ アクエリオン ALL STARS
+   - Store: マルハン網走店
+   - Game ceiling: liquid-crystal 1000G -> AT.
+   - CZ interval ceiling: liquid-crystal 700G -> EVOL Chance or Apollonius Mode; AT is not guaranteed by this threshold alone.
+   - CZ-skip ceiling: max 4 misses -> 5th CZ succeeds -> AT.
+   - AT starts through Ecstasy Chance; first AT set is guaranteed 70G or more; 2nd and later sets 30G or more. Pure increase about 2.5 medals/G.
+   - 70G is a published game-count guarantee, not a fixed minimum medal amount.
+   - Sources: https://nana-press.com/kaiseki/machine/383/10002/ ; https://nana-press.com/kaiseki/machine/383/10012/ ; https://nana-press.com/kaiseki/machine/383/10013/ ; https://www.p-world.co.jp/machine/database/9643
+
+3) パチスロペルソナ5
+   - Store: オーロラ北見店
+   - AT interval 699G+: next PC gives AT. AT interval 999G+α with no PC -> direct AT.
+   - PC-skip ceiling: 6 misses -> 7th PC gives AT; setting change shortens to max 4 misses -> 5th PC.
+   - PC interval max 400G only moves to super-high state (PC probability greatly increased), so it is not a direct payout / AT guarantee.
+   - PC is 15G, pure increase about 2.0 medals/G; AT TAKE YOUR HEART is 30G+α/set, pure increase about 2.0 medals/G.
+   - Sources: https://nana-press.com/kaiseki/machine/407/11027/ ; https://nana-press.com/kaiseki/machine/407/11029/ ; https://nana-press.com/kaiseki/machine/407/11030/ ; https://www.p-world.co.jp/machine/database/9670
+
+4) パチスロ戦姫絶唱シンフォギア 勇気の歌
+   - Store: オーロラ北見店
+   - 800G ceiling -> GX Battle; the ceiling CZ has about 80% AT expectation, but AT is not guaranteed.
+   - Same advantageous section 1499G: the next GX Battle succeeds -> AT.
+   - 4 consecutive CZ failures: next CZ gives V-SONG or Zessho; Zessho expectation about 75%.
+   - V-SONG is 30G/set, pure increase about 2.8 medals/G. Do not convert 30G × pure increase into a fixed minimum payout.
+   - Sources: https://nana-press.com/kaiseki/machine/161/7186/ ; https://nana-press.com/kaiseki/machine/161/7194/ ; https://nana-press.com/kaiseki/machine/161/7198/ ; https://www.p-world.co.jp/machine/database/9520
+
+Edited strategy records only:
+- slotばじりすく~甲賀忍法帖~絆2
+- ぱちすろあくえりおんallstars
+- ぱちすろぺるそな5
+- ぱちすろ戦姫絶唱しんふぉぎあ勇気の歌
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r78
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 129 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch76
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards
+- Service Worker revision r78
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 129 / 199 (project tracker basis; remaining 70)
+- payoutChecked strategy records in current strategy DB: 129
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch76: PASS
+- benefit/minimum/initial/benefitSource fields present on all 4 audited strategy cards: PASS
+- Service Worker revision: hall-scan-v3.15-r78 PASS
+- current live unaudited edge/yutime strategies after batch77: 65. This live count is informational only and does not alter the inherited 199-machine project tracker.

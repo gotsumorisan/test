@@ -1,0 +1,66 @@
+HALL SCAN v3.15 batch70
+Date: 2026-09-22
+Base: batch69
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: remaining 2-store Yu-Time machines, prioritized by practical value for live decisions.
+
+Audited machines:
+1) PA野生の王国6
+   - 299 low-probability spins -> Yu-Time / 百獣の王TIME(∞), 5000 time-short spins.
+   - Jackpot expectation during Yu-Time about 99.9%; arrival itself pays 0 balls and is not a literal 100% jackpot guarantee.
+   - Jackpot payout: 4R 400 / 5R 500 / 10R 1000 balls (payout values).
+   - Source: https://www.p-world.co.jp/machine/database/10389
+
+2) PAドラム海物語IN JAPAN
+   - 290 low-probability spins -> Yu-Time, 379 time-short spins. After a jackpot, activation corresponds to 300 spins including ST10.
+   - Jackpot expectation during 379 time-short spins about 97.8%; arrival itself pays 0 balls.
+   - Jackpot payout: 4R 400 / 6R 600 / 10R 1000 balls.
+   - Sources: https://www.p-world.co.jp/machine/database/9239 ; https://pachiseven.jp/articles/detail/11415
+
+3) P新・遠山の金さん 77Ver.
+   - 150 low-probability spins -> 296 time-short spins; after ST, the in-game display reaches 204 at Yu-Time activation.
+   - Jackpot expectation during Yu-Time about 98%; arrival itself pays 0 balls.
+   - Jackpot payout: 2R about 220 / 3R about 330 / 10R about 1100 balls.
+   - Sources: https://www.fujimarukun.co.jp/products/p_kinsan3/ ; https://1geki.jp/pachinko/p_newtokinjwz77/25/
+
+4) ぱちんこ 劇場版 魔法少女まどか☆マギカ キュゥべえver.
+   - 300 spins between jackpots -> バカンスモード, 295 time-short spins + 4 residual holds.
+   - Jackpot expectation about 99.9%; arrival itself pays 0 balls.
+   - Jackpot payout range 243-1000 balls; payout values are not Yu-Time initial balls.
+   - Source: https://www.p-world.co.jp/machine/database/9253
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r71
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 101 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 101 / 199
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch69: PASS

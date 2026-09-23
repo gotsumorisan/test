@@ -1,0 +1,99 @@
+HALL SCAN v3.15 BATCH23 BEGINNER-LABEL + NUMERIC CONSULTATION-LINE AUDIT LOG
+Date: 2026-09-21
+Scope: beginner-friendly exchange labels + abstract consultation-line numericization phase 2
+
+Hard limits / workload
+- New Web audits: 5 / 10
+- Processed central strategy records: 5 / 60
+- Affected normal-rate installation records: 21 / 60
+- Files edited/created: 5 / 6
+  - machine-strategy-v315.js
+  - hallscan-v315.js
+  - sw.js
+  - README.md
+  - BATCH23_LOG.txt
+
+1. Beginner-friendly exchange wording
+Problem:
+The source-style labels "等価" and "5.6枚" are accurate but too technical for a beginner.
+
+UI-only rendering change:
+- 等価 / 等価交換 -> 交換ロスなし
+- 5.6枚 -> 56枚=1000円交換
+- 5.6枚現金 -> 56枚=1000円交換・現金投資
+- Numeric lines now render with a separator, e.g.
+  source DB: 等価650G～ / 5.6枚750G～
+  screen:    交換ロスなし：650G～ / 56枚=1000円交換：750G～
+
+A short glossary was added to the normal-rate section:
+- 交換ロスなし = lending and exchange medal value are the same
+- 56枚=1000円交換 = 56 medals are required for 1000 yen of prize value
+- If the exchange rate is unknown, do not guess; confirm in chat.
+
+The underlying strategy DB keeps source terminology so source comparisons remain traceable; beginner wording is applied only at render time.
+
+2. Numeric consultation-line audit phase 2 (5 machines)
+All lines below use HALL SCAN's approx. +2,000 yen screening threshold when the source expectation table supports it. Consultation line != seating line.
+
+1) L 真・一騎当千
+- Normal: equal 650G+ / 5.6 750G+
+- Confirmed reset: equal 150G+ / 5.6 200G+
+- Normal ceiling max 1000G+alpha; reset max 400G+alpha
+- Source: NanaPress machine 815/24362
+
+2) L主役は銭形5
+- Normal: equal 700G+ / 5.6 850G+
+- Confirmed reset: equal 400G+ / 5.6 500G+
+- Mode ceilings separated: A 1250G / B 950G / C 550G / heaven 150G; reset max 850G
+- Source: NanaPress machine 1033/32240
+
+3) スマスロ とある科学の超電磁砲2
+- AT interval normal: equal 650G+ / 5.6 750G+
+- Confirmed reset: equal 450G+ / 5.6 500G+
+- CZ interval max 499G+alpha remains a separate counter
+- Source: NanaPress machine 1041/32750
+
+4) スマスロ ミリオンゴッド‐神々の軌跡‐
+- Normal: equal 700G+ / 5.6 850G+
+- Confirmed reset: equal 300G+ / 5.6 700G+ for the +2,000-yen project threshold
+- Important: reset 5.6 exchange has a value dip around 510-599G, so it is not represented as one shallow continuous line
+- Normal ceiling 1480G+alpha; reset ceiling distribution 510/1000/1480G
+- Source: NanaPress machine 1112/35715
+
+5) スマスロスーパーリオエース2
+- Bonus interval normal: equal 500G+ / 5.6 550G+
+- Confirmed reset: equal 300G+ / 5.6 350G+
+- Through ceiling: normal 7 throughs -> 8th bonus AT; reset 4 throughs -> 5th bonus AT
+- Source: NanaPress machine 1143/36738
+
+Impact
+- 5 audited strategies resolve to 21 normal-rate installation records.
+- Edge/yutime strategies with no numeric token in target: 35 -> 30.
+- All 1,689 normal-rate installation records still resolve; fallback 0 / review 0.
+
+Protected / unchanged
+- fullrate-data-v314.js
+- hallscan-v315.css
+- all low-rate fact-checked HTML
+- store installation/rate data
+
+Service Worker cache
+- hall-scan-v3.15-r23 -> hall-scan-v3.15-r24
+
+QA
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- Stores: 14
+- Full-rate installations: 1,689 (4-pachi 929 / 20-slot 760)
+- strategy resolution fallback: 0
+- installed review: 0
+- installed type counts unchanged: no-g 837 / yutime 90 / edge 554 / setting 208
+- beginner label function test:
+  等価650G～ / 5.6枚750G～ -> 交換ロスなし：650G～ / 56枚=1000円交換：750G～
+- Direct Chromium file:// render was attempted once but the environment timed out; the process was terminated and not retried. Static/JS QA passed. No claim of direct browser render QA for batch23.
+
+Remaining work
+- 30 edge/yutime strategies still have no numeric token in target.
+- Other targets may still contain abstract modifiers together with numbers; audit later source-by-source.
+- Ceiling payout / minimum-guarantee display remains a separate feature and is not mixed into this batch.

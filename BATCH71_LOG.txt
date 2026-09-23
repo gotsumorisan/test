@@ -1,0 +1,70 @@
+HALL SCAN v3.15 batch71
+Date: 2026-09-22
+Base: batch70
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for 4 machines.
+- Selection basis: remaining 2-store unaudited machines plus high-practical-value 1-store machines.
+
+Audited machines:
+1) PAぱちんこ乗物娘77ver.
+   - 200 low-probability spins -> Yu-Time, 290 time-short spins.
+   - Jackpot expectation during Yu-Time about 98%; arrival itself pays 0 balls.
+   - Jackpot payout: about 440-1100 balls (4R/6R/8R/10R).
+   - Source: https://www.p-world.co.jp/machine/database/9455
+
+2) PAコマコマ倶楽部with坂本冬美 99ver.
+   - 265 low-probability spins -> Yu-Time / 冬美チャンス, 379 time-short spins.
+   - Arrival itself pays 0 balls; 379 time-short spins are not a literal jackpot guarantee.
+   - Jackpot payout: 5R 400 / 10R 800 balls; 10R share 34%.
+   - Source: https://www.p-world.co.jp/machine/database/9624
+
+3) L 犬夜叉2
+   - Game-count ceiling: max 666G+alpha; reset max 333G+alpha -> CZ 妖勝負.
+   - CZ-skip ceiling: max 7 skips -> next AT without CZ. Reset / AT walk-through: max 3 skips.
+   - Game-count ceiling is CZ only, so direct payout guarantee at arrival is 0 medals.
+   - AT ブッた斬りスラッシュ: 20G+alpha. AT bonus initial values: 50/100/200 medals depending on type; not the G-count ceiling guarantee.
+   - Sources: https://nana-press.com/kaiseki/machine/846/25667/ ; https://nana-press.com/kaiseki/machine/846/25676/ ; https://nana-press.com/kaiseki/machine/846/25677/ ; https://nana-press.com/kaiseki/machine/846/25678/
+
+4) スマスロ シャーマンキング
+   - Game-count ceiling: 800G+alpha; reset 500G+alpha -> シャーマンボーナス.
+   - AT-skip ceiling: max 10 skips -> AT on the next bonus. Possession-point ceiling: 1000pt -> CZ or bonus or AT.
+   - Game-count ceiling does not guarantee AT.
+   - シャーマンボーナス: 30G, approx. 2.5 medals/G, then シャーマンファイト予選.
+   - AT シャーマンファイト: initial 40G+alpha, approx. 2.5 or 5.4 medals/G.
+   - Sources: https://nana-press.com/kaiseki/machine/898/27187/ ; https://nana-press.com/kaiseki/machine/898/27200/ ; https://nana-press.com/kaiseki/machine/898/27203/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r72
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 105 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 105 / 199
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch70: PASS
+- benefit/minimum/initial fields present on all 4 audited strategy cards: PASS

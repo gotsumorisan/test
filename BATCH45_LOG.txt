@@ -1,0 +1,75 @@
+HALL SCAN v3.15 batch45
+Date: 2026-09-21
+Purpose: finish numeric consultation-line audit, final 4 machines
+
+Web-audited strategies: 4
+1. 押忍！番長4
+   - Game-count +2,000 yen guide: equal 450G+ / 5.6 500G+
+   - Published EV table: 450G equal +2,303 yen / 500G 5.6 +2,202 yen
+   - Bonus interval ceiling: 699G+alpha -> 番長ボーナス
+   - Training interval is a separate counter: A 249G / B 199G / 押忍・チャンス 149G / AT引き戻し 99G / 天国 49G
+   - AT rescue: normally max 9 skips -> AT on the 10th bonus; setting change max 6 skips -> AT on the 7th bonus
+   - No dedicated published +2,000-yen reset start line was added
+   - Source: https://nana-press.com/kaiseki/machine/736/20456/
+   - Additional condition page: https://nana-press.com/kaiseki/machine/736/22670/
+2. 沖ドキ！DUO
+   - 0-skip +2,000 yen guide: equal 550G+ / 5.6 600G+
+   - Published EV: 550G equal +2,546 yen / 600G 5.6 +2,701 yen
+   - 1-skip +2,000 yen guide: equal 350G+ / 5.6 450G+
+   - Published EV: 350G equal +2,299 yen / 450G 5.6 +2,376 yen
+   - Bonus interval ceiling: max 800G; chance 200G; heaven+ 32G
+   - Same advantageous interval: 6 heaven skips -> 7th bonus enters heaven or higher
+   - Follow through the 33rd game after a bonus for heaven/Dokihana confirmation
+   - Source: https://nana-press.com/kaiseki/machine/223/7071/
+3. 沖ドキ！GOLD
+   - Game-count +2,000 yen guide: equal 700G+ / 5.6 750G+
+   - Published EV table: 700G equal +2,465 yen / 750G 5.6 +2,186 yen
+   - Normal A/B ceiling 999G; comeback/chance 200G; heaven/Dokidoki/super-Dokidoki/guarantee/Kin-Doki 32G
+   - Setting change: chance mode ~39.8%; if A/B is selected, 25% chance of 399G ceiling
+   - No dedicated published +2,000-yen reset start line was added
+   - Follow through 32G after bonus; mode B+ confirmed/strong hints require separate continuation judgment
+   - Source: https://nana-press.com/kaiseki/machine/478/12848/
+4. 麻雀格闘倶楽部 覚醒
+   - Game-count +2,000 yen guide: equal 750G+ / 5.6 850G+
+   - Published EV table: 750G equal +2,060 yen / 850G 5.6 +2,643 yen
+   - Mode ceilings: normal 770G+alpha / comeback 390G+alpha / 覚醒・裏覚醒 160G+alpha / 裏覚醒準備 960G+alpha
+   - 770G+ is 裏覚醒準備濃厚
+   - Setting change: about 80% AT by 160G+alpha; no dedicated published +2,000-yen reset start line was added
+   - Source: https://nana-press.com/kaiseki/machine/604/16783/
+
+Affected normal-rate installation records: 15
+- 沖ドキ！GOLD: 8
+- 麻雀格闘倶楽部 覚醒: 4
+- 沖ドキ！DUO: 2
+- 押忍！番長4: 1
+
+Numericization progress:
+- edge/yutime strategies with zero numeric token in target: 4 -> 0
+- The abstract consultation-line numericization task is complete.
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Safety:
+- Consultation line remains screening only; it is not an automatic seating line.
+- +2,000-yen thresholds were used only where the published expectation tables directly supported them.
+- Published site "recommended" start lines below the project +2,000-yen criterion were not adopted as HALL SCAN +2,000-yen lines.
+- Reset/mode values without a dedicated published +2,000-yen table were kept as separate conditions, not converted into invented fixed start G values.
+
+Service Worker: hall-scan-v3.15-r46
+
+QA
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- fallback: 0 / review: 0
+- classification: no-g 837 / yutime 90 / edge 554 / setting 208
+- changed central strategies vs batch44: exactly 4
+- aliases unchanged: PASS
+- remaining zero-numeric edge/yutime targets: 0
+- fullrate-data-v314.js / hallscan-v315.js / hallscan-v315.css unchanged vs batch44: PASS

@@ -1,0 +1,29 @@
+HALL SCAN v3.15 batch 06
+Date: 2026-09-21
+Store: ロイヤル網走店
+New web-audited machines: 10
+Existing confirmed data reused: 0
+Files changed/created this batch: machine-strategy-v315.js, sw.js, README.md, BATCH06_LOG.txt
+
+Batch06 audited:
+1. eようこそ実力至上主義の教室へ -> G数狙いなし
+2. eルパン三世 ONE COLLECTION 超ブチヌキLT ver. -> G数狙いなし
+3. e 仮面ライダー電王 デカヘソ239 -> G数狙いなし
+4. e範馬刃牙 199ver. -> G数狙いなし
+5. e 乃木坂46 II -> G数狙いなし
+6. PストリートファイターV K.O.RUSH LIGHT EDITION -> G数狙いなし
+7. P にゃんこ大戦争 多様性のネコ 神さまにおまかせ88ver. -> G数狙いなし
+8. デカスタP戦国無双 100ver. -> G数狙いなし
+9. P【超甘LT】江頭2:50inナナシー 奇跡の99% -> G数狙いなし
+10. eF炎炎ノ消防隊2 99ver. -> G数狙いなし
+
+Store status:
+- ロイヤル網走店 4パチ未監査: 0 (20件中20件監査完了)
+- ロイヤル網走店 20スロ未監査: 0
+
+Hard limits:
+- Stores: 1/1 (STOP)
+- New web-audited machines: 10/10 (STOP)
+- Existing confirmed data reused: 0/50
+- Machine records processed: 10/60
+- Files edited/created: 4/6

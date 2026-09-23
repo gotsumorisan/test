@@ -1,0 +1,115 @@
+HALL SCAN v3.15 BATCH21 QA / DATA-HYGIENE LOG
+Date: 2026-09-21
+Scope: normal-rate hiena candidate quality correction only
+
+No new machine Web audits: 0 / 10
+Processed central strategy records: 43 / 60
+Files edited/created: 5 / 6
+- machine-strategy-v315.js
+- hallscan-v315.js
+- sw.js
+- README.md
+- BATCH21_LOG.txt
+
+1. False expectation-candidate correction
+Found 12 central strategies whose own fields said "ハイエナ巡回では原則スキップ" / "設定狙い・技術介入" / "天井なし" while type=edge, edge=true.
+Corrected all 12 to type=setting, edge=false:
+- LBパチスロ ヱヴァンゲリヲン ～約束の扉～
+- アレックス ブライト
+- クランキークレスト
+- スマスロ ハナビ
+- ニューゲッターマウス
+- ニューパルサーSP4 with 太鼓の達人
+- ニューパルサーSPIII
+- ハナハナホウオウ～天翔～
+- バーサスリヴァイズ
+- パチスロハイパーラッシュ
+- パチスロ交響詩篇エウレカセブンHI-EVOLUTION ZERO TYPE-ART
+- 新ハナビ
+
+Impact on full-rate installations:
+- 62 installation records moved out of the normal-rate expectation-candidate filter.
+- fullrate-data-v314.js was NOT changed; only central strategy classification changed.
+
+2. Source-quality correction for P-WORLD hall-page records
+After the 12 false-edge corrections, 31 edge/yutime strategies still used a P-WORLD Hokkaido hall page as their source URL.
+These records were not silently treated as analysis-source verified.
+Added metadata:
+- sourceQuality: needs-web
+- sourceRole: installation
+
+UI behavior:
+- Source link label changed globally from "解析元を開く" to neutral "参照元を開く".
+- needs-web records display "設置確認元を開く".
+- needs-web normal-rate cards show a visible caution that P-WORLD hall pages are for installation confirmation and that strategy conditions must be rechecked with current analysis before A/B/C/D seating judgment.
+- The same warning is shown in the on-site decision modal.
+
+Impact:
+- 31 central strategies flagged.
+- 131 normal-rate installation records resolve to a flagged strategy.
+- These remain screening/consultation candidates; they are not promoted to A by the site.
+
+3. Abstract consultation-line handling
+Some edge candidates have no numeric start line and only state-based wording such as "条件が見える台を優先" or "深いG数・特殊条件時のみ確認".
+No numeric value was invented.
+For edge/yutime strategies whose target text contains no numeric token, the UI now prefixes:
+"固定相談ライン未設定｜... 最新解析で期待値を再確認。"
+This is a display-only safety treatment; the strategy source fields are not rewritten.
+Current scope:
+- 45 central edge/yutime strategies
+- 250 normal-rate installation records
+
+4. Central resolution after correction
+- Stores: 14
+- Full-rate installation records: 1689
+  - pachi4: 929
+  - slot20: 760
+- strategyFor fallback: 0
+- installed type counts:
+  - no-g: 837
+  - yutime: 90
+  - edge: 554
+  - setting: 208
+- edge/type consistency mismatches: 0
+- raw review installed records: 0
+
+Note:
+The display-mode "期待値候補" uses edge=true, so yutime entries are also eligible on 4-pachi. The 12 corrected setting/technical machines no longer appear as normal-rate hiena candidates.
+
+5. Static integrity
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- Service Worker CORE entries: 61, missing: 0
+- HTML local static references: missing 0
+- search.html / stores.html / maruhan_tanno_integrated_factchecked.html / abashiri.html include the four required v3.15 normal-rate files.
+
+6. UI / behavior smoke QA
+Method: Chromium CSS/JS injection with QA-only pathname replacement and in-memory localStorage because this environment blocks direct file:// / local HTTP navigation. This is not a GitHub Pages production-network test.
+
+Maruhan Tanno representative normal-rate store page:
+- 375px: document scrollWidth 375; Runtime exceptions 0
+- 393px: document scrollWidth 393; Runtime exceptions 0
+- False-edge LB Evangelion card resolves data-edge=0 / status "設定/技術".
+- In edge mode, false-edge query returns 0 normal-rate candidate cards.
+- needs-web record "真打 吉宗" displays:
+  - "固定相談ライン未設定"
+  - visible "要Web再確認" caution
+  - source label "設置確認元を開く"
+- trusted-source record "東京喰種" displays no source-quality warning and source label "参照元を開く".
+
+Search page 393px:
+- edge mode + query "新ハナビ": normal-rate results 0
+- edge mode + query "真打 吉宗": normal-rate results remain available and display fixed-line-unset safety wording
+- document scrollWidth 393
+- Runtime exceptions 0
+
+7. Protected data
+Unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.css
+- all existing low-rate fact-checked HTML content
+- installation lists / store rate data
+
+Service Worker cache:
+- hall-scan-v3.15-r21 -> hall-scan-v3.15-r22

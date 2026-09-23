@@ -1,0 +1,41 @@
+HALL SCAN v3.15 batch 12
+Date: 2026-09-21
+Store: マルハン北見店
+Processed: 5 machines (pachi4=4, slot20=1)
+
+Pachi4 result: 4 -> G数狙いなし
+1. Pゴッドイーター199ゴッドトリガーVER.
+   Source: https://nana-press.com/kaiseki/machine/1048/32447/
+   Note: 遊タイム非搭載。LT/時短108回はあるが通常時ハマリG到達型ではない。
+2. Pえとたま2 神祭 干支甘
+   Source: https://nana-press.com/kaiseki/machine/1107/35692/
+   Note: 遊タイム非搭載。
+3. e転生したらスライムだった件2
+   Source: https://nana-press.com/kaiseki/machine/1128/35797/
+   Note: 遊タイム非搭載。
+4. eFブルーロック Light ver.
+   Source: https://p.hisshobon.jp/machine/4788/1/1
+   Note: 遊タイム非搭載。PF版とは別スペックとして管理。
+
+Slot20 result: 1 -> 期待値候補
+5. 沖ドキ！GOLD-30
+   Primary strategy source: https://nana-press.com/kaiseki/machine/478/12848/
+   Exact 30Φ spec cross-check: https://www.p-world.co.jp/machine/database/9750
+   Ceiling: 通常A/B 999G、引き戻し/チャンス 200G、天国以上等 32G。
+   +2,000円 consultation line from setting1 EV table: 等価700G～ / 5.6枚750G～。
+   Reset: 約39.8%チャンス移行、通常A/B時も25%で399G短縮。リセット根拠なしでは加点しない。
+   Stop: ボーナス後32Gまで。通常B以上確定/強示唆があれば再判定。
+
+Result counts:
+- マルハン北見店 pachi4 review: 4 -> 0
+- マルハン北見店 slot20 review: 1 -> 0
+
+Batch limits used:
+- stores: 1/1
+- new web analyses: 5/10
+- edited files: 4/6 (machine-strategy-v315.js, sw.js, README.md, BATCH12_LOG.txt)
+- machine records: 5/60
+
+Protected data:
+- fullrate-data-v314.js unchanged
+- existing HTML files unchanged

@@ -1,0 +1,29 @@
+HALL SCAN v3.15 batch 05
+Date: 2026-09-21
+Store: ロイヤル網走店
+New web-audited machines: 10
+Existing confirmed data reused: 0
+Files changed/created this batch: machine-strategy-v315.js, sw.js, README.md, BATCH05_LOG.txt
+
+Batch05 audited:
+1. P弾球黙示録カイジ5 電撃チャージVer.A -> G数狙いなし
+2. P攻殻機動隊SAC_2045 大入りLTver -> G数狙いなし
+3. Pネオモンスターハウス 199Ver. -> G数狙いなし
+4. Pうまい棒2 -> G数狙いなし
+5. Pわんニャンアドベンチャー -> G数狙いなし
+6. Pクイーンズブレイド4 UNLIMITED -> G数狙いなし
+7. P ウルトラマンメビウス デカヘソ319 -> G数狙いなし
+8. e牙狼12黄金騎士極限 -> G数狙いなし
+9. e異世界でチート能力を手にした俺は現実世界をも無双する ～レベルアップは人生を変えた～ -> G数狙いなし
+10. eFダンベル何キロ持てる？2 -> G数狙いなし
+
+Store status:
+- ロイヤル網走店 4パチ未監査: 10 (20件中10件監査完了)
+- ロイヤル網走店 20スロ未監査: 0
+
+Hard limits:
+- Stores: 1/1 (STOP)
+- New web-audited machines: 10/10 (STOP)
+- Existing confirmed data reused: 0/50
+- Machine records processed: 10/60
+- Files edited/created: 4/6

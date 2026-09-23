@@ -1,0 +1,34 @@
+HALL SCAN v3.15 BATCH24 LOG
+Date: 2026-09-21
+Scope: 店舗別交換条件表示の基盤（1店舗のみ）
+
+Target store
+- ロイヤル網走店
+
+Verified external exchange information
+- 20スロ貸出: 1000円/46枚（既存P-WORLD設置DB）
+- 20スロ交換: 5.2枚交換 = 52枚/1000円分の景品
+- 4パチ交換: 28玉交換
+- 20スロ交換率は「みんパチ」と「スロマップAI」の2ソース一致。公式情報ではないため非公式ラベルを付与。
+
+UI behavior
+- ロイヤル網走店の通常貸し欄に店舗交換条件を表示。
+- 公開期待値に56枚交換側がある機種は、ロイヤル網走店ページではそのラベルを「この店で使う基準」に変更。
+- 等価側は「参考（交換ロスなし）」へ変更。
+- 52枚専用期待値を補間・推定して新しいG数を作らない。
+- 56枚側がない機種は従来表示を維持。
+
+Protected data
+- 設置機種リスト自体は変更なし。
+- machine-strategy-v315.js の攻略数値は変更なし。
+- 低貸データ変更なし。
+
+Files edited
+- fullrate-data-v314.js (ロイヤル網走の交換メタデータのみ)
+- hallscan-v315.js
+- sw.js
+- README.md
+- BATCH24_LOG.txt
+
+Service Worker
+- hall-scan-v3.15-r25

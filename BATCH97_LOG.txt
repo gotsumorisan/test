@@ -1,0 +1,33 @@
+HALL SCAN v3.15 batch97
+Date: 2026-09-23
+Baseline: batch96 only
+Purpose: final UI safety / readability pass
+
+Changes:
+1. Separate patrol priority (S/A/B/C/D/X) from final A/B/C/D play decision.
+2. Rename decision buttons to A/B/C/D判定.
+3. Hide memo floating button when memo count is zero; reposition when visible.
+4. Add relative freshness labels and stale warning at >=7 days.
+5. Raise tiny supporting text sizes while keeping compact layout.
+6. Preserve batch96 normal/low independent rate toggles and all audited machine data.
+
+Protected data unchanged:
+- fullrate-data-v314.js
+- machine-strategy-v315.js
+- all existing factchecked store HTML data
+- aliases / audited ceiling-benefit-payout content
+
+SW: hall-scan-v3.15-r98
+
+QA RESULTS:
+- Changed files exactly: BATCH97_LOG.txt, README.md, hallscan-v315.css, hallscan-v315.js, sw.js
+- Protected hashes unchanged: fullrate-data-v314.js, machine-strategy-v315.js, app-v2.css, app-v3.css
+- HTML changed: 0 / duplicate IDs: 0 / missing local refs: 0
+- Low-rate DATA: 569
+- Normal-rate DATA: 1690 (pachi 930 / slot 760)
+- Rate states: both 2259 / normal only 1690 / low only 569 / none 0
+- Audited edge/yutime strategy keys: 194 / pending 0
+- Installed strategy classifications: no-g 838 / yutime 90 / edge 554 / setting 208 / unresolved 0
+- JS syntax: PASS
+- Service Worker CORE refs: 61 / missing 0
+- Service Worker revision: hall-scan-v3.15-r98

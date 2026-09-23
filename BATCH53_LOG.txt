@@ -1,0 +1,87 @@
+HALL SCAN v3.15 batch53
+Date: 2026-09-22
+Purpose: continue ceiling-arrival benefit / payout-information audit, next 4 machines
+
+Selection rule:
+- Continued strictly from batch52.
+- Kept the 4-machine batch cap.
+- Ranked unprocessed installed edge/yutime names by current store coverage in fullrate-data-v314.js.
+- Selected four 7-store machines with high practical play relevance.
+
+Web-audited machines: 4
+
+1. L青春ブタ野郎はバニーガール先輩の夢を見ない
+   - CZ ceiling: max 1000 puberty points or max 560G+alpha since CZ -> CZ
+   - Bonus ceiling: 899G+alpha; reset/ST no-bonus-through shortens to 699G+alpha -> Seishun Bonus
+   - After 6 CZ failures, the 7th CZ occurrence -> Seishun Bonus
+   - Seishun Bonus ends after 5 or 25 bell navigations; after the bonus, ST begins
+   - AT net increase about 8.0 medals/G
+   - CZ ceiling alone has zero guaranteed payout; do not infer a fixed minimum payout from bell-nav count
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1214/38856/
+     https://nana-press.com/kaiseki/machine/1214/38874/
+     https://nana-press.com/kaiseki/machine/1214/
+
+2. スマスロ とある魔術の禁書目録2
+   - Actual consumed 1200G -> AT
+   - Display 800G+alpha -> CZ or AT
+   - Reset: actual 777G -> AT; display 200G+alpha -> CZ or AT
+   - AT starts at 40G+alpha, about 4.0 medals/G
+   - Display-game ceiling can stop at CZ, so its payout guarantee is zero
+   - 40G and pure-increase rate are not converted into a fixed minimum acquisition guarantee
+   - Source:
+     https://nana-press.com/kaiseki/machine/1154/
+
+3. パチスロ甲鉄城のカバネリ
+   - Normal 1000G+alpha -> Episode Bonus + ST
+   - Reset, post-Biba-ST, or single-ST-finish: 650G+alpha -> Episode Bonus + ST
+   - 4 Hayajiro Bonus failures -> 5th bonus becomes Episode Bonus + ST
+   - Normal-time Episode Bonus: about 6.0 medals/G, average about 110 medals
+   - Average 110 medals is not a minimum guarantee
+   - ST Kabaneri Bonus payout 200-1000 medals applies only when that ST bonus is won; not a ceiling-arrival guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/384/10027/
+     https://nana-press.com/kaiseki/machine/384/
+
+4. 吉宗
+   - Mode ceiling: Normal A/C 999G+alpha; Normal B 465G+alpha; Heaven-prep/Heaven 193G+alpha -> bonus
+   - Ceiling bonus can be BIG or REG; BIG is not guaranteed
+   - BIG: about 711 medals, about 7.11 medals/G
+   - REG: about 72 medals, about 7.11 medals/G
+   - About 72 medals is the published REG acquisition, not a fixed ceiling minimum guarantee
+   - Sources:
+     https://nana-press.com/kaiseki/machine/920/29004/
+     https://nana-press.com/kaiseki/machine/920/29016/
+     https://nana-press.com/kaiseki/machine/920/29020/
+
+Schema/UI:
+- No schema or UI changes in this batch.
+- Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Service Worker: hall-scan-v3.15-r54
+
+QA results:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- installed edge/yutime unique display names: 199
+- benefit-audited installed edge/yutime strategy names: 33 / 199
+- fallback references: 0
+- review references: 0
+- changed strategy records in this batch: exactly 4 intended machines
+- aliases unchanged vs batch52: PASS
+- fullrate-data-v314.js unchanged vs batch52: PASS
+- hallscan-v315.js unchanged vs batch52: PASS
+- hallscan-v315.css unchanged vs batch52: PASS
+- factchecked low-rate HTML files unchanged vs batch52: PASS
+- UI benefit/minimum/initial/average fields remain wired: PASS

@@ -1,0 +1,38 @@
+HALL SCAN v3.15 batch39
+Date: 2026-09-21
+Purpose: numeric consultation-line audit, 4 machines per user instruction
+
+Web-audited strategies: 4
+1. L 無職転生 ～異世界行ったら本気だす～
+   - Normal +2,000 yen guide: equal 900G+ / 5.6 950G+
+   - Confirmed shortened state: equal 600G+ / 5.6 650G+
+   - Actual ceilings are stage-change counts: bonus max 19, AT max 40; reset 13/17
+   - Bonus/AT immediate-stop situation: stage change 3 times has about 60% first-hit expectation
+   - Source: https://nana-press.com/kaiseki/machine/1058/33836/
+2. Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE
+   - CZ interval normal: equal 500G+ / 5.6 550G+
+   - CZ interval confirmed reset: equal 150G+ / 5.6 200G+
+   - AT interval normal: equal 750G+ / 5.6 900G+
+   - AT interval confirmed reset: equal 450G+ / 5.6 550G+
+   - CZ 4 throughs around is source's practical prediction, not exact EV line
+   - Source: https://nana-press.com/kaiseki/machine/1123/36306/
+3. Lパチスロ 炎炎ノ消防隊
+   - Bonus interval normal +2,000 yen guide: equal 550G+ / 5.6 600G+
+   - Confirmed shortened state: equal 350G+ / 5.6 400G+
+   - Enen-gekitou interval has 2500G ceiling but no source-supported fixed start line; no invented threshold
+   - Source: https://nana-press.com/kaiseki/machine/738/21300/
+4. Lラブ嬢3～Wご指名はいかがですか？～
+   - Normal +2,000 yen guide: equal 500G+ / 5.6 550G+
+   - 10000pt: Cabaret Chance confirmed
+   - Wご指名チャンス failure: AT within 100G confirmed
+   - Reset ceiling max 500G+alpha; no dedicated +2,000-yen start line found, so none invented
+   - Source: https://nana-press.com/kaiseki/machine/651/18112/
+
+Affected normal-rate installation records: 11
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+
+Service Worker: hall-scan-v3.15-r40

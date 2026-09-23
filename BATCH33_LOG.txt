@@ -1,0 +1,32 @@
+HALL SCAN v3.15 BATCH33 LOG
+Date: 2026-09-21
+Scope: 店舗別交換条件監査 第10店舗（1店舗のみ）
+
+Target store
+- ダイナム北見店
+
+Verified current lending information
+- P-WORLD current listing (last updated 2026-09-19):
+  - パチンコ: 200円/89玉 / 100円/89玉 / 50円/89玉
+  - スロット: 1000円/89枚
+- 4円パチンコ、20円系スロットの通常貸しは現行掲載なし。
+
+Decision
+- 通常貸し用の交換条件プロファイルは追加しない。
+- 存在しない20スロ/4パチ向け相談ラインを他レートから換算・推定しない。
+- fullrate-data-v314.js は pachi4=[] / slot20=[] を維持。
+- checked / sourceUpdated の確認日だけ2026-09-21へ更新。
+
+Protected data
+- 低貸ファクトチェック済みHTML変更なし。
+- machine-strategy-v315.js変更なし。
+- HALL SCAN UIロジック変更なし。
+
+Files edited
+- fullrate-data-v314.js（ダイナム北見店の確認日のみ）
+- sw.js
+- README.md
+- BATCH33_LOG.txt
+
+Service Worker
+- hall-scan-v3.15-r34

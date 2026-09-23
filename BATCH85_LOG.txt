@@ -1,0 +1,40 @@
+HALL SCAN v3.15 batch85
+Date: 2026-09-22
+Baseline: batch84 only
+
+Benefit/payout audit targets (exactly 4):
+1. パチスロ北斗の拳 宿命 / オーロラ北見店
+   - 800G+α -> AT「バトルボーナス」
+   - AT type differs: 伝承(set) / 拳王(medal); no unified fixed minimum payout invented
+   - Sources: https://nana-press.com/kaiseki/machine/103/3026/ , /2815/ , /2816/
+2. パチスロ真・北斗無双 / オーロラ北見店
+   - normal max 12 cycles (~600G) -> CZ「制圧ZONE」, not guaranteed AT
+   - dream mode 4 cycles can direct AT; mode distinctions preserved
+   - Sources: https://nana-press.com/kaiseki/machine/43/1408/ , /1412/ , /1414/ , /1416/
+3. パチスロハードボイルド / オーロラ北見店
+   - 1000G+α normal games from advantageous-section transition -> BIG or REG
+   - BIG ~300 / REG ~60 are averages, not guaranteed minimum; JAC-hazushi tech affects BIG acquisition
+   - Sources: https://nana-press.com/kaiseki/machine/431/11934/ , /431/
+4. パチスロ学園黙示録ハイスクール・オブ・ザ・デッド ゴールド / オーロラ北見店
+   - max 765G -> CZ「黙示録CHANCE」, not guaranteed AT
+   - AT initial 40-300G and pure increase ~8.7/G are AT structure, not ceiling minimum payout
+   - Sources: https://nana-press.com/kaiseki/machine/86/1925/ , /1927/ , /86/
+
+Separation rules retained:
+- ceiling reward != fixed minimum payout
+- CZ ceiling != AT guarantee
+- initial G/medals != final net profit guarantee
+- average acquisition != minimum guarantee
+- do not derive fixed medals from G x pure increase
+
+Protected data/UI unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- aliases
+- low-rate factchecked HTML
+- normal-rate installation DB
+- exchange conditions / fuzzy search / favorites / rate toggles / PWA UI
+
+Project tracker inherited: 161/199 audited, 38 remaining.
+Current live edge/yutime unresolved-by-payout after batch85: 33 (informational; tracker discrepancy not reconciled).
+Service Worker cache: hall-scan-v3.15-r86

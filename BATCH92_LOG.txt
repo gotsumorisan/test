@@ -1,0 +1,13 @@
+HALL SCAN v3.15 batch92
+Date: 2026-09-23
+Baseline: batch91 only
+Baseline SHA256: 8e634e7ea5ab5d12eca6f6e5df9dacd3f3b3a27f8340e258a97cf8092a8989f9
+Targets (exactly 4):
+1. PF戦姫絶唱シンフォギア（甘デジ）
+2. P【超甘LT】華牌RR 1/49×99de遊タイム
+3. PモンキーターンV GC250A
+4. P中森明菜・歌姫伝説～BLACK DIVA 楽～80～89ver.「PB機」
+Tracker: 185/199 -> 189/199 (remaining 10)
+Expected live unaudited: 9 -> 5
+SW: hall-scan-v3.15-r92 -> hall-scan-v3.15-r93
+Protected files/UI structure: unchanged

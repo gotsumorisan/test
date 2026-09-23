@@ -1,0 +1,112 @@
+HALL SCAN v3.15 batch73
+Date: 2026-09-22
+Base: batch72 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining current live candidates were still 1-store installations, so selection prioritized practical encounter likelihood, multi-counter/ceiling complexity, and loss risk from misreading the benefit.
+- Project tracker remains on inherited 199-machine basis: 109 -> 113 / 199; remaining 86. Current live resolvable edge/yutime total differs from that inherited tracker, and no denominator reconciliation was performed in this batch.
+
+Selected / audited machines:
+1) L 真・一騎当千
+   - Store: オーロラ北見店
+   - AT ceiling: max 1000G+alpha; mode B 900 / C 700 / D 400 / heaven 100G+alpha.
+   - Reset: normal D or heaven -> max 400G+alpha; CZ failure does not reset the AT-interval game count.
+   - Benefit: AT "一騎当千RUSH".
+   - AT structure: 1 set 30G+alpha, continuation about 70%; machine overview lists AT pure increase about 3.3 medals/G.
+   - No fixed medal minimum is derived from 30G x pure increase. Pseudo-bonus "当千ボーナス" ~50 medals is separate AT-internal structure, not a ceiling minimum.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/815/24362/
+     https://nana-press.com/kaiseki/machine/815/24394/
+     https://nana-press.com/kaiseki/machine/815/24398/
+     https://1geki.jp/slot/l_shin_ikkitosen/3/
+
+2) Lパチスロ ダンベル何キロ持てる？
+   - Store: オーロラ北見店
+   - CZ ceiling: CZ interval 750G or 100,000 kcal -> CZ only.
+   - AT ceiling: AT interval 1500G; reset shortens to 1000G -> AT "ダンベル何キロ持てる？BONUS".
+   - CZ ceiling direct payout guarantee: 0 medals because AT is not guaranteed.
+   - AT structure: 30G+alpha, pure increase about 8.5 medals/G, with an explicit 50G continuation guarantee.
+   - Published average: about 75G continuation / about 640 medals. These are averages, not minimum guarantees.
+   - Do not convert the 50G guarantee x pure increase into a fixed minimum payout.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/855/25383/
+     https://nana-press.com/kaiseki/machine/855/25373/
+     https://nana-press.com/kaiseki/machine/855/25386/
+     https://1geki.jp/slot/l_dumbbell/3/
+
+3) Lパチスロガールズ＆パンツァー 最終章
+   - Store: オーロラ北見店
+   - Game ceiling: AT interval max 1111G+alpha or 500G+alpha -> success-guaranteed CZ, then episode bonus -> AT.
+   - CZ interval max 300G+alpha -> super-high state only; direct payout guarantee at that point is 0 medals.
+   - CZ skip ceiling: 7 consecutive failures -> 8th CZ success guaranteed. If previous AT ended by losing to 継続高校, max 5 failures -> 6th CZ success guaranteed.
+   - Normal first hit is basically Episode Bonus: pure increase about 4.7 medals/G, acquisition about 100 medals, then AT "戦車道".
+   - ~100 medals is a bonus acquisition figure, not a fixed final-net minimum from ceiling arrival.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/678/19212/
+     https://nana-press.com/kaiseki/machine/678/19256/
+     https://nana-press.com/kaiseki/machine/678/19269/
+     https://1geki.jp/slot/l_girlpan_finale/3/
+
+4) Lパチスロ 戦姫絶唱シンフォギア 正義の歌
+   - Store: パーラー太陽 山下通店
+   - Normal ceiling: max 777G+alpha -> AT "AXZラッシュ".
+   - Reset: max 498G+alpha; heaven mode: within 100G.
+   - AT structure: initial G decided by "わたしは歌でぶん殴るッ！", explicitly minimum 40G+, pure increase about 2.8 medals/G.
+   - The 40G figure is a game-count guarantee, not a fixed medal minimum. Do not convert 40G x pure increase into a minimum payout.
+   - Upper AT "AXZラッシュ黄金" (~5.0 medals/G) is separate and not the normal ceiling's fixed benefit.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/760/22574/
+     https://nana-press.com/kaiseki/machine/760/22591/
+     https://1geki.jp/slot/l_sympho/3/
+
+Edited strategy records only:
+- l真一騎当千
+- lぱちすろだんべる何きろ持てる
+- lぱちすろがーるず&ぱんつぁー最終章
+- lぱちすろ戦姫絶唱しんふぉぎあ正義の歌
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r74
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 113 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch72
+- benefit/minimum/initial fields present on all 4 audited strategy cards
+- average field present for ダンベル where published average figures exist
+- Service Worker revision r74
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 113 / 199 (project tracker basis; remaining 86)
+- payoutChecked strategy records in current strategy DB: 113
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch72: PASS
+- benefit/minimum/initial fields present on all 4 audited strategy cards: PASS
+- average field present for ダンベル: PASS
+- Service Worker revision: hall-scan-v3.15-r74 PASS
+- current live unaudited edge/yutime strategies after batch73: 81; all have max store coverage 1. This live count is informational only and does not alter the inherited 199-machine project tracker.

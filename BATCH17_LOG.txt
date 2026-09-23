@@ -1,0 +1,33 @@
+HALL SCAN v3.15 BATCH17 LOG
+Date: 2026-09-21
+Store: オーロラ北見店
+
+Hard limits
+- stores: 1/1 STOP
+- new Web-audited machines: 8/10
+- reuse/link existing confirmed data: 0/50
+- edited/created files: 3/6 (machine-strategy-v315.js, sw.js, BATCH17_LOG.txt)
+- machine records processed: 8/60
+
+Audited machines
+1. 十字架5 => edge / 期待値候補
+2. パチスロ戦姫絶唱シンフォギア 勇気の歌 => edge / 期待値候補
+3. パチスロなめ猫～液晶ないけどなめんじゃねぇ～ => edge / 期待値候補（固定+2,000円ライン保留）
+4. シャア専用パチスロ 逆襲の赤い彗星 => edge / 期待値候補
+5. パチスロ頭文字D => edge / 期待値候補（固定+2,000円ライン保留）
+6. パチスロ真・北斗無双 => edge / 期待値候補
+7. パチスロ北斗の拳 宿命 => edge / 期待値候補
+8. プリズムナナ => edge / 期待値候補
+
+Key safeguards
+- +2,000円の根拠を確認できない機種には固定A相談ラインを作らない。
+- リセット/有利区間継続/モード/技術介入を推測で有利側に扱わない。
+- プリズムナナは通常と天井短縮確定時を分離。
+- シンフォギア勇気の歌は通常G・有利区間G・CZスルーを分離。
+- 真北斗無双は旧6号機。スマスロ真・北斗無双と混同しない。
+
+Result
+- オーロラ北見店 20スロ未監査: 8 -> 0
+- Existing low-rate fact-checked data: unchanged
+- fullrate-data-v314.js: unchanged
+- Previously audited strategy records: unchanged except global serialization order/format retained as JSON object content

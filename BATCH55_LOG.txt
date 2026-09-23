@@ -1,0 +1,62 @@
+HALL SCAN v3.15 batch55
+Date: 2026-09-22
+Base: batch54
+
+Scope:
+- Ceiling benefit / minimum guarantee caution / initial payout or AT structure audit.
+- Exactly 4 machines.
+
+Machines:
+1. PA花の慶次～傾奇一転 87ver.
+   - Low-probability 260 spins -> Yutime, time-shortening 5000 spins.
+   - Entry itself gives no payout; jackpot expectation about 99.9% is not a payout guarantee.
+   - Jackpot payout: 4R 400 balls / 10R 1000 balls (payout basis).
+   - Source: https://www.p-world.co.jp/machine/database/10490
+
+2. L アズールレーン THE ANIMATION
+   - Bonus interval 350G+alpha -> Sea Battle Bonus, AT not guaranteed.
+   - AT interval 2000G+alpha -> AT-confirmed Sea Battle Bonus; normal 9 skips then 10th / reset max 6 skips then 7th -> AT.
+   - Sea Battle Bonus average about 100 medals. Normal AT initial >=50G (attack average about 100G), net about 2.5 medals/G.
+   - Source: https://nana-press.com/kaiseki/machine/993/31187/
+
+3. スマスロ モンスターハンターライズ
+   - 999G or 6 quest skips then the 7th quest -> red-7-or-better hunting bonus.
+   - Red 7: guaranteed 40G+alpha or 50G+alpha, net about 2.7 medals/G. Purple 7: 60G+alpha or 100G+alpha, net about 4.0 medals/G.
+   - Do not convert guaranteed game count into a fixed minimum medal payout.
+   - Source: https://nana-press.com/kaiseki/machine/837/25430/
+
+4. パチスロ かぐや様は告らせたい
+   - BIG after 1100G+alpha / REG after 900G+alpha / reset after 800G+alpha -> BIG or better.
+   - Normal max 7 CZ skips -> next CZ rewritten to BIG or better. Chance-role max 30-count ceiling -> CZ only.
+   - BIG average about 270 medals / Super BIG average about 490 medals; averages are not minimum guarantees.
+   - Source: https://nana-press.com/kaiseki/machine/804/23721/
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r56
+
+QA:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- central installed edge/yutime display names: 199
+- benefit-audited strategy records: 41 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged vs batch54: PASS
+- fullrate-data-v314.js unchanged vs batch54: PASS
+- hallscan-v315.js unchanged vs batch54: PASS
+- hallscan-v315.css unchanged vs batch54: PASS
+- factchecked low-rate HTML unchanged vs batch54: PASS
+- benefit/minimum/initial/average UI fields remain wired: PASS

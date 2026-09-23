@@ -1,0 +1,66 @@
+HALL SCAN v3.15 batch41
+Date: 2026-09-21
+Purpose: numeric consultation-line audit, 4 machines per user instruction
+
+Web-audited strategies: 4
+1. いざ！番長
+   - Normal +2,000 yen guide: equal 600G+ / 5.6 700G+
+   - Confirmed shortened state (setting change or upper-AT end): equal 350G+ / 5.6 400G+
+   - Normal max 999G+alpha; shortened max 600G+alpha
+   - Red sword (Lv3), female/dragon ukiyo-e, purple electrification remain separate strong-state checks
+   - Source: https://nana-press.com/kaiseki/machine/946/29777/
+2. アニマルスロットドッチ
+   - BIG/ST-end ceiling 999G; REG-end ceiling 499G; confirmed reset ceiling 499G
+   - Jungle Bonus interval ceiling 2500G (normal + ST), with BIG + 3 gold tickets + Jungle Bonus strong/confirmed by major analysis
+   - Major analysis did not publish a fixed +2,000-yen start line; no independent threshold was invented
+   - ST end is not immediate-stop: high state / pullback must be checked
+   - Source: https://nana-press.com/kaiseki/machine/1126/
+3. スマスロ やじきた道中記参る！
+   - Normal +2,000 yen guide: equal 500G+ / 5.6 550G+ (published provisional EV table, 1G=1.5 miles assumption)
+   - Normal mile ceiling max 999; 7th CZ is 100% win / AT strong
+   - Setting-change table and advantageous-section reset table kept separate; no unsupported dedicated +2,000-yen reset start line added
+   - Advantageous-section reset: special A, max 399 miles
+   - Source: https://nana-press.com/kaiseki/machine/1186/
+4. スマスロ 新鬼武者3
+   - Game-count +2,000 yen guide: equal 600G+ / 5.6 700G+
+   - AT-end cycle target 5th+; confirmed reset cycle target 3rd+ are major-analysis practical predictions, not fixed +2,000-yen lines
+   - Game ceiling 1000G+alpha; cycle ceiling max 6 normally / max 4 on reset
+   - Hideyoshi Final Battle failure -> heaven strong, check first cycle
+   - Source: https://nana-press.com/kaiseki/machine/1015/32201/
+
+Affected normal-rate installation records: 28
+- いざ！番長: 9
+- アニマルスロットドッチ: 5
+- スマスロ やじきた道中記参る！: 7
+- スマスロ 新鬼武者3: 7
+
+Numericization progress:
+- edge/yutime strategies with zero numeric token in target: 20 -> 16
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+- aliases
+
+Safety:
+- Consultation line remains screening only; it is not an automatic seating line.
+- HALL SCAN +2,000-yen preference was used where published source tables directly support it.
+- Animal Slot Dotch did not receive an invented fixed start G because major-analysis +2,000-yen tables were not confirmed.
+- Reset/shortened conditions require actual evidence and are not assumed.
+- Yajikita's 1G=1.5 miles is the source EV-table calculation assumption, not a claim that actual miles always advance at that exact rate.
+
+Service Worker: hall-scan-v3.15-r42
+
+QA
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- fallback: 0 / review: 0
+- classification: no-g 837 / yutime 90 / edge 554 / setting 208
+- changed central strategies vs batch40: exactly 4
+- aliases unchanged
+- remaining zero-numeric edge/yutime targets: 16
+- fullrate-data-v314.js / hallscan-v315.js / hallscan-v315.css unchanged vs batch40

@@ -1,0 +1,62 @@
+HALL SCAN v3.15 batch60
+Date: 2026-09-22
+Base: batch59
+
+Scope:
+- Ceiling benefit / minimum guarantee caution / initial payout or AT structure audit.
+- Exactly 4 machines.
+
+Machines:
+1. スマスロ 秘宝伝
+   - BIG after 799G+alpha / REG after 649G+alpha / reset 499G+alpha -> bonus (BIG or REG).
+   - BIG about 200 or 300 medals; REG about 70 medals; net about 5.0 medals/G.
+   - Do not label REG 70 medals as a ceiling final-net minimum guarantee or imply BIG is guaranteed.
+   - Sources: https://nana-press.com/kaiseki/machine/1074/33800/ , https://nana-press.com/kaiseki/machine/1074/33814/ , https://nana-press.com/kaiseki/machine/1074/33815/
+
+2. スマスロヨルムンガンド
+   - AT interval 999G+alpha -> AT.
+   - Reset / upper-CZ "恥の世紀" failure -> 450G+alpha AT ceiling; other states can also draw shortened ceiling.
+   - Normal AT: 50G+alpha, net about 2.4 medals/G. Do not derive a fixed minimum payout from G x net rate.
+   - Sources: https://nana-press.com/kaiseki/machine/1101/35969/ , https://nana-press.com/kaiseki/machine/1101/35986/
+
+3. スマスロ BIRDIE WING ‐Golf Girls’ Story‐
+   - 10 cycles (reset 7 cycles) -> Birdie Bonus + ST highly likely.
+   - Birdie Bonus: about 100 medals, net about 5.0 medals/G; basic ST: 20G+alpha per day.
+   - Treat ~100 medals as bonus acquisition structure, not final-net minimum guarantee through ST.
+   - Sources: https://nana-press.com/kaiseki/machine/1157/37212/ , https://nana-press.com/kaiseki/machine/1157/
+
+4. PA花の慶次～裂99ver.
+   - 299 spins since jackpot including normal/RUSH spins -> Yutime "神速一騎駆", effectively until next jackpot.
+   - Jackpot expectation about 99.99%; do not express as absolute 100% guarantee.
+   - Yutime entry itself guarantees 0 balls. Jackpot payout: 10R ~800 / 5R ~400 / 3R ~240 balls.
+   - Source: https://www.p-world.co.jp/machine/database/10182
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r61
+
+QA:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- UI benefit/minimum/initial/average display fields: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 61 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged vs batch59: PASS
+- fullrate-data-v314.js unchanged vs batch59: PASS
+- hallscan-v315.js unchanged vs batch59: PASS
+- hallscan-v315.css unchanged vs batch59: PASS
+- factchecked low-rate HTML unchanged vs batch59: PASS
+- batch59 base SHA256 verified: c868dcdb7e28f7cd8b213febc018beaf9617f2ef91588b94b615e66dfb66067e

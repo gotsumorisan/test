@@ -1,0 +1,62 @@
+HALL SCAN v3.15 batch40
+Date: 2026-09-21
+Purpose: numeric consultation-line audit, 4 machines per user instruction
+
+Web-audited strategies: 4
+1. L南国育ち SPECIAL
+   - Normal +2,000 yen guide: equal 550G+ / 5.6 600G+
+   - Confirmed shortened state: equal 300G+ / 5.6 350G+
+   - Normal max ceiling 799G+alpha; setting change / post-super-Hisho max 500G+alpha
+   - Published EV table is provisional and uses 750G as the normal ceiling assumption
+   - Source: https://nana-press.com/kaiseki/machine/1173/37759/
+2. L虚構推理
+   - Use internal Kyoko-Shingi interval G, not simple data-counter hamari
+   - Normal +2,000 yen guide: equal 600G+ / 5.6 700G+
+   - Confirmed shortened state: equal 350G+ / 5.6 400G+
+   - Normal max 1000G; reset/shortened max 700G
+   - Source: https://nana-press.com/kaiseki/machine/1111/36134/
+3. L青春ブタ野郎はバニーガール先輩の夢を見ない
+   - Four axes kept separate: bonus interval, CZ interval, puberty points, CZ-through count
+   - Conservative source-confirmed +2,000-yen points used: normal equal 550G+ / 5.6 650G+; shortened equal 400G+ / 5.6 450G+
+   - Bonus ceiling 899G+alpha; reset/ST-whiff 699G+alpha; CZ 560G+alpha; 1000pt; 6 CZ failures -> 7th CZ success strong/confirmed by major analysis
+   - Sources: https://slobase.jp/machines/aobuta ; https://1geki.jp/slot/l_ao_buta/3/
+4. SLOT劇場版 魔法少女まどか☆マギカ[前編]始まりの物語/[後編]永遠の物語
+   - +2,000 yen guide: equal 400G+ / 5.6 450G+
+   - Normal mode ceiling 660G+prelude (max 700G), special mode 700G+prelude
+   - No unsupported reset-shortening line added
+   - Source: https://nana-press.com/kaiseki/machine/140/4216/
+
+Affected normal-rate installation records: 12
+- L南国育ち SPECIAL: 2
+- L虚構推理: 2
+- L青春ブタ野郎はバニーガール先輩の夢を見ない: 7
+- SLOT劇場版 魔法少女まどか☆マギカ[前編]始まりの物語/[後編]永遠の物語: 1
+
+Numericization progress:
+- edge/yutime strategies with zero numeric token in target: 24 -> 20
+
+Protected/unchanged:
+- fullrate-data-v314.js
+- hallscan-v315.js / hallscan-v315.css
+- low-rate factchecked HTML
+- store exchange profiles
+
+Safety:
+- Consultation line remains screening only; it is not an automatic seating line.
+- HALL SCAN +2,000-yen preference was used where source tables support it.
+- For Aobuta, the source table does not expose every 50G row in indexed text, so only directly source-confirmed +2,000-yen points were used; no interpolation was invented.
+- Reset/shortened conditions require actual evidence and are not assumed.
+
+Service Worker: hall-scan-v3.15-r41
+
+QA
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- fallback: 0 / review: 0
+- classification: no-g 837 / yutime 90 / edge 554 / setting 208
+- changed central strategies vs batch39: exactly 4
+- aliases unchanged
+- SW CORE: 61 / missing 0 (root ./ entry excluded from file existence check)
+- fullrate-data-v314.js / hallscan-v315.js / hallscan-v315.css unchanged vs batch39

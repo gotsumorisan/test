@@ -1,0 +1,102 @@
+HALL SCAN v3.15 batch72
+Date: 2026-09-22
+Base: batch71 (唯一のベースライン)
+
+Scope:
+- Continued ceiling-benefit / minimum-guarantee / initial payout-structure audit for exactly 4 machines.
+- Recounted current unaudited installed edge/yutime strategies. All remaining current live candidates were 1-store installations, so selection used practical encounter likelihood, ceiling/skip complexity, and loss risk from misreading conditions.
+- Project tracker remains on inherited 199-machine basis: 105 -> 109 / 199; remaining 90. Current live resolvable edge/yutime total differs from that inherited tracker, and no denominator reconciliation was performed in this batch.
+
+Selected / audited machines:
+1) L ダーリン・イン・ザ・フランキス
+   - Store: パーラー太陽 山下通店
+   - Normal bonus-interval ceiling: 666G -> bonus.
+   - Reset ceiling: max 390G -> bonus.
+   - 4 consecutive REG skips -> next Darling-in-the-Bonus or Episode Bonus.
+   - Published approximate acquisitions: REG ~40 medals / Darling ~100 / Episode ~200. These are bonus-specific acquisition figures, not a fixed final-net minimum guarantee from ceiling arrival.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/989/31174/
+     https://nana-press.com/kaiseki/machine/989/30982/
+     https://nana-press.com/kaiseki/machine/989/30981/
+     https://nana-press.com/kaiseki/machine/989/30983/
+
+2) スマスロ とんでもスキルで異世界放浪メシ
+   - Store: ロイヤル網走店
+   - Normal ceiling: max 1000G+alpha -> Opening BONUS.
+   - Reset ceiling: max 650G+alpha -> Opening BONUS.
+   - Opening BONUS: approx. 5.0 medals/G; initial 100 or 200 is explicitly payout medals, then ST.
+   - Normal ST: 25G+alpha, continuation about 70%, expected medals about 504. Expected medals are not a minimum guarantee.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1148/
+     https://nana-press.com/kaiseki/machine/1148/38270/
+
+3) スマスロ ゴブリンスレイヤーII
+   - Store: ロイヤル北見店
+   - AT ceiling: 600 / 1000 / 1500G; max 1500G.
+   - Benefit: AT + 1-5 宿命バトル stocks, average about 2; first stock is 勝利濃厚.
+   - Reset max ceiling: 1000G.
+   - Normal AT: 100G per set, approx. 2.8 medals/G, continuation about 50/67/80%.
+   - Do not convert AT G x pure-increase or battle-stock guarantees into a fixed medal minimum.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/1095/34373/
+     https://nana-press.com/kaiseki/machine/1095/34386/
+
+4) スマスロ頭文字D 2nd
+   - Store: パーラー太陽 山下通店
+   - Game ceiling: max 599G+alpha -> LB + next ceiling 299G+alpha.
+   - Shortened ceiling: max 299G+alpha.
+   - LB skip ceiling: AT at max 7th LB in the AT interval.
+   - Game ceiling only guarantees LB, not AT.
+   - AT Legend Rush: initial 30G+alpha, approx. 2.4 medals/G. Do not convert G x pure-increase into a fixed minimum payout.
+   - Sources:
+     https://nana-press.com/kaiseki/machine/818/24489/
+     https://nana-press.com/kaiseki/machine/818/24504/
+
+Edited strategy records only:
+- lだーりんいんざふらんきす
+- すますろとんでもすきるで異世界放浪めし
+- すますろごぶりんすれいやーii
+- すますろ頭文字d2nd
+
+Schema/UI:
+- No changes. Reused benefit / minimum / initial / average / benefitSource / payoutChecked.
+
+Protected:
+- fullrate-data-v314.js
+- hallscan-v315.js
+- hallscan-v315.css
+- factchecked low-rate HTML
+- existing store exchange profiles and aliases
+
+Service Worker: hall-scan-v3.15-r73
+
+QA target:
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 109 / 199 (project tracker basis)
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged
+- protected files unchanged vs batch71
+- benefit/minimum/initial fields present on all 4 audited strategy cards
+- Service Worker revision r73
+
+QA result:
+- node --check machine-strategy-v315.js: PASS
+- node --check hallscan-v315.js: PASS
+- node --check sw.js: PASS
+- full-rate records: 1,689 (4p 929 / 20s 760)
+- classifications: no-g 837 / yutime 90 / edge 554 / setting 208
+- benefit-audited strategy records: 109 / 199 (project tracker basis; remaining 90)
+- fallback references: 0
+- review references: 0
+- unresolved installed strategies: 0
+- changed strategy records: exactly 4 intended machines
+- aliases unchanged: PASS
+- protected files unchanged vs batch71: PASS
+- benefit/minimum/initial fields present on all 4 audited strategy cards: PASS
+- average field present for とんでもスキル where a published expected-medal figure exists: PASS
+- Service Worker revision: hall-scan-v3.15-r73 PASS
+- current live unaudited edge/yutime strategies after batch72: 85; all have max store coverage 1. This live count is informational only and does not alter the inherited 199-machine project tracker.
